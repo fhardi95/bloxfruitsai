@@ -1,7 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { FRUITS, TIERS, formatValue, type FruitTier, type FruitCategory } from "@/lib/fruits-data";
+import { FRUITS, TIERS, formatValue, type FruitTier, type FruitCategory } from "../../lib/fruits-data";
 
 const TIER_STYLES: Record<FruitTier, { bg: string; color: string; border: string }> = {
   S: { bg: "rgba(255,215,0,0.12)", color: "var(--gold)", border: "rgba(255,215,0,0.4)" },
