@@ -1,7 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { FRUITS, formatValue, type Fruit } from "@/lib/fruits-data";
+import { FRUITS, formatValue, type Fruit } from "../../lib/fruits-data";
 
 type TradeItem = { fruit: Fruit; qty: number };
 type Side = "you" | "them";
