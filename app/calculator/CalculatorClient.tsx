@@ -204,7 +204,7 @@ export default function CalculatorClient() {
             <div>
               <div style={{ display: "inline-block", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--cyan)", background: "rgba(0,245,255,0.08)", border: "1px solid rgba(0,245,255,0.2)", padding: "3px 12px", borderRadius: 50, marginBottom: "0.75rem" }}>Trade Analysis</div>
               <h1 style={{ fontFamily: "'Orbitron',monospace", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 700, marginBottom: "0.5rem" }}>
-                Trade <span style={{ color: "var(--cyan)" }}>Calculator</span>
+                Blox Fruits trade  <span style={{ color: "var(--cyan)" }}>calculator</span>
               </h1>
         <div>
           <h3 style={{ display: "inline-block", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--cyan)", background: "rgba(0,245,255,0.08)", border: "1px solid rgba(0,245,255,0.2)", padding: "3px 12px", borderRadius: 50, marginBottom: "0.75rem" }}>
