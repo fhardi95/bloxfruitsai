@@ -191,32 +191,50 @@ export default function CalculatorClient() {
   const themDemand = themItems.length ? themItems.reduce((s, i) => s + i.fruit.demand, 0) / themItems.length : 0;
 
   return (
-    <div style={{ paddingTop: 70, minHeight: "100vh" }}>
-      {/* Header */}
-      <div style={{ background: "linear-gradient(180deg,rgba(0,245,255,0.04),transparent)", borderBottom: "1px solid var(--border)", padding: "3rem 5% 2rem" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "0.75rem", fontSize: "0.8rem", color: "var(--text-muted)" }}>
-            <Link href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Home</Link>
-            <span>/</span>
-            <span style={{ color: "var(--cyan)" }}>Trade Calculator</span>
-          </div>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "1rem" }}>
-            <div>
-              <div style={{ display: "inline-block", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--cyan)", background: "rgba(0,245,255,0.08)", border: "1px solid rgba(0,245,255,0.2)", padding: "3px 12px", borderRadius: 50, marginBottom: "0.75rem" }}>Trade Analysis</div>
-              <h1 style={{ fontFamily: "'Orbitron',monospace", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 700, marginBottom: "0.5rem" }}>
-                Trade <span style={{ color: "var(--cyan)" }}>Calculator</span>
-              </h1>
-              <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.9rem" }}>
-                Compare values, demand scores and Robux prices — instantly see if a trade is fair.
-              </p>
-            </div>
-            <div style={{ display: "flex", gap: 8 }}>
-              <button onClick={reset} style={{ background: "transparent", border: "1px solid rgba(255,71,87,0.35)", color: "var(--red)", padding: "10px 18px", borderRadius: 8, fontFamily: "'Rajdhani',sans-serif", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer", letterSpacing: "0.08em", textTransform: "uppercase", transition: "all 0.2s" }}
-                onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "rgba(255,71,87,0.08)"}
-                onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = "transparent"}
-              >Reset</button>
-              <Link href="/values" style={{ background: "transparent", color: "var(--cyan)", border: "1px solid var(--cyan)", padding: "10px 18px", borderRadius: 8, fontFamily: "'Rajdhani',sans-serif", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none" }}>View Values</Link>
-            </div>
+<div style={{ paddingTop: 70, minHeight: "100vh" }}>
+  {/* Header */}
+  <header style={{ background: "linear-gradient(180deg,rgba(0,245,255,0.04),transparent)", borderBottom: "1px solid var(--border)", padding: "3rem 5% 2rem" }}>
+    <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      
+      <nav style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "0.75rem", fontSize: "0.8rem", color: "var(--text-muted)" }}>
+        <Link href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Home</Link>
+        <span>/</span>
+        <span style={{ color: "var(--cyan)" }}>Trade Calculator</span>
+      </nav>
+
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "1rem" }}>
+        
+        <div>
+          <h3 style={{ display: "inline-block", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--cyan)", background: "rgba(0,245,255,0.08)", border: "1px solid rgba(0,245,255,0.2)", padding: "3px 12px", borderRadius: 50, marginBottom: "0.75rem" }}>
+            Blox Fruits Trade Analysis Tool
+          </h3>
+
+          <h1 style={{ fontFamily: "'Orbitron',monospace", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 700, marginBottom: "0.5rem" }}>
+            Blox Fruits Value Calculator – Trade <span style={{ color: "var(--cyan)" }}>Calculator</span>
+          </h1>
+
+          <h2 style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "1rem", marginBottom: "0.5rem" }}>
+            Check trade fairness, fruit values, demand scores, and Robux prices instantly
+          </h2>
+
+          <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.9rem" }}>
+            The <strong>Blox Fruits Value Calculator</strong> helps players analyze trades in Roblox Blox Fruits with precision. 
+            Compare fruit values, demand levels, and in-game prices to see if your trade is fair or profitable. 
+            This powerful <strong>Blox Fruits trade calculator</strong> gives real-time insights so you can avoid bad trades 
+            and maximize your value every time.
+          </p>
+        </div>
+
+        <div style={{ display: "flex", gap: 8 }}>
+          <button onClick={reset} style={{ background: "transparent", border: "1px solid rgba(255,71,87,0.35)", color: "var(--red)", padding: "10px 18px", borderRadius: 8, fontFamily: "'Rajdhani',sans-serif", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer", letterSpacing: "0.08em", textTransform: "uppercase", transition: "all 0.2s" }}
+            onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "rgba(255,71,87,0.08)"}
+            onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = "transparent"}
+          >Reset</button>
+
+          <Link href="/values" style={{ background: "transparent", color: "var(--cyan)", border: "1px solid var(--cyan)", padding: "10px 18px", borderRadius: 8, fontFamily: "'Rajdhani',sans-serif", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none" }}>
+            View Values
+          </Link>
+        </div>
           </div>
         </div>
       </div>
