@@ -213,7 +213,7 @@ export default function CalculatorClient() {
 		  
 		  
           <h2 style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "1rem", marginBottom: "0.5rem" }}>
-            Check trade fairness, fruit values, demand scores, and Robux prices instantly
+            Check trade fairness, fruit values, demand scores, and Robux prices instantly with our Blox fruits calculator tool.
           </h2>
 
           <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.9rem" }}>
