@@ -12,7 +12,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bloxfruitsai.com"),
   title: {
-    default: "Blox Fruits AI Value Calculator — Best AI Guide",
+    default: "Blox Fruits AI Value Calculator — Best BloxFruits AI Guide",
     template: "%s | Blox Fruits AI",
   },
   description:
