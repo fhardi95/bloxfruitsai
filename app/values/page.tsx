@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ValuesClient from "./ValuesClient";
 
 export const metadata: Metadata = {
-  title: "Blox Fruits Value List 2025 — All Fruit Prices & Demand",
+  title: "Blox Fruits Value List 2— All Fruit Prices & Demand",
   description:
-    "Complete Blox Fruits value list for 2025. Real-time market prices, demand ratings, trend indicators and rarity tiers for every devil fruit, gamepass, and limited item. Trusted by 100K+ traders. Updated daily after every patch.",
+    "Complete Blox Fruits value list. Real-time market prices, demand ratings, trend indicators and rarity tiers for every devil fruit, gamepass.",
   alternates: { canonical: "https://www.bloxfruitsai.com/values" },
   openGraph: {
     title: "Blox Fruits Value List 2025 — All Fruit Prices & Demand",
