@@ -9,17 +9,42 @@
 
 <url>
   <loc>https://www.bloxfruitsai.com/</loc>
-  <lastmod>2026-04-24T23:06:52+00:00</lastmod>
+  <lastmod>2026-04-25T11:47:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.bloxfruitsai.com/values</loc>
-  <lastmod>2026-04-24T23:06:52+00:00</lastmod>
+  <lastmod>2026-04-25T11:47:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.bloxfruitsai.com/calculator</loc>
-  <lastmod>2026-04-24T23:06:52+00:00</lastmod>
+  <lastmod>2026-04-25T11:47:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.bloxfruitsai.com/blog</loc>
+  <lastmod>2026-04-25T11:47:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.bloxfruitsai.com/about</loc>
+  <lastmod>2026-04-25T11:47:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.bloxfruitsai.com/contact</loc>
+  <lastmod>2026-04-25T11:47:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.bloxfruitsai.com/privacy-policy</loc>
+  <lastmod>2026-04-25T11:47:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.bloxfruitsai.com/terms-of-use</loc>
+  <lastmod>2026-04-25T11:47:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
