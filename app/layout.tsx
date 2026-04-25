@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.bloxfruitsai.com"),
   title: {
     default: "Blox Fruits AI Value Calculator — Best BloxFruits AI Guide",
-    template: "%s | Blox Fruits AI",
+    template: "%s",
   },
   description:
     "Blox Fruits AI is the #1 AI-powered tool for Roblox Blox Fruits players. Get real-time tier lists, instant devil fruit rankings and a live Trade Box Fruits Calculator.",
