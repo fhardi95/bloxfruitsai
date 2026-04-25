@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block technical junk
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /*?*
+
+# Sitemap
+Sitemap: https://www.bloxfruitsai.com/sitemap.xml
