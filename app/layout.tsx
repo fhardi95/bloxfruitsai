@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Blox Fruits AI",
   },
   description:
-    "Blox Fruits AI is the #1 AI-powered tool for Roblox Blox Fruits players in  2026. Get real-time tier lists, instant devil fruit rankings, personalized PVP build recommendations, boss fight guides, and a live Trade Box Fruits Calculator.",
+    "Blox Fruits AI is the #1 AI-powered tool for Roblox Blox Fruits players. Get real-time tier lists, instant devil fruit rankings and a live Trade Box Fruits Calculator.",
   keywords: ["blox fruits ai","blox fruits tier list  2026","blox fruits guide","best fruits blox fruits","blox fruits trade calculator","blox fruits value list","blox fruits pvp builds","blox fruits devil fruit ranking","roblox blox fruits"],
   authors: [{ name: "BloxFruitsAI Team", url: "https://www.bloxfruitsai.com" }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
