@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Blox Fruits Trade Calculator to check if any trade is fair, Calculate the value of your trade. Enter your offered and requested items",
   alternates: { canonical: "https://www.bloxfruitsai.com/calculator" },
   openGraph: {
-    title: "Blox Fruits Trade Calculator — Check Fair Trade Value 2025",
+    title: "Blox Fruits Trade Calculator — Check Fair Trade Value",
     description: "Instant trade calculator for Blox Fruits. Compare values, demand, and Robux prices side-by-side.",
     url: "https://www.bloxfruitsai.com/calculator",
   },
