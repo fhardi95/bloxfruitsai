@@ -100,8 +100,8 @@ export default function HeroSection() {
         </div>
 
         <h1 style={{ fontFamily: "'Orbitron',monospace", fontSize: "clamp(2rem,6vw,4.8rem)", fontWeight: 900, lineHeight: 1.1, marginBottom: "1.4rem", animation: "fadeUp 0.6s 0.1s ease both" }}>
-          <span style={{ display: "block", color: "var(--text)" }}>Master Every Fruit</span>
-          <span style={{ display: "block", background: "linear-gradient(90deg,var(--cyan),var(--gold))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>With Blox Fruits AI</span>
+          <span style={{ display: "block", color: "var(--text)" }}>Blox Fruits Calculator & Value List (2026)</span>
+          <span style={{ display: "block", background: "linear-gradient(90deg,var(--cyan),var(--gold))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>AI Trade Checker</span>
         </h1>
 
         <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(1rem,2vw,1.2rem)", color: "var(--text-muted)", maxWidth: 580, margin: "0 auto 2.5rem", lineHeight: 1.75, animation: "fadeUp 0.6s 0.2s ease both" }}>
