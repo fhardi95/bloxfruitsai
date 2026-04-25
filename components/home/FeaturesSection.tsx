@@ -13,7 +13,7 @@ export default function FeaturesSection() {
       <div style={{ textAlign:"center", marginBottom:"3.5rem" }}>
         <span style={{ display:"inline-block", fontSize:"0.7rem", letterSpacing:"0.2em", textTransform:"uppercase", color:"var(--cyan)", background:"rgba(0,245,255,0.08)", border:"1px solid rgba(0,245,255,0.2)", padding:"4px 14px", borderRadius:50, marginBottom:"1rem" }}>Why Blox Fruits AI</span>
         <h2 style={{ fontFamily:"'Orbitron',monospace", fontSize:"clamp(1.6rem,3.5vw,2.6rem)", fontWeight:700, marginBottom:"1rem" }}>
-          Everything You Need to <span style={{ color:"var(--cyan)" }}>Dominate</span>
+          Everything You Need to <span style={{ color:"var(--cyan)" }}>Dominate - Blox Frtuis Value</span>
         </h2>
         <p style={{ fontFamily:"'Inter',sans-serif", color:"var(--text-muted)", fontSize:"1rem", maxWidth:520, margin:"0 auto", lineHeight:1.7 }}>
           From beginner to top-tier PVP — our AI tools give you the edge to win every trade and every fight.
