@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CalculatorClient from "./CalculatorClient";
 
 export const metadata: Metadata = {
-  title: "Blox Fruits Trade Calculator — Check Fair Trade Value 2025",
+  title: "Blox Fruits Trade Calculator — Check Fair Trade Value",
   description:
-    "Use the Blox Fruits Trade Calculator to check if any trade is fair, overpay, or underpay. Compare fruit values, demand scores, and Robux prices side-by-side in real-time. Never get scammed again. Free tool updated for 2025 meta.",
+    "Use the Blox Fruits Trade Calculator to check if any trade is fair, Calculate the value of your trade. Enter your offered and requested items to see if your trade is a win or a lose..",
   alternates: { canonical: "https://www.bloxfruitsai.com/calculator" },
   openGraph: {
     title: "Blox Fruits Trade Calculator — Check Fair Trade Value 2025",
