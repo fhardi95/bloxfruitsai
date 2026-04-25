@@ -19,30 +19,62 @@ export default function Footer() {
             </div>
           </div>
 
-          {[
-            { title: "Tools", links: [{ label: "AI Fruit Finder", href: "/#ai-tool" }, { label: "Tier List", href: "/#tier-list" }, { label: "Value List", href: "/values" }, { label: "Trade Calculator", href: "/calculator" }, { label: "Patch Tracker", href: "#" }] },
-            { title: "Guides", links: [{ label: "PVP Builds 2025", href: "#" }, { label: "Best Grinding Routes", href: "#" }, { label: "Fruit Rankings", href: "/values" }, { label: "Race Guide", href: "#" }, { label: "Beginner Guide", href: "#" }] },
-            { title: "Company", links: [{ label: "About Us", href: "#" }, { label: "Contact", href: "#" }, { label: "Blog", href: "#" }, { label: "Privacy Policy", href: "#" }, { label: "Terms of Use", href: "#" }] },
-          ].map(col => (
-            <div key={col.title}>
-              <h4 style={{ fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#7a96b8", marginBottom: "1rem", fontWeight: 600 }}>{col.title}</h4>
-              <ul style={{ listStyle: "none" }}>
-                {col.links.map(l => (
-                  <li key={l.label} style={{ marginBottom: 8 }}>
-                    <Link href={l.href} style={{ color: "#7a96b8", textDecoration: "none", fontSize: "0.88rem" }}>{l.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div>
+            <h4 style={{ fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#7a96b8", marginBottom: "1rem", fontWeight: 600 }}>Tools</h4>
+            <ul style={{ listStyle: "none" }}>
+              {[
+                { label: "AI Fruit Finder", href: "/#ai-tool" },
+                { label: "Tier List", href: "/#tier-list" },
+                { label: "Value List", href: "/values" },
+                { label: "Trade Calculator", href: "/calculator" },
+              ].map(l => (
+                <li key={l.label} style={{ marginBottom: 8 }}>
+                  <Link href={l.href} style={{ color: "#7a96b8", textDecoration: "none", fontSize: "0.88rem" }}>{l.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 style={{ fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#7a96b8", marginBottom: "1rem", fontWeight: 600 }}>Guides</h4>
+            <ul style={{ listStyle: "none" }}>
+              {[
+                { label: "PVP Builds 2025", href: "/guides/pvp-builds" },
+                { label: "Grinding Routes", href: "/guides/grinding-routes" },
+                { label: "Fruit Rankings", href: "/guides/fruit-rankings" },
+                { label: "Race Guide", href: "/guides/race-guide" },
+                { label: "Beginner Guide", href: "/guides/beginner-guide" },
+              ].map(l => (
+                <li key={l.label} style={{ marginBottom: 8 }}>
+                  <Link href={l.href} style={{ color: "#7a96b8", textDecoration: "none", fontSize: "0.88rem" }}>{l.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 style={{ fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#7a96b8", marginBottom: "1rem", fontWeight: 600 }}>Company</h4>
+            <ul style={{ listStyle: "none" }}>
+              {[
+                { label: "About Us", href: "/about" },
+                { label: "Contact", href: "/contact" },
+                { label: "Blog", href: "/blog" },
+                { label: "Privacy Policy", href: "/privacy-policy" },
+                { label: "Terms of Use", href: "/terms-of-use" },
+              ].map(l => (
+                <li key={l.label} style={{ marginBottom: 8 }}>
+                  <Link href={l.href} style={{ color: "#7a96b8", textDecoration: "none", fontSize: "0.88rem" }}>{l.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div style={{ borderTop: "1px solid rgba(0,245,255,0.13)", paddingTop: "1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
           <span style={{ fontFamily: "'Inter',sans-serif", color: "#7a96b8", fontSize: "0.8rem" }}>© 2025 BloxFruitsAI.com · Not affiliated with Roblox Corporation</span>
           <div style={{ display: "flex", gap: "1.5rem" }}>
-            {["Privacy Policy", "Terms of Use", "Cookie Policy"].map(t => (
-              <a key={t} href="#" style={{ color: "#7a96b8", textDecoration: "none", fontSize: "0.8rem" }}>{t}</a>
-            ))}
+            <Link href="/privacy-policy" style={{ color: "#7a96b8", textDecoration: "none", fontSize: "0.8rem" }}>Privacy Policy</Link>
+            <Link href="/terms-of-use" style={{ color: "#7a96b8", textDecoration: "none", fontSize: "0.8rem" }}>Terms of Use</Link>
           </div>
         </div>
       </div>
