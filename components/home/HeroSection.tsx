@@ -95,7 +95,7 @@ export default function HeroSection() {
         <div style={{ animation: "fadeUp 0.6s ease both" }}>
           <span style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(0,245,255,0.08)", border: "1px solid rgba(0,245,255,0.25)", borderRadius: 50, padding: "6px 16px", fontSize: "0.75rem", color: "var(--cyan)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
             <span style={{ width: 6, height: 6, background: "var(--cyan)", borderRadius: "50%", animation: "pulseDot 2s infinite" }} />
-            AI-Powered · Updated 2025
+            AI-Powered · Updated  2026
           </span>
         </div>
 
@@ -105,8 +105,9 @@ export default function HeroSection() {
         </h1>
 
         <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "clamp(1rem,2vw,1.2rem)", color: "var(--text-muted)", maxWidth: 580, margin: "0 auto 2.5rem", lineHeight: 1.75, animation: "fadeUp 0.6s 0.2s ease both" }}>
-          The smartest AI tool for Roblox Blox Fruits. Instant tier lists, live trade calculator, devil fruit value list, and personalized build guides — all updated after every patch.
-        </p>
+        Use our Blox Fruits calculator to check fruit values, compare trades, and explore the latest tier list.
+This AI-powered Blox Fruits trade calculator helps you find fair trades instantly using real-time values.
+</p>
 
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", animation: "fadeUp 0.6s 0.3s ease both" }}>
           <Link href="/#ai-tool" style={{ background: "var(--cyan)", color: "var(--bg-deep)", border: "none", padding: "14px 32px", borderRadius: 8, fontFamily: "'Rajdhani',sans-serif", fontSize: "1rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", boxShadow: "0 0 30px rgba(0,245,255,0.3)", transition: "all 0.25s" }}
