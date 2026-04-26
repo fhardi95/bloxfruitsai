@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const POSTS = [
   {
-    slug: "april-2025-patch-analysis",
-    title: "April 2025 Patch Analysis — Dough Buffed, Ice Nerfed, Kitsune S-Tier",
+    slug: "patch-analysis",
+    title: "Patch Analysis — Dough Buffed, Ice Nerfed, Kitsune S-Tier",
     excerpt: "The latest Blox Fruits update reshuffled the meta. Dough returns to A-tier with a significant hitbox buff, Ice loses some PVP dominance, and Kitsune is confirmed as the new strongest mythical fruit.",
-    date: "April 22, 2025",
+    date: "April 22, 2026",
     category: "Patch Notes",
     categoryColor: "#00f5ff",
     categoryBg: "rgba(0,245,255,0.08)",
@@ -18,9 +18,9 @@ const POSTS = [
   },
   {
     slug: "kitsune-complete-guide",
-    title: "Kitsune Fruit Complete Guide 2025 — Is It Worth It?",
+    title: "Kitsune Fruit Complete Guide 2026 — Is It Worth It?",
     excerpt: "Kitsune is the newest mythical Beast fruit in Blox Fruits. We break down every move, damage output, and how it compares to Dragon and Leopard in both PVP and PVE.",
-    date: "April 18, 2025",
+    date: "April 18, 2026",
     category: "Fruit Guide",
     categoryColor: "#ffd700",
     categoryBg: "rgba(255,215,0,0.08)",
@@ -33,7 +33,7 @@ const POSTS = [
     slug: "trade-calculator-launch",
     title: "We Launched the BloxFruits Trade Calculator",
     excerpt: "Our new AI-powered trade calculator is live. Add up to 4 items on each side and get an instant verdict — Fair, Overpay, or Underpay. Never get scammed on a trade again.",
-    date: "April 10, 2025",
+    date: "April 10, 2026",
     category: "Feature",
     categoryColor: "#ff6b9d",
     categoryBg: "rgba(255,107,157,0.08)",
@@ -43,10 +43,10 @@ const POSTS = [
     featured: false,
   },
   {
-    slug: "best-grinding-setup-2025",
-    title: "The Best Grinding Setup in 2025 — Castle on the Sea",
+    slug: "best-grinding-setup",
+    title: "The Best Grinding Setup — Castle on the Sea",
     excerpt: "Castle on the Sea is now the undisputed #1 XP spot for endgame players. With Dragon or Kitsune you can hit 2.5M+ XP per hour. Here's the complete route breakdown.",
-    date: "April 5, 2025",
+    date: "April 5, 2026",
     category: "Grinding",
     categoryColor: "#2ed573",
     categoryBg: "rgba(46,213,115,0.08)",
@@ -57,9 +57,9 @@ const POSTS = [
   },
   {
     slug: "race-v4-tier-list",
-    title: "Race V4 Tier List — Which Race is Best in 2025?",
+    title: "Race V4 Tier List — Which Race is Best ?",
     excerpt: "With all six races now having V4 awakenings available, we rank every race based on PVP impact, PVE utility, and which fruit builds they pair best with.",
-    date: "March 28, 2025",
+    date: "March 28, 2026",
     category: "Race Guide",
     categoryColor: "#a855f7",
     categoryBg: "rgba(168,85,247,0.08)",
@@ -72,7 +72,7 @@ const POSTS = [
     slug: "blox-fruits-trading-tips",
     title: "10 Trading Tips Every Blox Fruits Player Should Know",
     excerpt: "Trading is one of the most complex parts of Blox Fruits. These 10 tips — from understanding demand vs value to knowing when to hold vs sell — will make you a better trader immediately.",
-    date: "March 20, 2025",
+    date: "March 20, 2026",
     category: "Trading",
     categoryColor: "#ffa502",
     categoryBg: "rgba(255,165,2,0.08)",
@@ -124,7 +124,7 @@ export default function BlogClient() {
             </div>
             {/* Stats */}
             <div style={{ display: "flex", gap: "2rem" }}>
-              {[{ num: "6", label: "Articles" }, { num: "Apr 2025", label: "Latest" }].map(s => (
+              {[{ num: "6", label: "Articles" }, { num: "Apr 2026", label: "Latest" }].map(s => (
                 <div key={s.label} style={{ textAlign: "center" }}>
                   <div style={{ fontFamily: "'Orbitron',monospace", fontSize: "1.4rem", fontWeight: 700, color: "#00f5ff" }}>{s.num}</div>
                   <div style={{ fontSize: "0.72rem", color: "#7a96b8", textTransform: "uppercase", letterSpacing: "0.1em" }}>{s.label}</div>
