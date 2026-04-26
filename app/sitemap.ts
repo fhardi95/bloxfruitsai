@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllSlugs } from "@/lib/blog-data";
+import { getAllSlugs } from "./_data/blog-data";
 
 const BASE_URL = "https://www.bloxfruitsai.com";
 
