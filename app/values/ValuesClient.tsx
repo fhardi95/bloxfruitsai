@@ -62,12 +62,27 @@ export default function ValuesClient() {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "1rem" }}>
             <div>
               <div style={{ display: "inline-block", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--cyan)", background: "rgba(0,245,255,0.08)", border: "1px solid rgba(0,245,255,0.2)", padding: "3px 12px", borderRadius: 50, marginBottom: "0.75rem" }}>Updated Daily</div>
-              <h1 style={{ fontFamily: "'Orbitron',monospace", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 700, marginBottom: "0.5rem" }}>
-                Blox Fruits <span style={{ color: "var(--cyan)" }}>Value List</span>
-              </h1>
-              <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.9rem" }}>
-                {filtered.length} items · Real-time prices, demand ratings & tier rankings
-              </p>
+              
+<h1 style={{ fontFamily: "'Orbitron',monospace", fontSize: "clamp(1.6rem,3vw,2.4rem)", fontWeight: 700, marginBottom: "0.5rem" }}>
+  Blox Fruits <span style={{ color: "var(--cyan)" }}>Value List</span>
+</h1>
+
+<h2 style={{ fontFamily: "'Orbitron',monospace", fontSize: "1.2rem", fontWeight: 600, marginBottom: "0.4rem" }}>
+  Updated Trading Values & Fruit Prices
+</h2>
+
+<h3 style={{ fontFamily: "'Inter',sans-serif", fontSize: "0.95rem", fontWeight: 500, color: "var(--text-muted)", marginBottom: "0.6rem" }}>
+  Real-time demand rankings and accurate trade insights
+</h3>
+
+<p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.9rem" }}>
+  {filtered.length} items · Real-time prices, demand ratings & tier rankings
+</p>
+
+<p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.95rem", marginTop: "0.6rem", maxWidth: "650px" }}>
+  Explore the latest <strong>Blox Fruits Value List</strong> with updated trade values, fruit prices, and demand rankings. Our Blox Fruits value list is designed to help players make smarter trades, understand market trends, and maximize profit with accurate, fast, and daily updated data.
+</p>
+			  
             </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               <Link href="/calculator" style={{ background: "var(--cyan)", color: "var(--bg-deep)", padding: "10px 20px", borderRadius: 8, fontFamily: "'Rajdhani',sans-serif", fontSize: "0.88rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none" }}>Trade Calculator</Link>
