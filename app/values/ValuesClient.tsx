@@ -75,12 +75,12 @@ export default function ValuesClient() {
   Real-time demand rankings and accurate trade insights
 </h3>
 
-<p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.9rem" }}>
-  {filtered.length} items · Real-time prices, demand ratings & tier rankings
-</p>
-
 <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.95rem", marginTop: "0.6rem", maxWidth: "650px" }}>
   Explore the latest <strong>Blox Fruits Value List</strong> with updated trade values, fruit prices, and demand rankings. Our Blox Fruits value list is designed to help players make smarter trades, understand market trends, and maximize profit with accurate, fast, and daily updated data.
+</p>
+
+<p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.9rem" }}>
+ <strong>{filtered.length}</strong>  items · Real-time prices, demand ratings & tier rankings
 </p>
 			  
             </div>
