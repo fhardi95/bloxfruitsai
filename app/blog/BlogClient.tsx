@@ -81,6 +81,32 @@ const POSTS = [
     icon: "💡",
     featured: false,
   },
+    {
+    slug: "blox-fruits-eggs-guide",
+    title: "Blox Fruits Eggs — Complete Guide to All 24 Easter Eggs",
+    excerpt: "Everything you need to know about Blox Fruits eggs in 2026. All 24 Easter Egg locations, five rarity tiers, Candy Egg rewards, the Celestial Egg boss fight.",
+    date: "April 28, 2026",
+    category: "Event Guide",
+    categoryColor: "#ff6b9d",
+    categoryBg: "rgba(255,107,157,0.08)",
+    categoryBorder: "rgba(255,107,157,0.25)",
+    readTime: "10 min",
+    icon: "🥚",
+    featured: true,
+  },
+  {
+    slug: "blox-fruits-codes",
+    title: "All Blox Fruits Codes 2026 — Working Codes for 2x EXP",
+    excerpt: "Every working Blox Fruits code for 2026, verified and updated daily. Redeem free 2x EXP boosts, stat resets, Beli, and titles. Includes how to redeem codes",
+    date: "April 28, 2026",
+    category: "Codes",
+    categoryColor: "#2ed573",
+    categoryBg: "rgba(46,213,115,0.08)",
+    categoryBorder: "rgba(46,213,115,0.25)",
+    readTime: "7 min",
+    icon: "🎁",
+    featured: true,
+  },
 ];
 
 const CATS = ["All", "Patch Notes", "Fruit Guide", "Grinding", "Trading", "Feature", "Race Guide"];
