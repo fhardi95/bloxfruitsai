@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -507,6 +509,17 @@ export const BLOG_POSTS: BlogPost[] = [
         "View the value ratio and average demand score for the full trade",
         "Built-in trading tips based on the current meta",
       ]},
+	  
+
+              {[
+                { label: "PVP Builds 2025", href: "/guides/pvp-builds" },
+                { label: "Grinding Routes", href: "/guides/grinding-routes" },
+                { label: "Fruit Rankings", href: "/guides/fruit-rankings" },
+                { label: "Race Guide", href: "/guides/race-guide" },
+                { label: "Beginner Guide", href: "/guides/beginner-guide" },
+              ]}
+	  
+	  
       { type: "info", text: "The Blox Fruits Trade Calculator is completely free to use and requires no account. Just go to bloxfruitsai.com/calculator and start adding items." },
       { type: "heading", text: "Why We Built It" },
       { type: "paragraph", text: "Getting scammed on a trade is one of the most frustrating experiences in Blox Fruits — especially when you spend real money on Robux to buy a fruit only to trade it away for far less than it was worth. The Trade Calculator eliminates that risk entirely. No more mental math, no more googling values mid-trade, no more pressure decisions." },
