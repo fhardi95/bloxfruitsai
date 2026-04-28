@@ -485,34 +485,66 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: "tip", text: "Stack your code redemption with the EASTEREXP code during the Easter Event period for maximum gains. Seasonal event codes are always worth prioritising because they tend to have shorter windows than permanent codes — claim time-limited codes first, then redeem the evergreen EXP and reset codes in the same session." },
     ],
   },
-  {
-    slug: "trade-calculator-launch",
-    title: "Introducing the Blox Fruits Trade Calculator",
-    excerpt: "Our new AI-powered Blox Fruits Trade Calculator is live. Add up to 4 items on each side and get an instant verdict on any trade.",
-    date: "April 10, 2026",
-    dateISO: "2026-04-10",
-    category: "Feature",
-    categoryColor: "#ff6b9d",
-    readTime: "3 min",
-    icon: "💱",
-    author: "BloxFruitsAI Team",
-    content: [
-      { type: "paragraph", text: "Today we are launching the Blox Fruits Trade Calculator— a tool we have been building for months and one that we believe will fundamentally change how players approach trading in Blox Fruits." },
-      { type: "heading", text: "What the Blox Fruits Trade Calculator Does" },
-      { type: "paragraph", text: "The Blox Fruits Trade Calculator lets you add up to 4 items on each side of a trade. It then compares total value, average demand score, and total Robux price for each side, and delivers an instant verdict: Fair Trade, You're Overpaying, or You're Underpaying." },
-      { type: "list", items: [
+{
+  slug: "trade-calculator-launch",
+  title: "Blox Fruits Trade Calculator — Check Any Trade Instantly",
+  excerpt: "Our new AI-powered Blox Fruits Trade Calculator is live. Add up to 4 items on each side and get an instant verdict on any trade.",
+  date: "April 10, 2026",
+  dateISO: "2026-04-10",
+  category: "Feature",
+  categoryColor: "#ff6b9d",
+  readTime: "4 min",
+  icon: "💱",
+  author: "BloxFruitsAI Team",
+  content: [
+    {
+      type: "paragraph",
+      text: "Today we are launching the Blox Fruits Trade Calculator — a tool we have been building for months and one that we believe will fundamentally change how players approach trading in Blox Fruits. Whether you are a casual player swapping fruits with friends or a seasoned trader managing high-value deals, the Blox Fruits Trade Calculator gives you the data you need to trade with confidence."
+    },
+    {
+      type: "heading",
+      text: "How the Blox Fruits Trade Calculator Works"
+    },
+    {
+      type: "paragraph",
+      text: "The Blox Fruits Trade Calculator lets you add up to 4 items on each side of a trade. It then compares the total value, average demand score, and total Robux price for each side, and delivers an instant verdict: Fair Trade, You're Overpaying, or You're Underpaying. Every item in our database is updated regularly so the values you see in the trade calculator reflect the current market — not outdated spreadsheet data from months ago."
+    },
+    {
+      type: "list",
+      items: [
         "Search and add any fruit or gamepass from our full item database",
         "See real-time values, demand scores, and Robux prices for each item",
         "Get an instant Fair/Overpay/Underpay verdict with percentage difference",
         "View the value ratio and average demand score for the full trade",
         "Built-in trading tips based on the current meta",
-      ]},
-      { type: "info", text: "The Blox Fruits Trade Calculator is completely free to use and requires no account. Just go to bloxfruitsai.com/calculator and start adding items." },
-      { type: "heading", text: "Why We Built It" },
-      { type: "paragraph", text: "Getting scammed on a trade is one of the most frustrating experiences in Blox Fruits — especially when you spend real money on Robux to buy a fruit only to trade it away for far less than it was worth. The Trade Calculator eliminates that risk entirely. No more mental math, no more googling values mid-trade, no more pressure decisions." },
-      { type: "tip", text: "Bookmark bloxfruitsai.com/calculator on your phone so you can open it instantly whenever a trade offer comes in during a game session." },
-    ],
-  },
+      ]
+    },
+    {
+      type: "info",
+      text: "The Blox Fruits Trade Calculator is completely free to use and requires no account. Just go to <a href=\"https://www.bloxfruitsai.com/calculator\" target=\"_blank\" rel=\"noopener noreferrer\">bloxfruitsai.com/calculator</a> and start adding items."
+    },
+    {
+      type: "heading",
+      text: "Why We Built the Blox Fruits Trade Calculator"
+    },
+    {
+      type: "paragraph",
+      text: "Getting scammed on a trade is one of the most frustrating experiences in Blox Fruits — especially when you spend real money on Robux to buy a fruit only to trade it away for far less than it was worth. The Blox Fruits Trade Calculator eliminates that risk entirely. No more mental math, no more googling values mid-trade, no more pressure decisions. Open the trade calculator, enter the items being offered on both sides, and you'll know in seconds whether the deal is fair."
+    },
+    {
+      type: "heading",
+      text: "Who Is the Trade Calculator For?"
+    },
+    {
+      type: "paragraph",
+      text: "The Blox Fruits Trade Calculator is built for every type of player. New players can use it to avoid getting taken advantage of before they know the market. Experienced traders can use it to double-check gut feelings and confirm value differences down to the exact percentage. If you play Blox Fruits and you ever trade, this tool belongs in your routine."
+    },
+    {
+      type: "tip",
+      text: "Bookmark <a href=\"https://www.bloxfruitsai.com/calculator\" target=\"_blank\" rel=\"noopener noreferrer\">bloxfruitsai.com/calculator</a> on your phone so you can open the trade calculator instantly whenever a trade offer comes in during a game session."
+    },
+  ],
+},
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
