@@ -548,6 +548,14 @@ export const BLOG_POSTS: BlogPost[] = [
 },
 ];
 
+[
+                { label: "PVP Builds 2025", href: "/guides/pvp-builds" },
+                { label: "Grinding Routes", href: "/guides/grinding-routes" },
+                { label: "Fruit Rankings", href: "/guides/fruit-rankings" },
+                { label: "Race Guide", href: "/guides/race-guide" },
+                { label: "Beginner Guide", href: "/guides/beginner-guide" },
+              ]
+
 export function getPost(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find(p => p.slug === slug);
 }
