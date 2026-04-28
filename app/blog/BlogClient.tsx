@@ -6,7 +6,7 @@ const POSTS = [
   {
     slug: "patch-analysis",
     title: "Patch Analysis — Dough Buffed, Ice Nerfed, Kitsune S-Tier",
-    excerpt: "The latest Blox Fruits update reshuffled the meta. Dough returns to A-tier with a significant hitbox buff, Ice loses some PVP dominance, and Kitsune is confirmed as the new strongest mythical fruit.",
+    excerpt: "The latest Blox Fruits update reshuffled the meta. Dough returns to A-tier with a significant hitbox buff, Kitsune is confirmed as the new strongest mythical fruit.",
     date: "April 22, 2026",
     category: "Patch Notes",
     categoryColor: "#00f5ff",
