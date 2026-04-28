@@ -498,7 +498,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "BloxFruitsAI Team",
     content: [
       { type: "paragraph", text: "Today we are launching the Blox Fruits Trade Calculator— a tool we have been building for months and one that we believe will fundamentally change how players approach trading in Blox Fruits." },
-      { type: "heading", text: "What the Calculator Does" },
+      { type: "heading", text: "What the Blox Fruits Trade Calculator Does" },
       { type: "paragraph", text: "The Blox Fruits Trade Calculator lets you add up to 4 items on each side of a trade. It then compares total value, average demand score, and total Robux price for each side, and delivers an instant verdict: Fair Trade, You're Overpaying, or You're Underpaying." },
       { type: "list", items: [
         "Search and add any fruit or gamepass from our full item database",
