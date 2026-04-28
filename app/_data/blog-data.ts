@@ -487,7 +487,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "trade-calculator-launch",
-    title: "Introducing the Blox Fruits Trade Calculator — Never Get Scammed",
+    title: "Introducing the Blox Fruits Trade Calculator",
     excerpt: "Our new AI-powered Blox Fruits Trade Calculator is live. Add up to 4 items on each side and get an instant verdict on any trade.",
     date: "April 10, 2026",
     dateISO: "2026-04-10",
