@@ -252,8 +252,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "blox-fruits-eggs-guide",
-    title: "Blox Fruits Eggs — Complete Guide to All 24 Easter Eggs, Rarities & Rewards (2026)",
-    excerpt: "Everything you need to know about Blox Fruits eggs in 2026. All 24 Easter Egg locations, five rarity tiers, Candy Egg rewards, the Celestial Egg boss fight, and the fastest farming strategies to collect them all before the event closes.",
+    title: "Blox Fruits Eggs — Complete Guide to All 24 Easter Eggs",
+    excerpt: "Everything you need to know about Blox Fruits eggs in 2026. All 24 Easter Egg locations, five rarity tiers, Candy Egg rewards, the Celestial Egg boss fight.",
     date: "April 28, 2026",
     dateISO: "2026-04-28",
     category: "Event Guide",
@@ -378,8 +378,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "blox-fruits-codes",
-    title: "All Blox Fruits Codes 2026 — Working Codes for 2x EXP, Stat Resets & Beli (Updated April 28)",
-    excerpt: "Every working Blox Fruits code for 2026, verified and updated daily. Redeem free 2x EXP boosts, stat resets, Beli, and titles. Includes how to redeem codes, why codes stop working, and where to find new ones the moment they drop.",
+    title: "All Blox Fruits Codes 2026 — Working Codes for 2x EXP",
+    excerpt: "Every working Blox Fruits code for 2026, verified and updated daily. Redeem free 2x EXP boosts, stat resets, Beli, and titles. Includes how to redeem codes.",
     date: "April 28, 2026",
     dateISO: "2026-04-28",
     category: "Codes",
