@@ -1,3 +1,4 @@
+import Link from "next/link";
 export interface BlogPost {
   slug: string;
   title: string;
