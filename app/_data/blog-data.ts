@@ -521,7 +521,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       type: "info",
-      text: "The Blox Fruits Trade Calculator is completely free to use and requires no account. Just go to to the menu section and click to Calculator and start adding items."
+      text: "The Blox Fruits Trade Calculator is completely free to use and requires no account. Just go to bloxfruitsai.com/calculator and start adding items."
     },
     {
       type: "heading",
