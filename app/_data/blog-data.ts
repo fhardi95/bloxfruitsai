@@ -506,7 +506,6 @@ export const BLOG_POSTS: BlogPost[] = [
         "Get an instant Fair/Overpay/Underpay verdict with percentage difference",
         "View the value ratio and average demand score for the full trade",
         "Built-in trading tips based on the current meta",
-		{ label: "PVP Builds 2025", href: "/guides/pvp-builds" },
       ]},
       { type: "info", text: "The Blox Fruits Trade Calculator is completely free to use and requires no account. Just go to bloxfruitsai.com/calculator and start adding items." },
       { type: "heading", text: "Why We Built It" },
