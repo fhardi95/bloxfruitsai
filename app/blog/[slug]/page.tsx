@@ -14,7 +14,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost(slug);
   if (!post) return { title: "Post Not Found" };
   return {
-    title: `${post.title} | Blox Fruits AI Blog`,
+    /* OLD: title: `${post.title} | Blox Fruits AI Blog`,*/
+	 title: `${post.title}`,
     description: post.excerpt,
     alternates: { canonical: `https://www.bloxfruitsai.com/blog/${slug}` },
     openGraph: {
