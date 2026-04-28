@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   description:
     "Blox Fruits AI is the #1 AI-powered tool for Roblox Blox Fruits players. Get real-time tier lists, instant devil fruit rankings and a live Trade Box Fruits Calculator.",
-  keywords: ["blox fruits ai","blox fruits tier list  2026","blox fruits guide","best fruits blox fruits","blox fruits trade calculator","blox fruits value list","blox fruits pvp builds","blox fruits devil fruit ranking","roblox blox fruits"],
+  keywords: ["blox fruits ai","blox fruits tier list","blox fruits guide","best fruits blox fruits","blox fruits trade calculator","blox fruits value list","blox fruits pvp builds","blox fruits devil fruit ranking","roblox blox fruits"],
   authors: [{ name: "BloxFruitsAI Team", url: "https://www.bloxfruitsai.com" }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.bloxfruitsai.com",
     siteName: "Blox Fruits AI",
-    title: "Blox Fruits AI — Best AI Guide, Tier List & Fruit Finder  2026",
+    title: "Blox Fruits AI — Best AI Guide, Tier List & Fruit Finder",
     description: "The smartest AI tool for Blox Fruits players. Real-time tier lists, trade calculator, value list, and build guides — updated after every patch.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Blox Fruits AI" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@bloxfruitsai",
-    title: "Blox Fruits AI — Best AI Guide, Tier List & Fruit Finder  2026",
+    title: "Blox Fruits AI — Best AI Guide, Tier List & Fruit Finder",
     description: "The smartest AI tool for Blox Fruits. Real-time tier lists, trade calculator, and build guides.",
     images: ["/og-image.jpg"],
   },
