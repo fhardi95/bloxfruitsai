@@ -1,4 +1,3 @@
-import Link from "next/link";
 export interface BlogPost {
   slug: string;
   title: string;
@@ -522,7 +521,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       type: "info",
-      text: "The Blox Fruits Trade Calculator is completely free to use and requires no account. Just go to <a href=\"https://www.bloxfruitsai.com/calculator\" target=\"_blank\" rel=\"noopener noreferrer\">bloxfruitsai.com/calculator</a> and start adding items."
+      text: "The Blox Fruits Trade Calculator is completely free to use and requires no account. Just go to to the menu section and click to Calculator and start adding items."
     },
     {
       type: "heading",
@@ -542,19 +541,11 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       type: "tip",
-      text: "Bookmark <a href=\"https://www.bloxfruitsai.com/calculator\" target=\"_blank\" rel=\"noopener noreferrer\">bloxfruitsai.com/calculator</a> on your phone so you can open the trade calculator instantly whenever a trade offer comes in during a game session."
+      text: "Bookmark bloxfruitsai.com/calculator on your phone so you can open the trade calculator instantly whenever a trade offer comes in during a game session."
     },
   ],
-},
+},,
 ];
-
-[
-                { label: "PVP Builds 2025", href: "/guides/pvp-builds" },
-                { label: "Grinding Routes", href: "/guides/grinding-routes" },
-                { label: "Fruit Rankings", href: "/guides/fruit-rankings" },
-                { label: "Race Guide", href: "/guides/race-guide" },
-                { label: "Beginner Guide", href: "/guides/beginner-guide" },
-              ]
 
 export function getPost(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find(p => p.slug === slug);
