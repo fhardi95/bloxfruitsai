@@ -29,8 +29,8 @@ export interface BlogSection {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "patch-analysis",
-    title: "Patch Analysis — Dough Buffed, Ice Nerfed, Kitsune Confirmed S-Tier",
-    excerpt: "The latest Blox Fruits update reshuffled the meta. Dough returns to A-tier with a significant hitbox buff, Ice loses some PVP dominance, and Kitsune is confirmed as the new strongest mythical fruit.",
+    title: "Patch Analysis — Dough Buffed, Ice Nerfed, Kitsune S-Tier",
+    excerpt: "The latest Blox Fruits update reshuffled the meta. Dough returns to A-tier with a significant hitbox buff, Ice loses some PVP dominance, and Kitsune.",
     date: "April 22, 2026",
     dateISO: "2026-04-22",
     category: "Patch Notes",
@@ -71,8 +71,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "kitsune-complete-guide",
-    title: "Kitsune Fruit Complete Guide — Moves, Builds & Is It Worth It?",
-    excerpt: "Kitsune is the newest mythical Beast fruit in Blox Fruits. We break down every move, damage output, and how it compares to Dragon and Leopard in both PVP and PVE.",
+    title: "Kitsune Fruit Complete Guide — Moves, Builds",
+    excerpt: "Kitsune is the newest mythical Beast fruit in Blox Fruits. We break down every move, damage output, compares to Dragon and Leopard PVP and PVE.",
     date: "April 18, 2026",
     dateISO: "2026-04-18",
     category: "Fruit Guide",
