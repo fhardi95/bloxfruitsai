@@ -107,6 +107,19 @@ const POSTS = [
     icon: "🎁",
     featured: true,
   },
+    {
+    slug: "blox-fruits-trade-calculator-complete-guide",
+    title: "Blox Fruits Trade Calculator — The Complete Trading Guide (2026)",
+    excerpt: "Don't get scammed on your next trade. Our complete Blox Fruits trade calculator guide breaks down how fruit values work, which fruits are worth the most in 2026",
+    date: "April 30, 2026",
+    category: "Codes",
+    categoryColor: "#2ed573",
+    categoryBg: "rgba(46,213,115,0.08)",
+    categoryBorder: "rgba(46,213,115,0.25)",
+    readTime: "9 min",
+    icon: "🎁",
+    featured: true,
+  },
 ];
 
 const CATS = ["All", "Patch Notes", "Fruit Guide", "Grinding", "Trading", "Feature", "Race Guide"];
