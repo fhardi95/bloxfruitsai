@@ -120,6 +120,19 @@ const POSTS = [
     icon: "🎁",
     featured: true,
   },
+      {
+    slug: "blox-fruit-trade-value-guide",
+    title: "Blox Fruit Trade Value Guide – Complete Tier List & Trading Tips",
+    excerpt: "Find the exact value of every fruit in Blox Fruits. Updated tier list for Sea 3, best fruits to trade, V4 explained, and how to avoid getting scammed in every deal.",
+    date: "May 2, 2026",
+    category: "Codes",
+    categoryColor: "#2ed573",
+    categoryBg: "rgba(46,213,115,0.08)",
+    categoryBorder: "rgba(46,213,115,0.25)",
+    readTime: "9 min",
+    icon: "🎁",
+    featured: true,
+  },
 ];
 
 const CATS = ["All", "Patch Notes", "Fruit Guide", "Grinding", "Trading", "Feature", "Race Guide"];
