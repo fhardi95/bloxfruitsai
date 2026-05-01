@@ -50,7 +50,7 @@ export const WIKI_FRUITS: WikiFruit[] = [
     rarityColor: "#ffd700",
     robuxPrice: 2499,
     beli: null,
-    description: "Kitsune is the newest Mythical Beast fruit, transforming the user into a spirit fox. It features devastating foxfire projectiles, a long-range chase move, and Spirit Form — a 30-second ultimate that doubles all damage output. Currently the highest-value fruit in the game.",
+    description: "Kitsune is the newest Mythical Beast fruit, transforming the user into a spirit fox. It features devastating foxfire projectiles.",
     strengths: [
       "Highest trade value in the game — strong to hold",
       "Spirit Form doubles damage for 30 seconds — fight-reversing ultimate",
