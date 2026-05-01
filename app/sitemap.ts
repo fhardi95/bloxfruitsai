@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: now, changeFrequency: "daily", priority: 1.0 },
     { url: `${BASE_URL}/values`, lastModified: now, changeFrequency: "daily", priority: 0.95 },
+    { url: `${BASE_URL}/wiki`, lastModified: now, changeFrequency: "daily", priority: 0.95 },
     { url: `${BASE_URL}/calculator`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.88 },
     { url: `${BASE_URL}/guides/pvp-builds`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
