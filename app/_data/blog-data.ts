@@ -29,7 +29,7 @@ export interface BlogSection {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "blox-fruit-trade-value-guide",
-    title: "Blox Fruit Trade Value Guide 2026 – Complete Tier List & Trading Tips",
+    title: "Blox Fruit Trade Value Guide – Complete Tier List & Trading Tips",
     excerpt: "Find the exact value of every fruit in Blox Fruits. Updated tier list for Sea 3, best fruits to trade, V4 explained, and how to avoid getting scammed in every deal.",
     date: "May 2, 2026",
     dateISO: "2026-05-02",
