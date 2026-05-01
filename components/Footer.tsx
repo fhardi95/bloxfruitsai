@@ -59,6 +59,7 @@ export default function Footer() {
                 { label: "About Us", href: "/about" },
                 { label: "Contact", href: "/contact" },
                 { label: "Blog", href: "/blog" },
+                { label: "Wiki", href: "/wiki" },
                 { label: "Privacy Policy", href: "/privacy-policy" },
                 { label: "Terms of Use", href: "/terms-of-use" },
               ].map(l => (
