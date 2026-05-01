@@ -547,8 +547,8 @@ export const BLOG_POSTS: BlogPost[] = [
 },
 {
   slug: "blox-fruits-trade-calculator-complete-guide",
-  title: "Blox Fruits Trade Calculator — The Complete Trading Guide (2026)",
-  excerpt: "Don't get scammed on your next trade. Our complete Blox Fruits trade calculator guide breaks down how fruit values work, which fruits are worth the most in 2026, and how to flip your way from Uncommon to Mythical. Updated for the current patch — Kitsune, Dragon, Leopard values included.",
+  title: "Blox Fruits Trade Calculator — The Complete Trading Guide",
+  excerpt: "Don't get scammed on your next trade. Our complete Blox Fruits trade calculator guide breaks down how fruit values work, which fruits are worth the most.",
   date: "April 30, 2026",
   dateISO: "2026-04-30",
   category: "Trading Guide",
