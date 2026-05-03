@@ -3,114 +3,113 @@ import GuideLayout from "@/components/guides/GuideLayout";
 import { GuideSection, InfoBox, StepList } from "@/components/guides/GuideSection";
 
 export const metadata: Metadata = {
-  title: "Meilleurs Builds PVP Blox Fruits 2025 — Guide Complet",
-  description: "Les meilleurs builds PVP Blox Fruits pour 2025. Dragon, Léopard, Kitsune — configurations complètes avec stats, style de combat, épée et Haki pour dominer chaque combat.",
-  alternates: { canonical: "https://www.bloxfruitsai.fr/guides/pvp-builds" },
+  title: "Best Grinding Routes 2026 — Fastest XP & Beli Farming Guide",
+  description: "Fastest Blox Fruits grinding routes for every level range in 2026. Maximize XP per hour, Beli farming, and boss drop rates with our AI-optimized route guide.",
+  alternates: { canonical: "https://www.bloxfruitsai.com/guides/grinding-routes" },
 };
 
-const BUILDS = [
-  {
-    name: "Dragon — Tout Terrain", tier: "S", icon: "🐉", fruit: "Dragon", style: "Electric / Death Step", sword: "True Triple Katana", haki: "Ken V2 + Buso V2",
-    stats: { fruit: 2500, melee: 2500, defense: 1500, sword: 0 },
-    pros: ["Mobilité aérienne incomparable", "Dégâts AoE massifs", "Polyvalent PVP et PVE"],
-    cons: ["Difficile à maîtriser", "Coût élevé en Robux"],
-    combo: "Z (Dragon Fang) → X (Dragon Breath) → C (Infernal Dragon) → Electric Claw Z → M1 spam",
-  },
-  {
-    name: "Léopard — PVP Pur", tier: "S", icon: "🐆", fruit: "Léopard", style: "Death Step", sword: "Yama", haki: "Ken V2 + Buso V2",
-    stats: { fruit: 2500, melee: 2000, defense: 1000, sword: 0 },
-    pros: ["Burst damage le plus élevé du jeu", "Combos ultra-rapides", "Mobilité excellente"],
-    cons: ["Courbe d'apprentissage très élevée", "Peu efficace en PVE"],
-    combo: "Z (Leopard Barrage) → Death Step Z → X (Leopard Rush) → C → M1",
-  },
-  {
-    name: "Dough — Équilibré", tier: "A", icon: "🥐", fruit: "Dough", style: "Electric Fighting Style", sword: "True Triple Katana", haki: "Ken V2 + Buso V2",
-    stats: { fruit: 2000, melee: 2500, defense: 1500, sword: 0 },
-    pros: ["Hitboxes collantes très forgiving", "Bon dégâts consistants", "Accessible aux débutants PVP"],
-    cons: ["Moins de mobilité que Dragon/Léopard", "Méta moins dominant qu'avant"],
-    combo: "X (Dough Launcher) → Electric Z → Z (Dough Fist) → M1 combo → C finisher",
-  },
+const ROUTES = [
+  { range: "Lvl 1–100", zone: "Starter Island → Jungle", fruit: "Any fruit", xp: "~45K/hr", notes: "Complete all quests before moving. Don't skip the Bandit and Gorilla spawn areas." },
+  { range: "Lvl 100–300", zone: "Middle Town → Skylands", fruit: "Any / Smoke", xp: "~120K/hr", notes: "Sky Island mobs give great XP. Use ranged moves to clear faster." },
+  { range: "Lvl 300–700", zone: "Barren Island → Colosseum", fruit: "Ice or Magma", xp: "~280K/hr", notes: "Magma floor clears entire spawns passively. Ice freeze chains nearby mobs." },
+  { range: "Lvl 700–1200", zone: "Forgotten Island → Usoapp", fruit: "Buddha or Phoenix", xp: "~520K/hr", notes: "Buddha hitbox clears entire rooms. Stay at Usoapp village NPCs for dense spawns." },
+  { range: "Lvl 1200–1800", zone: "Sea 2 — Kingdom of Rose", fruit: "Buddha / Magma", xp: "~900K/hr", notes: "Military Detective quest chain gives the best XP in Sea 2. Loop continuously." },
+  { range: "Lvl 1800–2300", zone: "Sea 3 — Haunted Castle", fruit: "Buddha or Dragon", xp: "~1.8M/hr", notes: "Elite Pirates spawn is the best grind spot at this range. Dense and fast-respawning." },
+  { range: "Lvl 2300–2550", zone: "Castle on the Sea", fruit: "Dragon / Kitsune", xp: "~2.5M/hr", notes: "Best endgame grind. Dragon clears the entire floor in one rotation. Fastest path to max." },
 ];
 
-export default function PvpBuildsPage() {
+export default function GrindingRoutesPage() {
   return (
     <GuideLayout
-      tag="Guide PVP · Méta 2025"
-      title="Meilleurs Builds"
-      titleHighlight="PVP 2025"
-      description="Configurations complètes PVP pour les meilleurs fruits en 2025. Stats, style de combat, épée et Haki — tout ce qu'il faut pour dominer chaque serveur."
-      breadcrumb={[{ label: "Guides", href: "/guides" }, { label: "Builds PVP", href: "/guides/pvp-builds" }]}
-      readTime="12 min de lecture"
+      tag="Grinding Guide · All Levels"
+      title="Best Grinding"
+      titleHighlight="Routes 2026"
+      description="Optimized XP and Beli farming routes for every level range. From starter island to max level — know exactly where to grind, what fruit to use, and which quests to chain."
+      breadcrumb={[{ label: "Guides", href: "/guides" }, { label: "Grinding Routes", href: "/guides/grinding-routes" }]}
+      readTime="10 min read"
     >
-      <GuideSection title="Règles de Base du PVP" icon="⚔️">
+      <GuideSection title="General Grinding Rules" icon="📋">
         <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", marginBottom: "1.25rem" }}>
           {[
-            "Ken Haki (Observation) est OBLIGATOIRE en PVP — il te permet d'esquiver les attaques automatiquement.",
-            "Buso Haki V2 augmente tes dégâts de 15% et te permet d'attaquer les joueurs en mode Elemental.",
-            "La gestion d'énergie est cruciale — ne gaspille pas toutes tes capacités dès le début du combat.",
-            "La mobilité bat souvent les dégâts — un joueur mobile qui harcèle est plus difficile à battre qu'un joueur statique puissant.",
-            "Pratique tes combos dans une zone privée avant de PVP — la mémoire musculaire fait toute la différence.",
+            "Always have a quest active — no quest means no XP bonus multiplier.",
+            "Keep Auto-Haki ON while grinding for passive mastery gain.",
+            "Use Buddha fruit if you have it — the hitbox advantage makes all grind spots 2–3x faster.",
+            "Beli drops increase with enemy level — don't grind below your level range.",
+            "Server hop if your spawn point is contested — fresh servers have full enemy pools.",
           ].map((tip, i) => (
-            <div key={i} style={{ display: "flex", gap: 10 }}>
-              <span style={{ color: "var(--cyan)", flexShrink: 0 }}>◆</span>
-              <p style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>{tip}</p>
+            <div key={i} style={{ display: "flex", gap: 10 }}><span style={{ color: "var(--cyan)", flexShrink: 0 }}>◆</span><p style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>{tip}</p></div>
+          ))}
+        </div>
+        <InfoBox type="tip">The 2x Mastery gamepass makes grinding double XP towards moves. If you can afford it (499 Robux), it pays back in hours of saved grinding time.</InfoBox>
+      </GuideSection>
+
+      <GuideSection title="Level-by-Level Route Table" icon="🗺️" accent="gold">
+        <div style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <thead>
+              <tr style={{ borderBottom: "1px solid var(--border)" }}>
+                {["Level Range","Zone","Best Fruit","XP/Hour","Notes"].map(h => (
+                  <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em", whiteSpace: "nowrap" }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {ROUTES.map((r, i) => (
+                <tr key={i} style={{ borderBottom: "1px solid rgba(255,255,255,0.04)", background: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.01)" }}>
+                  <td style={{ padding: "12px 14px", fontFamily: "'Orbitron',monospace", fontSize: "0.78rem", color: "var(--cyan)", fontWeight: 700, whiteSpace: "nowrap" }}>{r.range}</td>
+                  <td style={{ padding: "12px 14px", fontSize: "0.88rem", fontWeight: 600, color: "var(--text)" }}>{r.zone}</td>
+                  <td style={{ padding: "12px 14px", fontSize: "0.85rem", color: "var(--text-muted)" }}>{r.fruit}</td>
+                  <td style={{ padding: "12px 14px", fontFamily: "'Orbitron',monospace", fontSize: "0.82rem", color: "var(--green)", fontWeight: 700 }}>{r.xp}</td>
+                  <td style={{ padding: "12px 14px", fontSize: "0.83rem", color: "var(--text-muted)", maxWidth: 260 }}>{r.notes}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </GuideSection>
+
+      <GuideSection title="Endgame Grind — Castle on the Sea" icon="🏰" accent="cyan">
+        <InfoBox type="info">Castle on the Sea is the #1 endgame grind spot for players 2300+. With Dragon or Kitsune you can hit 2.5M+ XP per hour consistently.</InfoBox>
+        <StepList steps={[
+          { title: "Take the Pirate Raid quest", desc: "Located at the entrance to Castle. This quest chains the fastest and gives the highest XP per completion at this level." },
+          { title: "Clear the ground floor mobs", desc: "Use Dragon's Z move (Dragon Fang) to sweep the entire entrance hallway in one rotation. Kitsune's AoE works equally well." },
+          { title: "Move to upper courtyard", desc: "The Cursed Captain spawn on the upper level gives a bonus XP burst. Clear it between quest loops." },
+          { title: "Chain quests without stopping", desc: "The moment your quest completes, immediately accept the next. Zero downtime between chains is the key to max XP/hr." },
+          { title: "Server hop every 30–45 minutes", desc: "Server populations accumulate AFK players which reduce enemy spawn rates. Fresh servers = full spawns = faster clearing." },
+        ]} />
+      </GuideSection>
+
+      <GuideSection title="Beli Farming Routes" icon="💰" accent="green">
+        <p style={{ marginBottom: "1rem" }}>XP and Beli grinding routes are often different. For max Beli income:</p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: "0.75rem" }}>
+          {[
+            { name: "Elite Pirates (Sea 3)", beli: "~2M/hr", note: "Best Beli drop rate in the game. Use Buddha for fastest clears." },
+            { name: "Darkbeard Boss", beli: "~800K run", note: "Drops fragments + high Beli. Respawns every 60 minutes." },
+            { name: "Sea Beast Hunting", beli: "~1.5M/hr", note: "Spawn sea beasts with a boat and kill them with Magma or Dragon." },
+            { name: "Flower quest chain", beli: "~600K/hr", note: "Low effort, can semi-AFK. Good for passive Beli while doing other things." },
+          ].map(r => (
+            <div key={r.name} style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 12, padding: "1rem" }}>
+              <div style={{ fontWeight: 700, color: "var(--text)", fontSize: "0.9rem", marginBottom: 4 }}>{r.name}</div>
+              <div style={{ fontFamily: "'Orbitron',monospace", fontSize: "0.85rem", color: "var(--green)", fontWeight: 700, marginBottom: 6 }}>{r.beli}</div>
+              <div style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>{r.note}</div>
             </div>
           ))}
         </div>
-        <InfoBox type="tip">Le style de combat le plus polyvalent pour le PVP est Electric Fighting Style — bonne vitesse, bon combo extension, et accessible à mid-game.</InfoBox>
       </GuideSection>
 
-      <GuideSection title="Top 3 Builds PVP 2025" icon="🏆" accent="gold">
-        {BUILDS.map(b => (
-          <div key={b.name} style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 16, overflow: "hidden", marginBottom: "1.25rem" }}>
-            <div style={{ padding: "1rem 1.25rem", background: "rgba(0,245,255,0.04)", borderBottom: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <span style={{ fontSize: "1.5rem" }}>{b.icon}</span>
-                <div>
-                  <div style={{ fontFamily: "'Orbitron',monospace", fontSize: "1rem", fontWeight: 700 }}>{b.name}</div>
-                  <div style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>Fruit: {b.fruit} · Style: {b.style}</div>
-                </div>
-              </div>
-              <span style={{ fontFamily: "'Orbitron',monospace", fontSize: "0.85rem", fontWeight: 900, color: "#ffd700", background: "rgba(255,215,0,0.1)", border: "1px solid rgba(255,215,0,0.3)", borderRadius: 6, padding: "4px 12px" }}>Tier {b.tier}</span>
-            </div>
-            <div style={{ padding: "1.25rem", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: "1rem" }}>
-              <div>
-                <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>Répartition Stats</div>
-                {Object.entries(b.stats).map(([k, v]) => (
-                  <div key={k} style={{ display: "flex", justifyContent: "space-between", marginBottom: 4, fontSize: "0.85rem" }}>
-                    <span style={{ color: "var(--text-muted)", textTransform: "capitalize" }}>{k === "fruit" ? "Fruit Blox" : k === "melee" ? "Corps à Corps" : k === "defense" ? "Défense" : "Épée"}</span>
-                    <span style={{ color: "var(--cyan)", fontFamily: "'Orbitron',monospace", fontWeight: 700, fontSize: "0.8rem" }}>{v}</span>
-                  </div>
-                ))}
-                <div style={{ marginTop: 8, fontSize: "0.82rem" }}>
-                  <span style={{ color: "var(--text-muted)" }}>Épée: </span><span style={{ color: "var(--text)" }}>{b.sword}</span>
-                </div>
-                <div style={{ fontSize: "0.82rem" }}>
-                  <span style={{ color: "var(--text-muted)" }}>Haki: </span><span style={{ color: "var(--text)" }}>{b.haki}</span>
-                </div>
-              </div>
-              <div>
-                <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>Points Forts / Faibles</div>
-                {b.pros.map(p => <div key={p} style={{ display: "flex", gap: 6, marginBottom: 4, fontSize: "0.83rem", color: "var(--green)" }}>✓ <span style={{ color: "var(--text-muted)" }}>{p}</span></div>)}
-                {b.cons.map(c => <div key={c} style={{ display: "flex", gap: 6, marginBottom: 4, fontSize: "0.83rem", color: "var(--red, #ff4757)" }}>✗ <span style={{ color: "var(--text-muted)" }}>{c}</span></div>)}
-              </div>
-              <div>
-                <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>Combo Principal</div>
-                <div style={{ background: "rgba(0,0,0,0.3)", borderRadius: 8, padding: "0.75rem", fontFamily: "'Rajdhani',sans-serif", fontSize: "0.85rem", color: "var(--cyan)", lineHeight: 1.7 }}>{b.combo}</div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </GuideSection>
-
-      <GuideSection title="Comment Débloquer le Ken Haki V2" icon="👁️" accent="cyan">
-        <InfoBox type="info">Ken Haki V2 est essentiel pour le PVP compétitif. Il te donne un rayon d'esquive automatique beaucoup plus grand et la capacité de voir les joueurs invisibles.</InfoBox>
-        <StepList steps={[
-          { title: "Atteins le niveau 1500+", desc: "Ken Haki V2 nécessite d'avoir atteint la Mer 3 et le niveau requis. Grinde jusqu'au niveau 1500 minimum." },
-          { title: "Trouve le maître Haki en Mer 3", desc: "Il se trouve sur l'île Mirage près du Château de la Mer. Il te donnera la quête de déblocage de Ken V2." },
-          { title: "Complète le défi d'esquive", desc: "Tu dois esquiver un certain nombre d'attaques en utilisant le Ken de base. Pratique contre des boss plutôt que des joueurs." },
-          { title: "Active et maxe Ken V2", desc: "Une fois débloqué, maîtrise le Ken en PVP. Plus tu esquives avec, plus le rayon s'améliore automatiquement." },
-        ]} />
+      <GuideSection title="Mastery Grinding Tips" icon="⭐" accent="gold">
+        <p style={{ marginBottom: "1rem" }}>Mastery unlocks your fruit and fighting style moves. Here&apos;s how to grind it efficiently:</p>
+        <InfoBox type="warning">Never grind mastery on enemies more than 100 levels below you — you get 1 mastery per kill instead of the full amount. Always stay in your level-appropriate zone.</InfoBox>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
+          {[
+            "Use the 2x Mastery gamepass — it halves the time needed for all mastery grinding.",
+            "Alternate between your fruit moves on every kill to spread mastery across all abilities evenly.",
+            "Fighting style mastery is separate — grind it alongside your fruit, not after.",
+            "At Sea 3, the Haunted Castle NPCs give the fastest mastery per hour due to their density.",
+          ].map((tip, i) => (
+            <div key={i} style={{ display: "flex", gap: 10 }}><span style={{ color: "var(--gold)", flexShrink: 0 }}>◆</span><p style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>{tip}</p></div>
+          ))}
+        </div>
       </GuideSection>
     </GuideLayout>
   );
