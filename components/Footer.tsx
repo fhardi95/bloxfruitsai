@@ -39,7 +39,7 @@ export default function Footer() {
             <h4 style={{ fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#7a96b8", marginBottom: "1rem", fontWeight: 600 }}>Guides</h4>
             <ul style={{ listStyle: "none" }}>
               {[
-                { label: "PVP Builds 2025", href: "/guides/pvp-builds" },
+                { label: "PVP Builds 2026", href: "/guides/pvp-builds" },
                 { label: "Grinding Routes", href: "/guides/grinding-routes" },
                 { label: "Fruit Rankings", href: "/guides/fruit-rankings" },
                 { label: "Race Guide", href: "/guides/race-guide" },
@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
 
         <div style={{ borderTop: "1px solid rgba(0,245,255,0.13)", paddingTop: "1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
-          <span style={{ fontFamily: "'Inter',sans-serif", color: "#7a96b8", fontSize: "0.8rem" }}>© 2025 BloxFruitsAI.com · Not affiliated with Roblox Corporation</span>
+          <span style={{ fontFamily: "'Inter',sans-serif", color: "#7a96b8", fontSize: "0.8rem" }}>© 2026 BloxFruitsAI.com · Not affiliated with Roblox Corporation</span>
           <div style={{ display: "flex", gap: "1.5rem" }}>
             <Link href="/privacy-policy" style={{ color: "#7a96b8", textDecoration: "none", fontSize: "0.8rem" }}>Privacy Policy</Link>
             <Link href="/terms-of-use" style={{ color: "#7a96b8", textDecoration: "none", fontSize: "0.8rem" }}>Terms of Use</Link>
