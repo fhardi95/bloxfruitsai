@@ -1,31 +1,98 @@
 import type { Metadata } from "next";
 import GuideLayout from "@/components/guides/GuideLayout";
-import { GuideSection, TierCard, InfoBox } from "@/components/guides/GuideSection";
+import { GuideSection, InfoBox } from "@/components/guides/GuideSection";
 
 export const metadata: Metadata = {
-  title: "Blox Fruits Rankings 2025 — Complete Devil Fruit Tier List",
-  description: "Complete Blox Fruits devil fruit rankings for 2025. Every fruit ranked for PVP, PVE, grinding, and overall value. Updated after every patch with AI analysis.",
-  alternates: { canonical: "https://www.bloxfruitsai.com/guides/fruit-rankings" },
+  title: "Classement des Fruits Blox Fruits 2025 — Tier List Complète",
+  description: "Classement complet des fruits diaboliques Blox Fruits pour 2025. Chaque fruit évalué en PVP, PVE, farm et valeur d'échange. Mis à jour après chaque patch.",
+  alternates: { canonical: "https://www.bloxfruitsai.fr/guides/fruit-rankings" },
 };
+
+const TIER_ITEMS: Record<string, { emoji: string; name: string; note: string }[]> = {
+  S: [
+    { emoji: "🐉", name: "Dragon", note: "Mobilité + AoE incomparables. Le meilleur all-rounder du jeu. Tier S PVP et PVE." },
+    { emoji: "🐆", name: "Léopard", note: "Burst damage le plus élevé en PVP. Combos ultra-rapides. Le plus difficile à maîtriser mais aussi le plus récompensant." },
+    { emoji: "🦊", name: "Kitsune", note: "Dernier mythique. Capacités de renard spirituel avec énormes dégâts AoE. Monte rapidement dans le méta." },
+    { emoji: "☠️", name: "Venom", note: "Les mares de poison contrent les healers. Dégâts exceptionnels contre les boss. Tier S PVE." },
+    { emoji: "🌑", name: "Ombre", note: "Le mode Umbra transforme entièrement le kit. Excellente extension de combos et zone denial." },
+  ],
+  A: [
+    { emoji: "🥐", name: "Dough", note: "Choix PVP consistant. Mouvements rapides, bons dégâts, hitboxes forgiving." },
+    { emoji: "❄️", name: "Blizzard", note: "Meilleur élémental pour les deux modes. Gel + AoE est dévastateur." },
+    { emoji: "🔥", name: "Phénix", note: "La régénération passive en fait le meilleur fruit de sustain. Idéal pour le farm de boss." },
+    { emoji: "⚡", name: "Tonnerre", note: "Vitesse et stuns excellent pour le PVP hit-and-run. Haute mobilité." },
+    { emoji: "🔔", name: "Buddha", note: "Le roi incontesté du farm. Hitbox massive, incroyable utilité PVE." },
+    { emoji: "🌋", name: "Magma", note: "Les dégâts de sol sont passifs et dévastateurs. Meilleur fruit pour farm de Beli." },
+  ],
+  B: [
+    { emoji: "🕷️", name: "Araignée", note: "Les toiles pour zone denial. Surprenamment efficace entre de bonnes mains." },
+    { emoji: "💨", name: "Gaz", note: "Les zones de gaz AoE font bien pression. Fort en PVP d'équipe." },
+    { emoji: "💢", name: "Douleur", note: "La réflexion de dégâts et l'utilité en font un pick de niche efficace." },
+    { emoji: "🌒", name: "Ténèbres", note: "Les trous noirs sont bons pour les combos. Kit all-round décent." },
+    { emoji: "🧊", name: "Glace", note: "Élémental fiable. Bon pour les nouveaux joueurs apprenant Blox Fruits." },
+  ],
+  C: [
+    { emoji: "🌊", name: "Tremblement", note: "Les shockwaves couvrent bien l'espace mais sont très lentes et prévisibles." },
+    { emoji: "🌸", name: "Ressort", note: "Le kit rebondissant a une courbe d'apprentissage mais manque de profondeur au haut niveau." },
+    { emoji: "🛡️", name: "Barrière", note: "Les boucliers sont situationnellement utiles mais le kit est trop passif globalement." },
+    { emoji: "💭", name: "Fumée", note: "Placeholder early game uniquement. À remplacer dès que possible." },
+  ],
+  D: [
+    { emoji: "🔪", name: "Chop", note: "L'immunité aux épées est le seul avantage. Kit extrêmement faible." },
+    { emoji: "💣", name: "Bombe", note: "Dégâts médiocres. Complètement surpassé par toutes les autres options." },
+    { emoji: "🌀", name: "Spin", note: "Aucune viabilité compétitive. À éviter à tout prix." },
+    { emoji: "🚀", name: "Fusée", note: "Le fruit le plus faible de Blox Fruits. Utile uniquement comme matériau de vente." },
+  ],
+};
+
+function TierCard({ tier, label, items }: { tier: string; label: string; items: { emoji: string; name: string; note: string }[] }) {
+  const colors: Record<string, { bg: string; color: string; border: string }> = {
+    S: { bg: "rgba(255,215,0,0.1)", color: "#ffd700", border: "rgba(255,215,0,0.35)" },
+    A: { bg: "rgba(0,245,255,0.09)", color: "#00f5ff", border: "rgba(0,245,255,0.28)" },
+    B: { bg: "rgba(46,213,115,0.09)", color: "#2ed573", border: "rgba(46,213,115,0.28)" },
+    C: { bg: "rgba(255,165,2,0.09)", color: "#ffa502", border: "rgba(255,165,2,0.28)" },
+    D: { bg: "rgba(255,71,87,0.08)", color: "#ff4757", border: "rgba(255,71,87,0.2)" },
+  };
+  const c = colors[tier];
+  return (
+    <div style={{ marginBottom: "1.25rem" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: "0.75rem" }}>
+        <div style={{ width: 40, height: 40, borderRadius: 8, background: c.bg, border: `1px solid ${c.border}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Orbitron',monospace", fontSize: "1rem", fontWeight: 900, color: c.color }}>{tier}</div>
+        <span style={{ fontSize: "0.82rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em" }}>{label}</span>
+      </div>
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+        {items.map(item => (
+          <div key={item.name} style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 10, padding: "0.75rem 1rem", display: "flex", alignItems: "flex-start", gap: 12 }}>
+            <span style={{ fontSize: "1.25rem", flexShrink: 0 }}>{item.emoji}</span>
+            <div>
+              <span style={{ fontFamily: "'Rajdhani',sans-serif", fontWeight: 700, fontSize: "0.95rem", color: "var(--text)" }}>{item.name}</span>
+              <p style={{ fontSize: "0.83rem", color: "var(--text-muted)", marginTop: 2 }}>{item.note}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function FruitRankingsPage() {
   return (
     <GuideLayout
-      tag="Fruit Rankings · April 2025"
-      title="Devil Fruit"
-      titleHighlight="Rankings 2025"
-      description="Every Blox Fruits devil fruit ranked across PVP, PVE, grinding efficiency, and trade value. Updated by our AI after every patch using real game data and community performance stats."
-      breadcrumb={[{ label: "Guides", href: "/guides" }, { label: "Fruit Rankings", href: "/guides/fruit-rankings" }]}
-      readTime="15 min read"
+      tag="Classement Fruits · Avril 2025"
+      title="Classement des"
+      titleHighlight="Fruits 2025"
+      description="Chaque fruit diabolique de Blox Fruits classé en PVP, PVE, efficacité de farm et valeur d'échange. Mis à jour par notre IA après chaque patch avec données réelles."
+      breadcrumb={[{ label: "Guides", href: "/guides" }, { label: "Classement des Fruits", href: "/guides/fruit-rankings" }]}
+      readTime="15 min de lecture"
     >
-      <GuideSection title="How We Rank Fruits" icon="📊">
-        <p style={{ marginBottom: "1rem" }}>Our AI analyzes four dimensions for each fruit: PVP performance (damage, mobility, combos), PVE effectiveness (boss damage, AoE, sustain), grinding efficiency (XP/hr, ease of use), and trade value (demand, rarity, price stability).</p>
+      <GuideSection title="Comment on Classe les Fruits" icon="📊">
+        <p style={{ marginBottom: "1rem" }}>Notre IA analyse quatre dimensions pour chaque fruit : performance PVP (dégâts, mobilité, combos), efficacité PVE (dégâts boss, AoE, sustain), efficacité de farm (XP/hr, facilité d'utilisation), et valeur d'échange (demande, rareté, stabilité du prix).</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(160px,1fr))", gap: "0.75rem", marginBottom: "1rem" }}>
           {[
-            { label: "PVP Weight", val: "35%", color: "var(--red)" },
-            { label: "PVE Weight", val: "30%", color: "var(--cyan)" },
-            { label: "Grinding", val: "20%", color: "var(--green)" },
-            { label: "Trade Value", val: "15%", color: "var(--gold)" },
+            { label: "Poids PVP", val: "35%", color: "var(--cyan)" },
+            { label: "Poids PVE", val: "30%", color: "#2ed573" },
+            { label: "Farm", val: "20%", color: "var(--gold)" },
+            { label: "Valeur Échange", val: "15%", color: "#a78bfa" },
           ].map(s => (
             <div key={s.label} style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 10, padding: "0.75rem 1rem", textAlign: "center" }}>
               <div style={{ fontFamily: "'Orbitron',monospace", fontSize: "1.2rem", fontWeight: 700, color: s.color }}>{s.val}</div>
@@ -35,80 +102,28 @@ export default function FruitRankingsPage() {
         </div>
       </GuideSection>
 
-      <GuideSection title="Overall Tier List — April 2025" icon="🏆" accent="gold">
-        <TierCard tier="S" label="God Tier — Must Have" items={[
-          { emoji: "🐉", name: "Dragon", note: "Unmatched mobility + AoE. Best all-rounder in the game. S-tier PVP and PVE." },
-          { emoji: "🐆", name: "Leopard", note: "Highest burst damage in PVP. Lightning-fast combos. Hardest to master but most rewarding." },
-          { emoji: "🦊", name: "Kitsune", note: "Newest mythical. Spirit fox abilities with massive AoE damage. Rising fast in meta." },
-          { emoji: "☠️", name: "Venom", note: "Poison pool mechanics counter healers. Exceptional boss damage. S-tier PVE." },
-          { emoji: "🌑", name: "Shadow", note: "Umbra mode transforms the kit entirely. Great combo extension and area denial." },
-        ]} />
-        <TierCard tier="A" label="Top Tier — Excellent Choice" items={[
-          { emoji: "🥐", name: "Dough", note: "Consistent PVP pick. Fast moves, good damage, forgiving hitboxes." },
-          { emoji: "❄️", name: "Blizzard", note: "Best elemental for both modes. Freeze + AoE is devastating." },
-          { emoji: "🔥", name: "Phoenix", note: "Passive regen makes it the best sustain fruit. Ideal for boss farming." },
-          { emoji: "⚡", name: "Thunder", note: "Speed and stuns make it great for hit-and-run PVP. High mobility." },
-          { emoji: "🔔", name: "Buddha", note: "The undisputed grinding king. Massive hitbox, incredible PVE utility." },
-          { emoji: "🌋", name: "Magma", note: "Floor damage is passive and devastating. Best Beli farming fruit." },
-        ]} />
-        <TierCard tier="B" label="Solid — Worth Using" items={[
-          { emoji: "🕷️", name: "Spider", note: "Web traps for area denial. Surprisingly effective in the right hands." },
-          { emoji: "💨", name: "Gas", note: "AoE gas zones pressure opponents well. Strong in team PVP." },
-          { emoji: "💢", name: "Pain", note: "Damage reflection and utility make it a niche but effective pick." },
-          { emoji: "🌒", name: "Dark", note: "Black hole pulls are great for combos. Decent all-round kit." },
-          { emoji: "🧊", name: "Ice", note: "Reliable elemental. Good for new players learning Blox Fruits." },
-        ]} />
-        <TierCard tier="C" label="Average — Upgrade ASAP" items={[
-          { emoji: "🌊", name: "Quake", note: "Shockwaves cover area but are very slow and predictable." },
-          { emoji: "🌸", name: "Spring", note: "Bouncing kit has a learning curve but lacks depth at high level." },
-          { emoji: "🛡️", name: "Barrier", note: "Shields are situationally useful but the kit is too passive overall." },
-          { emoji: "💭", name: "Smoke", note: "Early game placeholder only. Replace as soon as possible." },
-        ]} />
-        <TierCard tier="D" label="Avoid — Do Not Use" items={[
-          { emoji: "🔪", name: "Chop", note: "Sword immunity is the only redeeming quality. Extremely weak kit." },
-          { emoji: "💣", name: "Bomb", note: "Mediocre damage. Completely outclassed by every other option." },
-          { emoji: "🌀", name: "Spin", note: "No competitive viability whatsoever. Avoid at all costs." },
-          { emoji: "🚀", name: "Rocket", note: "The weakest fruit in Blox Fruits. Only useful as vendor material." },
-        ]} />
+      <GuideSection title="Tier List Globale — Avril 2025" icon="🏆" accent="gold">
+        {Object.entries(TIER_ITEMS).map(([tier, items]) => {
+          const labels: Record<string, string> = { S: "God Tier — Indispensable", A: "Top Tier — Excellent Choix", B: "Solide — Vaut le coup", C: "Moyen — À améliorer dès que possible", D: "À éviter — Ne pas utiliser" };
+          return <TierCard key={tier} tier={tier} label={labels[tier]} items={items} />;
+        })}
       </GuideSection>
 
-      <GuideSection title="Best Fruits by Use Case" icon="🎯" accent="cyan">
-        <InfoBox type="info">Different fruits excel in different scenarios. Use this table to find the best fruit for your specific goal.</InfoBox>
+      <GuideSection title="Meilleurs Fruits par Utilisation" icon="🎯" accent="cyan">
+        <InfoBox type="info">Différents fruits excellent dans différents scénarios. Utilise ce tableau pour trouver le meilleur fruit selon ton objectif spécifique.</InfoBox>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: "0.75rem" }}>
           {[
-            { use: "Best PVP Overall", fruits: "Dragon, Leopard, Dough", icon: "⚔️" },
-            { use: "Best for Grinding", fruits: "Buddha, Magma, Dragon", icon: "🔄" },
-            { use: "Best Boss Farming", fruits: "Venom, Phoenix, Buddha", icon: "👹" },
-            { use: "Best for Beginners", fruits: "Ice, Magma, Phoenix", icon: "🎮" },
-            { use: "Best Trade Value", fruits: "Kitsune, Dragon, Leopard", icon: "💱" },
-            { use: "Best Mobility", fruits: "Leopard, Dragon, Thunder", icon: "💨" },
-            { use: "Best Healing", fruits: "Phoenix, Venom (Demon)", icon: "❤️" },
-            { use: "Best AoE Damage", fruits: "Dragon, Blizzard, Kitsune", icon: "💥" },
+            { use: "Meilleur PVP Global", fruits: "Dragon, Léopard, Dough", icon: "⚔️" },
+            { use: "Meilleur pour le Farm", fruits: "Buddha, Magma, Dragon", icon: "🔄" },
+            { use: "Meilleur Boss Farm", fruits: "Venom, Phénix, Buddha", icon: "👹" },
+            { use: "Meilleur pour Débutants", fruits: "Glace, Magma, Phénix", icon: "🎮" },
+            { use: "Meilleure Valeur Échange", fruits: "Kitsune, Dragon, Léopard", icon: "💱" },
+            { use: "Meilleure Mobilité", fruits: "Dragon, Kitsune, Tonnerre", icon: "💨" },
           ].map(r => (
-            <div key={r.use} style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 12, padding: "0.9rem 1rem" }}>
-              <div style={{ fontSize: "1rem", marginBottom: 4 }}>{r.icon}</div>
-              <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>{r.use}</div>
-              <div style={{ fontWeight: 600, fontSize: "0.88rem", color: "var(--cyan)" }}>{r.fruits}</div>
-            </div>
-          ))}
-        </div>
-      </GuideSection>
-
-      <GuideSection title="Patch Notes Impact — April 2025" icon="🔄" accent="green">
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-          {[
-            { fruit: "Dough", change: "BUFF", detail: "Hitbox increased by 12%. Z move now has reduced startup lag. Back to A-tier.", color: "var(--green)" },
-            { fruit: "Ice", change: "NERF", detail: "Freeze duration reduced from 2.5s to 1.8s in PVP. Still viable but less oppressive.", color: "var(--red)" },
-            { fruit: "Venom", change: "BUFF", detail: "Poison pool damage increased by 15% in PVP. Pool duration extended to 8 seconds.", color: "var(--green)" },
-            { fruit: "Blizzard", change: "NEUTRAL", detail: "No changes this patch. Remains solid A-tier across all modes.", color: "var(--text-muted)" },
-            { fruit: "Kitsune", change: "NEW", detail: "Added in 2.1.4. Mythical Beast fruit. Already placing S-tier across PVP and PVE.", color: "var(--cyan)" },
-          ].map(p => (
-            <div key={p.fruit} style={{ display: "flex", gap: "1rem", alignItems: "flex-start", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 10, padding: "0.85rem 1rem" }}>
-              <span style={{ fontFamily: "'Orbitron',monospace", fontSize: "0.7rem", fontWeight: 700, color: p.color, background: `${p.color}18`, border: `1px solid ${p.color}40`, borderRadius: 6, padding: "3px 9px", flexShrink: 0, alignSelf: "flex-start" }}>{p.change}</span>
-              <div>
-                <span style={{ fontWeight: 700, color: "var(--text)", fontSize: "0.9rem" }}>{p.fruit}</span>
-                <span style={{ color: "var(--text-muted)", fontSize: "0.87rem" }}> — {p.detail}</span>
-              </div>
+            <div key={r.use} style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 12, padding: "1rem" }}>
+              <div style={{ fontSize: "1.25rem", marginBottom: 6 }}>{r.icon}</div>
+              <div style={{ fontWeight: 700, fontSize: "0.85rem", color: "var(--text)", marginBottom: 4 }}>{r.use}</div>
+              <div style={{ fontSize: "0.82rem", color: "var(--cyan)" }}>{r.fruits}</div>
             </div>
           ))}
         </div>
