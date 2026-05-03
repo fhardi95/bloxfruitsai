@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Blox Fruits AI is the #1 AI-powered tool for Roblox Blox Fruits players. Get real-time tier lists, instant devil fruit rankings and a live Trade blox Fruits Calculator Value.",
+    "Blox Fruits AI is the #1 AI-powered tool for Roblox Blox Fruits players. Get real-time tier lists, instant devil fruit rankings and Trade blox Fruits Calculator Value.",
   keywords: ["blox fruits ai","blox fruits tier list","blox fruits guide","best fruits blox fruits","blox fruits trade calculator","blox fruits value list","blox fruits pvp builds","blox fruits devil fruit ranking","roblox blox fruits"],
   authors: [{ name: "BloxFruitsAI Team", url: "https://www.bloxfruitsai.com" }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
