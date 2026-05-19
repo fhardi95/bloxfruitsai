@@ -159,9 +159,35 @@ const POSTS = [
     icon: "🎁",
     featured: true,
   },
+  {
+    slug: "bfv-values-blox-fruits-value-list-2026",
+    title: "BFV Values 2026 — Complete Blox Fruits Value List (All Fruits Ranked)",
+    excerpt: "Everything you need to know about BFV values in Blox Fruits — what BFV means, how values are calculated, and a full ranked value list from Mythical down to Common so you never get scammed in a trade again.",
+    date: "May 19, 2026",
+    category: "Trading",
+    categoryColor: "#f39c12",
+    categoryBg: "rgba(243,156,18,0.08)",
+    categoryBorder: "rgba(243,156,18,0.25)",
+    readTime: "8 min",
+    icon: "💰",
+    featured: false,
+  },
+  {
+    slug: "blox-fruits-wiki-fruit-guide-abilities-2026",
+    title: "Blox Fruits Wiki 2026 — Full Fruit Guide, Abilities & Devil Fruit List",
+    excerpt: "Your complete Blox Fruits wiki reference for 2026. Every devil fruit explained — rarity, abilities, grinding rating, PVP tier, and how to get each fruit — all in one place.",
+    date: "May 19, 2026",
+    category: "Wiki",
+    categoryColor: "#8e44ad",
+    categoryBg: "rgba(142,68,173,0.08)",
+    categoryBorder: "rgba(142,68,173,0.25)",
+    readTime: "8 min",
+    icon: "📖",
+    featured: false,
+  },
 ];
 
-const CATS = ["All", "Patch Notes", "Fruit Guide", "Grinding", "Trading", "Feature", "Race Guide", "Event Guide", "Codes", "Trading Guide"];
+const CATS = ["All", "Patch Notes", "Fruit Guide", "Grinding", "Trading", "Wiki", "Feature", "Race Guide", "Event Guide", "Codes", "Trading Guide"];
 
 export default function BlogClient() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -202,7 +228,7 @@ export default function BlogClient() {
             </div>
             {/* Stats */}
             <div style={{ display: "flex", gap: "2rem" }}>
-              {[{ num: "6", label: "Articles" }, { num: "Apr 2026", label: "Latest" }].map(s => (
+              {[{ num: String(POSTS.length), label: "Articles" }, { num: "May 2026", label: "Latest" }].map(s => (
                 <div key={s.label} style={{ textAlign: "center" }}>
                   <div style={{ fontFamily: "'Orbitron',monospace", fontSize: "1.4rem", fontWeight: 700, color: "#00f5ff" }}>{s.num}</div>
                   <div style={{ fontSize: "0.72rem", color: "#7a96b8", textTransform: "uppercase", letterSpacing: "0.1em" }}>{s.label}</div>
