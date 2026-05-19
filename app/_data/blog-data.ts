@@ -1224,7 +1224,6 @@ export const BLOG_POSTS: BlogPost[] = [
     },
   ],
 },
-];
 
   // ─── ARTICLE 15 ───────────────────────────────────────────────────────────
   // Title:       "BFV Values 2026 — Complete Blox Fruits Value List (All Fruits Ranked)"
@@ -1588,6 +1587,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+];
 
 export function getPost(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find(p => p.slug === slug);
