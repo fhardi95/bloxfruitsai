@@ -12,12 +12,12 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bloxfruitsai.com"),
   title: {
-    default: "Blox Fruits Calculator Value — Best BloxFruits AI Guide",
+    default: "Blox Fruits AI — Trade Calculator, Value List & Fruit Guide 2026",
     template: "%s | Blox Fruits AI",
   },
   description:
-    "Blox Fruits AI is the #1 AI-powered tool for Roblox Blox Fruits players. Get real-time tier lists, instant devil fruit rankings and Trade blox Fruits Calculator Value.",
-  keywords: ["blox fruits ai","blox fruits tier list","blox fruits guide","best fruits blox fruits","blox fruits trade calculator","blox fruits value list","blox fruits pvp builds","blox fruits devil fruit ranking","roblox blox fruits"],
+    "Blox Fruits AI is the #1 tool for Roblox Blox Fruits players. Free trade calculator, live fruit value list, BFV values, tier list, and build guides — updated after every patch.",
+  keywords: ["blox fruits ai","blox fruits calculator","bfv calculator","blox fruits trade calculator","blox fruits value list","bfv values","blox fruits wiki","blox fruits tier list","blox fruits guide","roblox blox fruits"],
   authors: [{ name: "BloxFruitsAI Team", url: "https://www.bloxfruitsai.com" }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {

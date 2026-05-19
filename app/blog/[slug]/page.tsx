@@ -9,18 +9,32 @@ export async function generateStaticParams() {
   return getAllSlugs().map(slug => ({ slug }));
 }
 
+// Per-article SEO overrides — title and meta description for key articles
+const SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  "bfv-values-blox-fruits-value-list-2026": {
+    title: "BFV Values 2026 — Complete Blox Fruits Value List (All Fruits Ranked)",
+    description: "Full Blox Fruits BFV value list for 2026. See every fruit's trade value by tier — Mythical, Legendary, Rare — plus how BFV values are calculated and how to use the free BFV calculator.",
+  },
+  "blox-fruits-wiki-fruit-guide-abilities-2026": {
+    title: "Blox Fruits Wiki 2026 — Full Fruit Guide, Abilities & Devil Fruit List",
+    description: "Complete Blox Fruits wiki guide for 2026. Every devil fruit explained — abilities, rarity, grinding tier, PVP rating, awakening cost, and how to get each fruit. Updated for Update 31.",
+  },
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return { title: "Post Not Found" };
+  const override = SEO_OVERRIDES[slug];
+  const seoTitle = override?.title ?? post.title;
+  const seoDesc = override?.description ?? post.excerpt;
   return {
-    /* OLD: title: `${post.title} | Blox Fruits AI Blog`,*/
-	 title: `${post.title}`,
-    description: post.excerpt,
+    title: seoTitle,
+    description: seoDesc,
     alternates: { canonical: `https://www.bloxfruitsai.com/blog/${slug}` },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: seoTitle,
+      description: seoDesc,
       url: `https://www.bloxfruitsai.com/blog/${slug}`,
       type: "article",
     },
@@ -160,6 +174,23 @@ function renderSection(s: BlogSection, i: number) {
   }
 }
 
+// FAQ schema data for articles that have FAQ sections
+const FAQ_SCHEMA: Record<string, { question: string; answer: string }[]> = {
+  "bfv-values-blox-fruits-value-list-2026": [
+    { question: "What is the highest BFV value fruit in Blox Fruits right now?", answer: "As of May 2026, Kitsune holds the highest BFV trade value in the game, between 30,000 and 35,000 BFV. Dragon follows at 25,000 to 28,000, and Tiger at 22,000 to 26,000." },
+    { question: "Do BFV values change after patches?", answer: "Yes — BFV values shift with every major Blox Fruits update. A buff can increase a fruit's value 20 to 50 percent within days. Always check a live source before trading, especially in the 72 hours following any patch." },
+    { question: "Is BFV the same as Robux price?", answer: "No. BFV is the community trade value reflecting real-world supply and demand. Robux price is the fixed dealer cost. A fruit can cost 2,000 Robux but have a BFV trade value of 15,000 because demand exceeds supply." },
+    { question: "Where can I check BFV values for free?", answer: "The most accurate free BFV calculator is at bloxfruitsai.com/calculator — showing live community-verified BFV values for every fruit, supporting awakened and unawakened variants." },
+  ],
+  "blox-fruits-wiki-fruit-guide-abilities-2026": [
+    { question: "How many fruits are in Blox Fruits in 2026?", answer: "As of Update 31 in May 2026, there are over 35 unique devil fruits across five rarity tiers — Common, Uncommon, Rare, Legendary, and Mythical." },
+    { question: "What is the rarest fruit in Blox Fruits?", answer: "Kitsune is the rarest Mythical-tier fruit in Blox Fruits, with the lowest world spawn probability and no guaranteed dealer availability. It also holds the highest BFV trade value in the game." },
+    { question: "Which fruit is best for beginners in Blox Fruits?", answer: "Buddha is the best fruit for beginner and mid-game players. Its transformation increases your hitbox dramatically, making it easy to hit multiple enemies at once, and it excels at grinding, boss fights, and raids." },
+    { question: "Can I lose my devil fruit in Blox Fruits?", answer: "Yes — you lose your equipped devil fruit if you eat another one. You can store one fruit in your Inventory Bag to prevent accidental loss. Always store a fruit before eating a new one." },
+    { question: "Where can I find a full Blox Fruits wiki with all fruit stats?", answer: "The most up-to-date Blox Fruits wiki is at bloxfruitsai.com/wiki — every fruit with move descriptions, awakening details, and BFV trade values updated after each patch." },
+  ],
+};
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = getPost(slug);
@@ -167,17 +198,30 @@ export default async function BlogPostPage({ params }: Props) {
 
   const related = BLOG_POSTS.filter(p => p.slug !== slug).slice(0, 3);
 
+  const faqData = FAQ_SCHEMA[slug];
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: post.dateISO,
-    dateModified: post.dateISO,
-    author: { "@type": "Organization", name: post.author },
-    publisher: { "@type": "Organization", name: "Blox Fruits AI", logo: { "@type": "ImageObject", url: "https://www.bloxfruitsai.com/logo.png" } },
-    url: `https://www.bloxfruitsai.com/blog/${slug}`,
-    mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.bloxfruitsai.com/blog/${slug}` },
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: post.dateISO,
+        dateModified: post.dateISO,
+        author: { "@type": "Organization", name: post.author },
+        publisher: { "@type": "Organization", name: "Blox Fruits AI", logo: { "@type": "ImageObject", url: "https://www.bloxfruitsai.com/logo.png" } },
+        url: `https://www.bloxfruitsai.com/blog/${slug}`,
+        mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.bloxfruitsai.com/blog/${slug}` },
+      },
+      ...(faqData ? [{
+        "@type": "FAQPage",
+        mainEntity: faqData.map(({ question, answer }) => ({
+          "@type": "Question",
+          name: question,
+          acceptedAnswer: { "@type": "Answer", text: answer },
+        })),
+      }] : []),
+    ],
   };
 
   return (
@@ -224,20 +268,6 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Article body */}
         <div style={{ maxWidth: 820, margin: "0 auto", padding: "3rem 5%" }}>
           <div>{post.content.map((section, i) => renderSection(section, i))}</div>
-
-          {/* Internal links CTA — passes PageRank to money pages */}
-          <div style={{ background: "rgba(0,245,255,0.05)", border: "1px solid rgba(0,245,255,0.18)", borderRadius: 14, padding: "1.4rem 1.6rem", margin: "2rem 0", display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", justifyContent: "space-between" }}>
-            <div>
-              <div style={{ fontFamily: "'Orbitron',monospace", fontSize: "0.7rem", color: "var(--cyan)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 6 }}>🔥 Free Tools</div>
-              <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.6, margin: 0 }}>
-                Use our <Link href="/calculator" style={{ color: "var(--cyan)", textDecoration: "underline", fontWeight: 600 }}>Blox Fruits trade calculator</Link> to check if any trade is fair — or browse the full <Link href="/values" style={{ color: "var(--cyan)", textDecoration: "underline", fontWeight: 600 }}>Blox Fruits value list</Link> to see every fruit ranked.
-              </p>
-            </div>
-            <div style={{ display: "flex", gap: "0.6rem", flexShrink: 0 }}>
-              <Link href="/calculator" style={{ background: "var(--cyan)", color: "var(--bg-deep)", padding: "7px 16px", borderRadius: 8, fontFamily: "'Rajdhani',sans-serif", fontSize: "0.82rem", fontWeight: 700, letterSpacing: "0.08em", textDecoration: "none" }}>Trade Calculator</Link>
-              <Link href="/values" style={{ background: "transparent", color: "var(--cyan)", border: "1px solid var(--cyan)", padding: "7px 16px", borderRadius: 8, fontFamily: "'Rajdhani',sans-serif", fontSize: "0.82rem", fontWeight: 700, letterSpacing: "0.08em", textDecoration: "none" }}>Value List</Link>
-            </div>
-          </div>
 
           {/* Share / nav */}
           <div style={{ marginTop: "3rem", paddingTop: "2rem", borderTop: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>

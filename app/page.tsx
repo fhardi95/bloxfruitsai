@@ -17,7 +17,7 @@ const faqJsonLd = {
   "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "What is Blox Fruits AI?", acceptedAnswer: { "@type": "Answer", text: "Blox Fruits AI is an AI-powered platform for Roblox Blox Fruits players providing real-time tier lists, trade calculators, devil fruit value lists, and build guides." } },
-    { "@type": "Question", name: "What is the best fruit in Blox Fruits in 2026?", acceptedAnswer: { "@type": "Answer", text: "As of 2026, Dragon, Leopard, and Kitsune hold the top S-tier spots. Our AI tier list updates after every patch to reflect the current meta." } },
+    { "@type": "Question", name: "What is the best fruit in Blox Fruits in 2026?", acceptedAnswer: { "@type": "Answer", text: "As of 2026, Kitsune, Dragon, and Leopard hold the top S-tier spots. Our AI tier list updates after every patch to reflect the current meta." } },
     { "@type": "Question", name: "Is Blox Fruits AI free?", acceptedAnswer: { "@type": "Answer", text: "Yes! Blox Fruits AI is completely free. Access the tier list, trade calculator, value list, and AI chat tool at no cost." } },
     { "@type": "Question", name: "How does the trade calculator work?", acceptedAnswer: { "@type": "Answer", text: "Add fruits from both sides of the trade. The calculator compares total values, demand scores, and Robux prices to tell you if a trade is fair, overpay, or underpay." } },
   ],

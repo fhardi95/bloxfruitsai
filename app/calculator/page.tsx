@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import CalculatorClient from "./CalculatorClient";
 
 export const metadata: Metadata = {
-  title: "Blox Fruits Trade Calculator — Compare trade values",
+  title: "BFV Calculator — Blox Fruits Trade Calculator & Fair Trade Checker",
   description:
-    "Blox Fruits Trade Calculator to check if any trade is fair, Calculate the value of your trade. Enter your offered and requested items",
+    "Free BFV calculator for Blox Fruits. Check if any trade is fair — compare fruit values, demand scores, and Robux prices side-by-side. Instant results, updated daily.",
   alternates: { canonical: "https://www.bloxfruitsai.com/calculator" },
   openGraph: {
-    title: "Blox Fruits Trade Calculator — Check Fair Trade Value",
-    description: "Instant trade calculator for Blox Fruits. Compare values, demand, and Robux prices side-by-side.",
+    title: "BFV Calculator — Blox Fruits Trade Calculator & Fair Trade Checker",
+    description: "Free BFV trade calculator for Blox Fruits. Compare fruit values, demand, and Robux prices side-by-side. Instantly see if a trade is fair, overpay, or underpay.",
     url: "https://www.bloxfruitsai.com/calculator",
   },
 };
