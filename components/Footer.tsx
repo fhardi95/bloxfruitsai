@@ -23,11 +23,10 @@ export default function Footer() {
             <h4 style={{ fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#7a96b8", marginBottom: "1rem", fontWeight: 600 }}>Tools</h4>
             <ul style={{ listStyle: "none" }}>
               {[
-                { label: "AI Fruit Finder", href: "/#ai-tool" },
-                { label: "Tier List", href: "/#tier-list" },
+                { label: "AI Tool", href: "/ai-tool" },
+                { label: "BFV Values", href: "/bfv" },
                 { label: "Value List", href: "/values" },
                 { label: "Trade Calculator", href: "/calculator" },
-                { label: "BFV Values", href: "/bfv" },
                 { label: "Fruit Wiki", href: "/wiki" },
               ].map(l => (
                 <li key={l.label} style={{ marginBottom: 8 }}>
