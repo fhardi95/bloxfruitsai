@@ -550,8 +550,6 @@ export const WIKI_FRUITS: WikiFruit[] = [
     metaNotes: "Magma's value is driven more by nostalgia than current meta strength in 2026. It's a solid holder fruit — won't spike but won't crash either. If you're grinding boss content, Magma Floor DoT means you're always dealing damage even while dodging. Use the Blox Fruits value calculator to compare Magma against newer fruits before trading.",
     updatedDate: "May 2026",
   },
-];
-
   {
     slug: "gas",
     name: "Gas",
@@ -776,6 +774,7 @@ export const WIKI_FRUITS: WikiFruit[] = [
     metaNotes: "Quake is the best value Legendary fruit in the game. 1,000 Robux buys you S-tier grinding performance. If you want to farm XP and not spend heavily, Quake is the answer.",
     updatedDate: "2026-06-01",
   },
+];
 
 export function getWikiFruit(slug: string): WikiFruit | undefined {
   return WIKI_FRUITS.find(f => f.slug === slug);
