@@ -228,7 +228,7 @@ export default function CalculatorClient() {
           <nav aria-label="Breadcrumb" style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "0.75rem", fontSize: "0.8rem", color: "var(--text-muted)" }}>
             <Link href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Home</Link>
             <span aria-hidden>/</span>
-            <span style={{ color: "var(--cyan)" }}>Blox Fruits Trade Calculator</span>
+            <span style={{ color: "var(--cyan)" }}>Blox Fruit Calculator</span>
           </nav>
 
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "1.5rem" }}>
@@ -241,9 +241,9 @@ export default function CalculatorClient() {
                 🔥 Updated 2026 · Free Trade Checker
               </div>
 
-              {/* H1 — primary keyword target */}
+              {/* H1 — primary keyword target: "blox fruit calculator" 12,100/mo exact match */}
               <h1 style={{ fontFamily: "'Orbitron',monospace", fontSize: "clamp(1.5rem,3vw,2.3rem)", fontWeight: 700, marginBottom: "0.6rem", lineHeight: 1.2 }}>
-                Blox Fruits <span style={{ color: "var(--cyan)" }}>Trade Calculator</span>
+                Blox Fruit <span style={{ color: "var(--cyan)" }}>Calculator</span>
               </h1>
 
               {/* BFV Calculator — exact-match keyword label */}
@@ -251,14 +251,14 @@ export default function CalculatorClient() {
                 BFV Calculator — Check Blox Fruits Values
               </p>
 
-              {/* H2 — semantic subtitle, secondary keyword */}
+              {/* H2 — secondary keyword cluster, leads with "blox fruit calculator" again for density */}
               <h2 style={{ fontFamily: "'Inter',sans-serif", fontSize: "1rem", fontWeight: 400, color: "var(--text-muted)", marginBottom: "0.85rem", lineHeight: 1.6 }}>
-                Check <strong style={{ color: "var(--text)" }}>Blox Fruits trade values</strong>, demand scores, and Robux prices instantly — the fastest <strong style={{ color: "var(--text)" }}>Blox Fruits value calculator</strong> online.
+                The fastest <strong style={{ color: "var(--text)" }}>Blox Fruit calculator</strong> online — check <strong style={{ color: "var(--text)" }}>Blox Fruits trade values</strong>, demand scores, and Robux prices instantly.
               </h2>
 
               {/* SEO paragraph — dense keyword coverage, reads naturally */}
               <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.75, marginBottom: "1rem" }}>
-                Our <strong style={{ color: "var(--text)" }}>Blox Fruits calculator</strong> lets you compare fruit values side by side and instantly tells you if a trade is a W or an L. Add fruits to both sides, check the <strong style={{ color: "var(--text)" }}>Blox Fruits trade value</strong> breakdown, and see demand scores to make smarter decisions every time. Whether you're trading Dragon, Kitsune, Leopard, or any other devil fruit, our <strong style={{ color: "var(--text)" }}>Blox Fruit trade checker</strong> keeps you one step ahead.
+                Our <strong style={{ color: "var(--text)" }}>Blox Fruit calculator</strong> lets you compare fruit values side by side and instantly tells you if a trade is a W or an L. Add fruits to both sides, check the <strong style={{ color: "var(--text)" }}>Blox Fruit trade value</strong> breakdown, and see demand scores to make smarter decisions every time. Whether you're trading Dragon, Kitsune, Leopard, or any other devil fruit, our <strong style={{ color: "var(--text)" }}>Blox Fruit trade checker</strong> keeps you one step ahead.
               </p>
 
               {/* Trust signals row */}
@@ -340,10 +340,10 @@ export default function CalculatorClient() {
           {/* Intro section */}
           <div style={{ marginBottom: "2.5rem" }}>
             <h2 style={{ fontFamily: "'Orbitron',monospace", fontSize: "1.1rem", fontWeight: 700, color: "var(--cyan)", marginBottom: "1rem", letterSpacing: "0.05em" }}>
-              How the Blox Fruits Trade Calculator Works
+              How the Blox Fruit Calculator Works
             </h2>
             <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.8, marginBottom: "0.85rem" }}>
-              The <strong style={{ color: "var(--text)" }}>Blox Fruits trade calculator</strong> uses a normalized value system based on community-verified trade data, updated after every Roblox Blox Fruits patch. Each fruit has three data points: a <strong style={{ color: "var(--text)" }}>trade value score</strong>, a <strong style={{ color: "var(--text)" }}>Robux permanent price</strong>, and a <strong style={{ color: "var(--text)" }}>demand rating from 1–10</strong>. When you add fruits to both sides, the calculator computes the total value on each side and delivers an instant W or L verdict — so you always know if you're getting a fair <strong style={{ color: "var(--text)" }}>Blox Fruits trade</strong>.
+              The <strong style={{ color: "var(--text)" }}>Blox Fruit calculator</strong> uses a normalized value system based on community-verified trade data, updated after every Roblox Blox Fruits patch. Each fruit has three data points: a <strong style={{ color: "var(--text)" }}>trade value score</strong>, a <strong style={{ color: "var(--text)" }}>Robux permanent price</strong>, and a <strong style={{ color: "var(--text)" }}>demand rating from 1–10</strong>. When you add fruits to both sides, the calculator computes the total value on each side and delivers an instant W or L verdict — so you always know if you're getting a fair <strong style={{ color: "var(--text)" }}>Blox Fruits trade</strong>.
             </p>
             <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.8 }}>
               Unlike basic <strong style={{ color: "var(--text)" }}>Blox Fruit value lists</strong> that only show static numbers, our <strong style={{ color: "var(--text)" }}>Blox Fruit trade checker</strong> shows you the ratio between both sides, the average demand, and the exact value difference in one glance. No math needed — just add fruits and read the result.

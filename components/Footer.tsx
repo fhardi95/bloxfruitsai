@@ -26,7 +26,7 @@ export default function Footer() {
                 { label: "AI Tool", href: "/ai-tool" },
                 { label: "BFV Values", href: "/bfv" },
                 { label: "Value List", href: "/values" },
-                { label: "Trade Calculator", href: "/calculator" },
+                { label: "Blox Fruit Calculator", href: "/calculator" },
                 { label: "Fruit Wiki", href: "/wiki" },
               ].map(l => (
                 <li key={l.label} style={{ marginBottom: 8 }}>

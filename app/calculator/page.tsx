@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import CalculatorClient from "./CalculatorClient";
 
 export const metadata: Metadata = {
-  title: "BFV Calculator Blox Fruits 2026 — Free Trade Value Calculator",
+  title: "Blox Fruit Calculator — Free BFV Trade Value Checker 2026",
   description:
-    "Free BFV trade calculator for Blox Fruits 2026. Add fruits on both sides and instantly see if your trade is fair, Trade Value Calculator — updated June 2026.",
+    "Free Blox Fruit calculator — check BFV trade values instantly. Add fruits on both sides and see if your trade is a W, L, or fair. Updated June 2026.",
   alternates: { canonical: "https://www.bloxfruitsai.com/calculator" },
   openGraph: {
-    title: "BFV Calculator Blox Fruits 2026 — Free Trade Value Calculator",
-    description: "Free BFV trade calculator for Blox Fruits 2026. Add fruits on both sides and instantly see if your trade is fair, overpay or underpay. No login needed — updated June 2026.",
+    title: "Blox Fruit Calculator — Free BFV Trade Value Checker 2026",
+    description: "Free Blox Fruit calculator for 2026. Add fruits on both sides and instantly see if your trade is fair, overpay or underpay. No login needed — updated June 2026.",
     url: "https://www.bloxfruitsai.com/calculator",
   },
 };
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Blox Fruits Trade Calculator",
+  name: "Blox Fruit Calculator",
   url: "https://www.bloxfruitsai.com/calculator",
   applicationCategory: "UtilityApplication",
   operatingSystem: "Web Browser",

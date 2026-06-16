@@ -72,7 +72,7 @@ export default function ValuesClient() {
           <nav aria-label="Breadcrumb" style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "0.85rem", fontSize: "0.8rem", color: "var(--text-muted)" }}>
             <Link href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Home</Link>
             <span aria-hidden>/</span>
-            <span style={{ color: "var(--cyan)" }}>Blox Fruits Value List</span>
+            <span style={{ color: "var(--cyan)" }}>Blox Fruit Value List</span>
           </nav>
 
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "2rem" }}>
@@ -86,19 +86,19 @@ export default function ValuesClient() {
                 Updated Daily · 2026
               </div>
 
-              {/* H1 — primary keyword: "blox fruit value list" 2,400/mo + "blox fruit values" 165,000/mo */}
+              {/* H1 — primary keyword: "blox fruit value" 135,000/mo exact match */}
               <h1 style={{ fontFamily: "'Orbitron',monospace", fontSize: "clamp(1.5rem,3vw,2.3rem)", fontWeight: 700, marginBottom: "0.6rem", lineHeight: 1.2 }}>
-                Blox Fruits <span style={{ color: "var(--cyan)" }}>Value List</span> 2026
+                Blox Fruit <span style={{ color: "var(--cyan)" }}>Value</span> List 2026
               </h1>
 
               {/* H2 — secondary keyword cluster: "blox fruit values" + "blox fruit value chart" + "blox fruit prices" */}
               <h2 style={{ fontFamily: "'Inter',sans-serif", fontSize: "1rem", fontWeight: 400, color: "var(--text-muted)", marginBottom: "0.85rem", lineHeight: 1.65 }}>
-                Complete <strong style={{ color: "var(--text)" }}>Blox Fruits values</strong> — every devil fruit price, demand score, and tier ranking in one place. The most accurate <strong style={{ color: "var(--text)" }}>Blox Fruit value chart</strong> online, updated after every patch.
+                Complete <strong style={{ color: "var(--text)" }}>Blox Fruit values</strong> — every devil fruit price, demand score, and tier ranking in one place. The most accurate <strong style={{ color: "var(--text)" }}>Blox Fruit value chart</strong> online, updated after every patch.
               </h2>
 
               {/* SEO paragraph — "blox fruit value list" + "blox fruit trading value" + "blox fruit value trade" + "blox fruit prices" + "bfv values" */}
               <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.8, marginBottom: "0.85rem" }}>
-                Our <strong style={{ color: "var(--text)" }}>Blox Fruits value list</strong> tracks real-time <strong style={{ color: "var(--text)" }}>Blox Fruit prices</strong>, demand ratings, and tier rankings for every devil fruit in the game. Whether you are looking for <strong style={{ color: "var(--text)" }}>Blox Fruit trading values</strong>, checking the worth of a permanent fruit, or comparing tiers before a trade — this is the only <strong style={{ color: "var(--text)" }}>BFV values</strong> resource you need. Filter by tier, sort by demand or value, and find exactly what every fruit is worth right now.
+                Our <strong style={{ color: "var(--text)" }}>Blox Fruit value list</strong> tracks real-time <strong style={{ color: "var(--text)" }}>Blox Fruit prices</strong>, demand ratings, and tier rankings for every devil fruit in the game. Whether you are looking for <strong style={{ color: "var(--text)" }}>Blox Fruit trading values</strong>, checking the worth of a permanent fruit, or comparing tiers before a trade — this is the only <strong style={{ color: "var(--text)" }}>BFV values</strong> resource you need. Filter by tier, sort by demand or value, and find exactly what every fruit is worth right now.
               </p>
 
               {/* Trust signals */}

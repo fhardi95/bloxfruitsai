@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import ValuesClient from "./ValuesClient";
 
 export const metadata: Metadata = {
-  title: "BFV Values – Live Blox Fruits Fruit Prices [Updated 2026]",
+  title: "Blox Fruit Value List 2026 — BFV Trade Values & Prices",
   description:
-    "Full BFV value list for every Blox Fruits devil fruit in 2026. live trade values, demand scores (1–10), updated daily after every patch. Free, no login.",
+    "Complete Blox Fruit value list for every devil fruit in 2026. Live trade values, demand scores (1–10), updated daily after every patch. Free, no login.",
   alternates: { canonical: "https://www.bloxfruitsai.com/values" },
   openGraph: {
-    title: "BFV Values — Full Blox Fruits Value List 2026 (All Fruits Ranked)",
-    description: "Every Blox Fruits BFV value in one place: trade value, demand score, Robux price, and tier. Updated after every patch. Check any fruit before you trade.",
+    title: "Blox Fruit Value List 2026 — BFV Trade Values & Prices",
+    description: "Every Blox Fruit value in one place: trade value, demand score, Robux price, and tier. Updated after every patch. Check any fruit before you trade.",
     url: "https://www.bloxfruitsai.com/values",
     type: "website",
   },
@@ -19,7 +19,7 @@ const breadcrumbLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.bloxfruitsai.com" },
-    { "@type": "ListItem", position: 2, name: "Blox Fruits Value List", item: "https://www.bloxfruitsai.com/values" },
+    { "@type": "ListItem", position: 2, name: "Blox Fruit Value List", item: "https://www.bloxfruitsai.com/values" },
   ],
 };
 
@@ -89,12 +89,12 @@ const faqLd = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  name: "Blox Fruits Value List 2026",
+  name: "Blox Fruit Value List 2026",
   url: "https://www.bloxfruitsai.com/values",
   description: "Complete real-time trade value list for all Blox Fruits devil fruits including trade value, Robux price, demand scores, and tier rankings. Updated after every patch.",
   dateModified: "2026-05-06",
   creator: { "@type": "Organization", name: "BloxFruitsAI", url: "https://www.bloxfruitsai.com" },
-  keywords: ["Blox Fruits value list", "Blox Fruits trade value", "BFV values", "Blox Fruit prices", "Blox Fruits value chart", "blox fruit trading value 2026"],
+  keywords: ["blox fruit value", "blox fruit values", "Blox Fruits trade value", "BFV values", "Blox Fruit prices", "blox fruit value list", "blox fruit trading value 2026"],
 };
 
 export default function ValuesPage() {
