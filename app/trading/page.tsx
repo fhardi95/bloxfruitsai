@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Blox Fruit Trade Ads — Post & Browse Blox Fruits Trades 2026",
   description:
-    "Free Blox Fruit trading board — post your trade ad or browse live offers from real traders. No login needed. Find fair Blox Fruits trades for Dragon, Kitsune, Leopard and every devil fruit.",
+    "Free Blox Fruit trading board — post your trade ad or browse live offers from real traders. Find fair Blox Fruits trades for Dragon, Kitsune, Leopard and every devil fruit.",
   alternates: { canonical: "https://www.bloxfruitsai.com/trading" },
   openGraph: {
     title: "Blox Fruit Trade Ads — Post & Browse Blox Fruits Trades 2026",
