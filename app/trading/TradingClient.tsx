@@ -261,9 +261,13 @@ export default function TradingClient({ initialAds }: { initialAds: TradeAd[] })
         <h1 style={{ fontFamily: "'Orbitron',monospace", fontSize: "clamp(1.5rem,3vw,2.3rem)", fontWeight: 700, marginBottom: "0.6rem", lineHeight: 1.2 }}>
           Blox Fruit <span style={{ color: "var(--cyan)" }}>Trade Ads</span>
         </h1>
-        <h2 style={{ fontFamily: "'Inter',sans-serif", fontSize: "1rem", fontWeight: 400, color: "var(--text-muted)", marginBottom: "1.5rem", lineHeight: 1.6, maxWidth: 700 }}>
+        <h2 style={{ fontFamily: "'Inter',sans-serif", fontSize: "1rem", fontWeight: 400, color: "var(--text-muted)", marginBottom: "0.85rem", lineHeight: 1.6, maxWidth: 700 }}>
           Post your <strong style={{ color: "var(--text)" }}>Blox Fruit trade</strong> offer or browse live ads from other traders. Free, no login needed — every ad stays active for 7 days.
         </h2>
+
+        <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.75, marginBottom: "1.5rem", maxWidth: 760 }}>
+          This <strong style={{ color: "var(--text)" }}>Blox Fruit trading</strong> board connects you directly with other players looking to trade devil fruits, gamepasses, and limiteds. Whether you're after Dragon, Kitsune, Leopard, or any other fruit, post what you're offering and what you want in return, then connect on Discord to complete the deal. Check the <Link href="/calculator" style={{ color: "var(--cyan)" }}>Blox Fruit calculator</Link> and <Link href="/values" style={{ color: "var(--cyan)" }}>Blox Fruit value list</Link> first to make sure every <strong style={{ color: "var(--text)" }}>Blox Fruits trade</strong> you accept is fair.
+        </p>
 
         <PostAdForm onPosted={ad => setAds(prev => [ad, ...prev])} />
 
@@ -280,6 +284,62 @@ export default function TradingClient({ initialAds }: { initialAds: TradeAd[] })
             {ads.map(ad => <AdCard key={ad.id} ad={ad} />)}
           </div>
         )}
+
+        <div style={{ marginTop: "3rem", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 14, padding: "1.25rem 1.5rem" }}>
+          <h2 style={{ fontFamily: "'Orbitron',monospace", fontSize: "1.1rem", marginBottom: "0.85rem" }}>
+            How <span style={{ color: "var(--cyan)" }}>Blox Fruit Trading</span> Works
+          </h2>
+          <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.75, marginBottom: 0 }}>
+            <strong style={{ color: "var(--text)" }}>Blox Fruit trade ads</strong> posted here are visible to every visitor browsing the board. Add the fruits you're offering, describe what you want back, and leave a Discord tag so interested traders can message you directly. From there, trades are completed in-game through Roblox's official trade menu — this board only handles matchmaking, not the trade itself. Always verify trade values with the <Link href="/calculator" style={{ color: "var(--cyan)" }}>Blox Fruit calculator</Link> before confirming, and never give items away first to someone you don't trust.
+          </p>
+        </div>
+
+        <div style={{ marginTop: "2rem" }}>
+          <h2 style={{ fontFamily: "'Orbitron',monospace", fontSize: "1.1rem", marginBottom: "1rem" }}>
+            Trade Ads <span style={{ color: "var(--cyan)" }}>FAQ</span>
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            {[
+              {
+                q: "How do I post a Blox Fruit trade ad?",
+                a: "Use the form at the top of this page. Search and add the fruits you're offering, type what you want in return, add your Discord tag so traders can reach you, and post. No account or login is required — your ad goes live instantly and stays active for 7 days.",
+              },
+              {
+                q: "Is the Blox Fruit trading board free to use?",
+                a: "Yes — posting and browsing Blox Fruit trade ads on BloxFruitsAI is completely free. There are no fees, no premium tiers, and no login requirement to post a trade.",
+              },
+              {
+                q: "How long do Blox Fruit trade ads stay active?",
+                a: "Every trade ad stays live for 7 days from the moment it's posted. After that it's automatically removed from the board. You can post a new ad anytime if your trade is still available.",
+              },
+              {
+                q: "How do I know if a Blox Fruit trade is fair before accepting?",
+                a: "Check the trade value and demand score for each fruit using the Blox Fruit calculator and value list before agreeing to a trade. A fair trade usually means both sides are within a similar value range, though demand also affects how easy a fruit is to trade again later.",
+              },
+              {
+                q: "How do I avoid scams when trading Blox Fruits?",
+                a: "Only trade in-game through the official trade menu, never give items away first, double-check exactly what's being offered before confirming, and be cautious of deals that seem too good to be true. Using a trusted middleman for high-value trades is common practice in the community.",
+              },
+              {
+                q: "Can I trade gamepasses and limiteds on this board?",
+                a: "Yes — the trade ad form supports any item in our Blox Fruit value list, including fruits, gamepasses, and limited items. Just search for the item name when building your offer.",
+              },
+            ].map((faq, i) => (
+              <details
+                key={i}
+                style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 12, padding: "1rem 1.25rem", cursor: "pointer" }}
+              >
+                <summary style={{ fontFamily: "'Rajdhani',sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "var(--text)", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "0.75rem" }}>
+                  {faq.q}
+                  <span style={{ color: "var(--cyan)", flexShrink: 0, fontSize: "0.8rem" }}>▼</span>
+                </summary>
+                <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.75, marginTop: "0.85rem", marginBottom: 0 }}>
+                  {faq.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
 
       </div>
     </div>
