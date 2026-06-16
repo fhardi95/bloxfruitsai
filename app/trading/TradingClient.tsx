@@ -2,7 +2,8 @@
 import { useState, useMemo, useTransition } from "react";
 import Link from "next/link";
 import { FRUITS, type Fruit } from "../../lib/fruits-data";
-import { createTradeAd, type TradeAd } from "./actions";
+import { createTradeAd, markTradeAdCompleted, type TradeAd } from "./actions";
+import { signInWithDiscord, signOut, type CurrentUser } from "../auth/actions";
 
 function timeAgo(iso: string): string {
   const diffMs = Date.now() - new Date(iso).getTime();
@@ -31,13 +32,13 @@ function FruitPill({ id }: { id: string }) {
   );
 }
 
-function PostAdForm({ onPosted }: { onPosted: (ad: TradeAd) => void }) {
+function PostAdForm({ onPosted, currentUser }: { onPosted: (ad: TradeAd) => void; currentUser: CurrentUser | null }) {
   const [offering, setOffering] = useState<Fruit[]>([]);
   const [search, setSearch] = useState("");
   const [wanting, setWanting] = useState("");
   const [note, setNote] = useState("");
   const [discordTag, setDiscordTag] = useState("");
-  const [displayName, setDisplayName] = useState("");
+  const [displayName, setDisplayName] = useState(currentUser?.discordUsername || "");
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
   const [success, setSuccess] = useState(false);
@@ -87,13 +88,14 @@ function PostAdForm({ onPosted }: { onPosted: (ad: TradeAd) => void }) {
         note: note || null,
         discord_tag: discordTag,
         display_name: displayName || "Anonymous Trader",
+        user_id: currentUser?.id ?? null,
       });
 
       setOffering([]);
       setWanting("");
       setNote("");
       setDiscordTag("");
-      setDisplayName("");
+      setDisplayName(currentUser?.discordUsername || "");
       setSuccess(true);
       setTimeout(() => setSuccess(false), 4000);
     });
@@ -213,11 +215,26 @@ function PostAdForm({ onPosted }: { onPosted: (ad: TradeAd) => void }) {
   );
 }
 
-function AdCard({ ad }: { ad: TradeAd }) {
+function AdCard({ ad, currentUser, onCompleted }: { ad: TradeAd; currentUser: CurrentUser | null; onCompleted: (id: string) => void }) {
+  const isOwner = !!currentUser && ad.user_id === currentUser.id;
+  const [isPending, startTransition] = useTransition();
+
+  function handleComplete() {
+    startTransition(async () => {
+      const result = await markTradeAdCompleted(ad.id);
+      if (result.success) onCompleted(ad.id);
+    });
+  }
+
   return (
     <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: 12, padding: "1rem 1.15rem" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 10 }}>
-        <span style={{ fontFamily: "'Rajdhani',sans-serif", fontWeight: 600, fontSize: "0.9rem", color: "var(--text)" }}>{ad.display_name}</span>
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "'Rajdhani',sans-serif", fontWeight: 600, fontSize: "0.9rem", color: "var(--text)" }}>
+          {ad.display_name}
+          {ad.user_id && (
+            <span title="Signed in with Discord" style={{ fontSize: "0.7rem", color: "var(--cyan)" }}>✓</span>
+          )}
+        </span>
         <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>{timeAgo(ad.created_at)}</span>
       </div>
 
@@ -237,25 +254,75 @@ function AdCard({ ad }: { ad: TradeAd }) {
         <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: 12, fontStyle: "italic" }}>{ad.note}</p>
       )}
 
-      <div style={{ display: "flex", alignItems: "center", gap: 6, paddingTop: 10, borderTop: "1px solid var(--border)" }}>
-        <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Contact:</span>
-        <span style={{ fontSize: "0.85rem", color: "var(--cyan)", fontFamily: "'Rajdhani',sans-serif", fontWeight: 600 }}>{ad.discord_tag}</span>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 6, paddingTop: 10, borderTop: "1px solid var(--border)" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Contact:</span>
+          <span style={{ fontSize: "0.85rem", color: "var(--cyan)", fontFamily: "'Rajdhani',sans-serif", fontWeight: 600 }}>{ad.discord_tag}</span>
+        </div>
+        {isOwner && (
+          <button
+            onClick={handleComplete}
+            disabled={isPending}
+            style={{ background: "none", border: "1px solid var(--border)", borderRadius: 6, padding: "4px 9px", fontSize: "0.72rem", color: "var(--text-muted)", cursor: isPending ? "default" : "pointer", fontFamily: "'Rajdhani',sans-serif" }}
+          >
+            {isPending ? "..." : "Mark Completed"}
+          </button>
+        )}
       </div>
     </div>
   );
 }
 
-export default function TradingClient({ initialAds }: { initialAds: TradeAd[] }) {
+export default function TradingClient({ initialAds, currentUser }: { initialAds: TradeAd[]; currentUser: CurrentUser | null }) {
   const [ads, setAds] = useState<TradeAd[]>(initialAds);
+  const [authPending, startAuthTransition] = useTransition();
+
+  function handleCompleted(id: string) {
+    setAds(prev => prev.filter(a => a.id !== id));
+  }
 
   return (
     <div style={{ minHeight: "100vh", padding: "2rem 5% 4rem" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
 
-        <nav aria-label="Breadcrumb" style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "0.75rem", fontSize: "0.8rem", color: "var(--text-muted)" }}>
-          <Link href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Home</Link>
-          <span aria-hidden>/</span>
-          <span style={{ color: "var(--cyan)" }}>Trade Ads</span>
+        <nav aria-label="Breadcrumb" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginBottom: "0.75rem", fontSize: "0.8rem", color: "var(--text-muted)" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <Link href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Home</Link>
+            <span aria-hidden>/</span>
+            <span style={{ color: "var(--cyan)" }}>Trade Ads</span>
+          </div>
+
+          {currentUser ? (
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              {currentUser.discordAvatarUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={currentUser.discordAvatarUrl} alt="" width={22} height={22} style={{ borderRadius: "50%" }} />
+              )}
+              <span style={{ color: "var(--text)", fontFamily: "'Rajdhani',sans-serif", fontWeight: 600 }}>
+                {currentUser.discordUsername || "Trader"}
+              </span>
+              <button
+                onClick={() => startAuthTransition(() => signOut())}
+                disabled={authPending}
+                style={{ background: "none", border: "1px solid var(--border)", borderRadius: 6, padding: "4px 10px", color: "var(--text-muted)", cursor: "pointer", fontFamily: "'Rajdhani',sans-serif", fontSize: "0.78rem" }}
+              >
+                Sign out
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={() => startAuthTransition(() => signInWithDiscord("/trading"))}
+              disabled={authPending}
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 6,
+                background: "#5865F2", color: "#fff", border: "none", borderRadius: 6,
+                padding: "6px 12px", fontFamily: "'Rajdhani',sans-serif", fontWeight: 600, fontSize: "0.8rem",
+                cursor: authPending ? "default" : "pointer", opacity: authPending ? 0.7 : 1,
+              }}
+            >
+              {authPending ? "Redirecting..." : "Sign in with Discord"}
+            </button>
+          )}
         </nav>
 
         <h1 style={{ fontFamily: "'Orbitron',monospace", fontSize: "clamp(1.5rem,3vw,2.3rem)", fontWeight: 700, marginBottom: "0.6rem", lineHeight: 1.2 }}>
@@ -266,10 +333,10 @@ export default function TradingClient({ initialAds }: { initialAds: TradeAd[] })
         </h2>
 
         <p style={{ fontFamily: "'Inter',sans-serif", color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.75, marginBottom: "1.5rem", maxWidth: 760 }}>
-          This <strong style={{ color: "var(--text)" }}>Blox Fruit trading</strong> board connects you directly with other players looking to trade devil fruits, gamepasses, and limiteds. Whether you're after Dragon, Kitsune, Leopard, or any other fruit, post what you're offering and what you want in return, then connect on Discord to complete the deal. Check the <Link href="/calculator" style={{ color: "var(--cyan)" }}>Blox Fruit calculator</Link> and <Link href="/values" style={{ color: "var(--cyan)" }}>Blox Fruit value list</Link> first to make sure every <strong style={{ color: "var(--text)" }}>Blox Fruits trade</strong> you accept is fair.
+          This <strong style={{ color: "var(--text)" }}>Blox Fruit trading</strong> board connects you directly with other players looking to trade devil fruits, gamepasses, and limiteds. Whether you're after Dragon, Kitsune, Leopard, or any other fruit, post what you're offering and what you want in return, then connect on Discord to complete the deal. Sign in with Discord to manage your ads, or post anonymously — both work. Check the <Link href="/calculator" style={{ color: "var(--cyan)" }}>Blox Fruit calculator</Link> and <Link href="/values" style={{ color: "var(--cyan)" }}>Blox Fruit value list</Link> first to make sure every <strong style={{ color: "var(--text)" }}>Blox Fruits trade</strong> you accept is fair.
         </p>
 
-        <PostAdForm onPosted={ad => setAds(prev => [ad, ...prev])} />
+        <PostAdForm onPosted={ad => setAds(prev => [ad, ...prev])} currentUser={currentUser} />
 
         <h2 style={{ fontFamily: "'Orbitron',monospace", fontSize: "1.1rem", marginBottom: "1rem" }}>
           Live <span style={{ color: "var(--cyan)" }}>Trades</span> ({ads.length})
@@ -281,7 +348,7 @@ export default function TradingClient({ initialAds }: { initialAds: TradeAd[] })
           </p>
         ) : (
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1rem" }}>
-            {ads.map(ad => <AdCard key={ad.id} ad={ad} />)}
+            {ads.map(ad => <AdCard key={ad.id} ad={ad} currentUser={currentUser} onCompleted={handleCompleted} />)}
           </div>
         )}
 

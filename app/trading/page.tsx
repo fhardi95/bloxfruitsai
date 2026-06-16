@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getOpenTradeAds } from "./actions";
+import { getCurrentUser } from "../auth/actions";
 import TradingClient from "./TradingClient";
 
 export const dynamic = "force-dynamic";
@@ -8,7 +9,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Blox Fruit Trade Ads — Post & Browse Blox Fruits Trades 2026",
   description:
-    "Free Blox Fruit trading board — post your trade ad or browse live offers from real traders. Find fair Blox Fruits trades for Dragon, Kitsune, Leopard and every devil fruit.",
+    "Free Blox Fruit trading board — post your trade ad or browse live offers from real traders. No login needed. Find fair Blox Fruits trades for Dragon, Kitsune, Leopard and every devil fruit.",
   alternates: { canonical: "https://www.bloxfruitsai.com/trading" },
   openGraph: {
     title: "Blox Fruit Trade Ads — Post & Browse Blox Fruits Trades 2026",
@@ -91,13 +92,13 @@ const faqLd = {
 };
 
 export default async function TradingPage() {
-  const ads = await getOpenTradeAds();
+  const [ads, user] = await Promise.all([getOpenTradeAds(), getCurrentUser()]);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
-      <TradingClient initialAds={ads} />
+      <TradingClient initialAds={ads} currentUser={user} />
     </>
   );
 }

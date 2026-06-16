@@ -1,6 +1,7 @@
 "use server";
 
 import { getSupabaseClient } from "@/lib/supabase";
+import { createServerSupabaseClient } from "@/lib/supabase-server";
 import { revalidatePath } from "next/cache";
 
 export interface TradeAd {
@@ -13,6 +14,7 @@ export interface TradeAd {
   note: string | null;
   discord_tag: string;
   display_name: string;
+  user_id: string | null;
 }
 
 export interface CreateTradeAdInput {
@@ -33,7 +35,7 @@ export async function getOpenTradeAds(): Promise<TradeAd[]> {
 
   const { data, error } = await supabase
     .from("trade_ads")
-    .select("id, created_at, expires_at, status, offering, wanting, note, discord_tag, display_name")
+    .select("id, created_at, expires_at, status, offering, wanting, note, discord_tag, display_name, user_id")
     .eq("status", "open")
     .gt("expires_at", new Date().toISOString())
     .order("created_at", { ascending: false })
@@ -52,7 +54,7 @@ export async function getTradeAdById(id: string): Promise<TradeAd | null> {
 
   const { data, error } = await supabase
     .from("trade_ads")
-    .select("id, created_at, expires_at, status, offering, wanting, note, discord_tag, display_name")
+    .select("id, created_at, expires_at, status, offering, wanting, note, discord_tag, display_name, user_id")
     .eq("id", id)
     .maybeSingle();
 
@@ -83,7 +85,11 @@ export async function createTradeAd(
     return { success: false, error: "Add a Discord tag so traders can reach you." };
   }
 
-  const supabase = getSupabaseClient();
+  // Use the session-aware client so Supabase RLS can attach the logged-in
+  // user's id automatically. Anonymous posting still works fine — auth.uid()
+  // is simply null in that case, matching the existing RLS policy.
+  const supabase = await createServerSupabaseClient();
+  const { data: userData } = await supabase.auth.getUser();
 
   const { data, error } = await supabase
     .from("trade_ads")
@@ -93,6 +99,7 @@ export async function createTradeAd(
       note,
       discord_tag: discordTag,
       display_name: displayName,
+      user_id: userData.user?.id ?? null,
     })
     .select("id")
     .single();
@@ -109,7 +116,9 @@ export async function createTradeAd(
 export async function markTradeAdCompleted(
   id: string
 ): Promise<{ success: true } | { success: false; error: string }> {
-  const supabase = getSupabaseClient();
+  // Session-aware client — RLS only allows this to succeed if the
+  // logged-in user is the original owner of the ad.
+  const supabase = await createServerSupabaseClient();
 
   const { error } = await supabase
     .from("trade_ads")
