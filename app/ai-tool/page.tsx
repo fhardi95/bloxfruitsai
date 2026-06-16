@@ -3,9 +3,9 @@ import AiToolClient from "./AiToolClient";
 
 // ─── SEO ──────────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Blox Fruits AI Tool — Free AI Fruit Finder, Build Helper & Trade Advisor",
+  title: "Blox Fruits AI Tool Finder - Build Helper & Trade Advisor",
   description:
-    "Free Blox Fruits AI tool — ask any question and get instant answers on the best fruits, PVP builds, grinding routes, boss strategies, and trade values. Updated for 2026 meta.",
+    "Free Blox Fruits AI tool — ask any question and get instant answers on the best fruits, PVP builds, grinding routes, and trade values. Updated for 2026 meta.",
   alternates: { canonical: "https://www.bloxfruitsai.com/ai-tool" },
   keywords: [
     "blox fruits ai tool",
