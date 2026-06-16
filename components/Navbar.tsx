@@ -19,6 +19,7 @@ export default function Navbar() {
     { href: "/bfv", label: "BFV" },
     { href: "/values", label: "Values" },
     { href: "/calculator", label: "Calculator" },
+    { href: "/trading", label: "Trading" },
     { href: "/guides/pvp-builds", label: "Guides" },
     { href: "/wiki", label: "Wiki" },
     { href: "/blog", label: "Blog" },

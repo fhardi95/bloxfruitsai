@@ -40,6 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.95,
     },
+    {
+      url: `${BASE_URL}/trading`,
+      lastModified: now,
+      changeFrequency: "hourly",
+      priority: 0.9,
+    },
   ];
 
   // ── FRUIT VALUE PAGES ────────────────────────────────────────────────────────
