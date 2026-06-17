@@ -281,7 +281,7 @@ export default function TradingClient({ initialAds, currentUser }: { initialAds:
   }
 
   return (
-    <div style={{ minHeight: "100vh", padding: "2rem 5% 4rem" }}>
+    <div style={{ minHeight: "100vh", paddingTop: 90, paddingLeft: "5%", paddingRight: "5%", paddingBottom: "4rem" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
 
         <nav aria-label="Breadcrumb" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginBottom: "0.75rem", fontSize: "0.8rem", color: "var(--text-muted)" }}>
