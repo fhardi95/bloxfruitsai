@@ -36,15 +36,30 @@ export async function signInWithDiscord() {
   const protocol = host?.includes("localhost") ? "http" : "https";
   const origin = `${protocol}://${host}`;
 
+  // Send the user back to whichever page they signed in from (e.g. navbar
+  // on any page), falling back to /trading if the referer is unavailable.
+  const referer = headersList.get("referer");
+  let next = "/trading";
+  if (referer) {
+    try {
+      const refererUrl = new URL(referer);
+      if (refererUrl.origin === origin) {
+        next = refererUrl.pathname + refererUrl.search;
+      }
+    } catch {
+      // Malformed referer — keep the /trading fallback.
+    }
+  }
+
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "discord",
     options: {
-      redirectTo: `${origin}/auth/callback?next=${encodeURIComponent("/trading")}`,
+      redirectTo: `${origin}/auth/callback?next=${encodeURIComponent(next)}`,
     },
   });
 
   if (error || !data.url) {
-    redirect("/trading?auth_error=1");
+    redirect(`${next}?auth_error=1`);
   }
 
   redirect(data.url);
@@ -52,6 +67,24 @@ export async function signInWithDiscord() {
 
 export async function signOut() {
   const supabase = await createServerSupabaseClient();
+  const headersList = await headers();
+  const host = headersList.get("host");
+  const protocol = host?.includes("localhost") ? "http" : "https";
+  const origin = `${protocol}://${host}`;
+
+  const referer = headersList.get("referer");
+  let next = "/trading";
+  if (referer) {
+    try {
+      const refererUrl = new URL(referer);
+      if (refererUrl.origin === origin) {
+        next = refererUrl.pathname + refererUrl.search;
+      }
+    } catch {
+      // Malformed referer — keep the /trading fallback.
+    }
+  }
+
   await supabase.auth.signOut();
-  redirect("/trading");
+  redirect(next);
 }

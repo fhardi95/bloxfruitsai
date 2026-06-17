@@ -11,10 +11,12 @@ create table if not exists profiles (
 
 alter table profiles enable row level security;
 
+drop policy if exists "Public can read profiles" on profiles;
 create policy "Public can read profiles"
   on profiles for select
   using (true);
 
+drop policy if exists "Users can update their own profile" on profiles;
 create policy "Users can update their own profile"
   on profiles for update
   using (auth.uid() = id);
@@ -27,11 +29,21 @@ begin
   insert into public.profiles (id, discord_username, discord_avatar_url)
   values (
     new.id,
-    coalesce(new.raw_user_meta_data->>'full_name', new.raw_user_meta_data->>'name', new.raw_user_meta_data->>'custom_claims'->>'global_name'),
+    coalesce(
+      new.raw_user_meta_data->>'full_name',
+      new.raw_user_meta_data->>'name',
+      new.raw_user_meta_data->'custom_claims'->>'global_name'
+    ),
     new.raw_user_meta_data->>'avatar_url'
   )
   on conflict (id) do nothing;
   return new;
+exception
+  when others then
+    -- Never let a profile-creation hiccup block the actual sign-in.
+    -- The user can still authenticate even if this insert fails for
+    -- any reason; the profile can be backfilled later.
+    return new;
 end;
 $$ language plpgsql security definer;
 

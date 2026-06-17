@@ -2,10 +2,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { signInWithDiscord, signOut } from "@/app/auth/actions";
+
+interface NavUser {
+  id: string;
+  discordUsername: string | null;
+  discordAvatarUrl: string | null;
+}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [user, setUser] = useState<NavUser | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -13,6 +21,13 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    fetch("/api/auth/me")
+      .then(res => res.json())
+      .then(data => setUser(data.user ?? null))
+      .catch(() => setUser(null));
+  }, [pathname]);
 
   const links = [
     { href: "/ai-tool", label: "AI Tool" },
@@ -70,6 +85,31 @@ export default function Navbar() {
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "var(--cyan)"; (e.currentTarget as HTMLElement).style.color = "var(--bg-deep)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "transparent"; (e.currentTarget as HTMLElement).style.color = "var(--cyan)"; }}
           >Try Free</Link>
+
+          {user ? (
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              {user.discordAvatarUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={user.discordAvatarUrl} alt="" width={26} height={26} style={{ borderRadius: "50%" }} />
+              )}
+              <form action={signOut}>
+                <button type="submit" style={{ background: "none", border: "1px solid var(--border)", borderRadius: 6, padding: "6px 12px", color: "var(--text-muted)", cursor: "pointer", fontFamily: "'Rajdhani',sans-serif", fontSize: "0.78rem" }}>
+                  Sign out
+                </button>
+              </form>
+            </div>
+          ) : (
+            <form action={signInWithDiscord}>
+              <button type="submit" style={{
+                display: "inline-flex", alignItems: "center", gap: 6,
+                background: "#5865F2", color: "#fff", border: "none", borderRadius: 6,
+                padding: "8px 16px", fontFamily: "'Rajdhani',sans-serif", fontWeight: 700, fontSize: "0.8rem",
+                letterSpacing: "0.04em", cursor: "pointer",
+              }}>
+                Sign in with Discord
+              </button>
+            </form>
+          )}
         </div>
 
         <button
@@ -96,6 +136,35 @@ export default function Navbar() {
               style={{ color: isActive(l.href) ? "var(--cyan)" : "var(--text-muted)", textDecoration: "none", fontSize: "1rem", fontWeight: 500, padding: "0.65rem 0", borderBottom: "1px solid rgba(255,255,255,0.05)", letterSpacing: "0.04em" }}
             >{l.label}</Link>
           ))}
+
+          {user ? (
+            <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "0.85rem 0", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+              {user.discordAvatarUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={user.discordAvatarUrl} alt="" width={28} height={28} style={{ borderRadius: "50%" }} />
+              )}
+              <span style={{ color: "var(--text)", fontSize: "0.95rem", fontFamily: "'Rajdhani',sans-serif", fontWeight: 600 }}>
+                {user.discordUsername || "Trader"}
+              </span>
+              <form action={signOut} style={{ marginLeft: "auto" }}>
+                <button type="submit" style={{ background: "none", border: "1px solid var(--border)", borderRadius: 6, padding: "5px 12px", color: "var(--text-muted)", cursor: "pointer", fontFamily: "'Rajdhani',sans-serif", fontSize: "0.82rem" }}>
+                  Sign out
+                </button>
+              </form>
+            </div>
+          ) : (
+            <form action={signInWithDiscord} style={{ padding: "0.65rem 0" }}>
+              <button type="submit" style={{
+                width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                background: "#5865F2", color: "#fff", border: "none", borderRadius: 8,
+                padding: "12px", fontFamily: "'Rajdhani',sans-serif", fontWeight: 700, fontSize: "0.95rem",
+                letterSpacing: "0.04em", cursor: "pointer",
+              }}>
+                Sign in with Discord
+              </button>
+            </form>
+          )}
+
           <Link href="/calculator" onClick={() => setMobileOpen(false)} style={{ marginTop: "0.75rem", display: "block", textAlign: "center", background: "var(--cyan)", color: "var(--bg-deep)", padding: "12px", borderRadius: 8, fontFamily: "'Rajdhani',sans-serif", fontSize: "0.95rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none" }}>
             Try Free →
           </Link>
