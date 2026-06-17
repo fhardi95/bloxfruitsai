@@ -275,7 +275,6 @@ function AdCard({ ad, currentUser, onCompleted }: { ad: TradeAd; currentUser: Cu
 
 export default function TradingClient({ initialAds, currentUser }: { initialAds: TradeAd[]; currentUser: CurrentUser | null }) {
   const [ads, setAds] = useState<TradeAd[]>(initialAds);
-  const [authPending, startAuthTransition] = useTransition();
 
   function handleCompleted(id: string) {
     setAds(prev => prev.filter(a => a.id !== id));
@@ -301,27 +300,29 @@ export default function TradingClient({ initialAds, currentUser }: { initialAds:
               <span style={{ color: "var(--text)", fontFamily: "'Rajdhani',sans-serif", fontWeight: 600 }}>
                 {currentUser.discordUsername || "Trader"}
               </span>
-              <button
-                onClick={() => startAuthTransition(() => signOut())}
-                disabled={authPending}
-                style={{ background: "none", border: "1px solid var(--border)", borderRadius: 6, padding: "4px 10px", color: "var(--text-muted)", cursor: "pointer", fontFamily: "'Rajdhani',sans-serif", fontSize: "0.78rem" }}
-              >
-                Sign out
-              </button>
+              <form action={signOut}>
+                <button
+                  type="submit"
+                  style={{ background: "none", border: "1px solid var(--border)", borderRadius: 6, padding: "4px 10px", color: "var(--text-muted)", cursor: "pointer", fontFamily: "'Rajdhani',sans-serif", fontSize: "0.78rem" }}
+                >
+                  Sign out
+                </button>
+              </form>
             </div>
           ) : (
-            <button
-              onClick={() => startAuthTransition(() => signInWithDiscord("/trading"))}
-              disabled={authPending}
-              style={{
-                display: "inline-flex", alignItems: "center", gap: 6,
-                background: "#5865F2", color: "#fff", border: "none", borderRadius: 6,
-                padding: "6px 12px", fontFamily: "'Rajdhani',sans-serif", fontWeight: 600, fontSize: "0.8rem",
-                cursor: authPending ? "default" : "pointer", opacity: authPending ? 0.7 : 1,
-              }}
-            >
-              {authPending ? "Redirecting..." : "Sign in with Discord"}
-            </button>
+            <form action={signInWithDiscord}>
+              <button
+                type="submit"
+                style={{
+                  display: "inline-flex", alignItems: "center", gap: 6,
+                  background: "#5865F2", color: "#fff", border: "none", borderRadius: 6,
+                  padding: "6px 12px", fontFamily: "'Rajdhani',sans-serif", fontWeight: 600, fontSize: "0.8rem",
+                  cursor: "pointer",
+                }}
+              >
+                Sign in with Discord
+              </button>
+            </form>
           )}
         </nav>
 

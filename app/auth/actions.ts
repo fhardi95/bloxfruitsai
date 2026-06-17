@@ -29,7 +29,7 @@ export async function getCurrentUser(): Promise<CurrentUser | null> {
   }
 }
 
-export async function signInWithDiscord(redirectTo?: string) {
+export async function signInWithDiscord() {
   const supabase = await createServerSupabaseClient();
   const headersList = await headers();
   const host = headersList.get("host");
@@ -39,7 +39,7 @@ export async function signInWithDiscord(redirectTo?: string) {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "discord",
     options: {
-      redirectTo: `${origin}/auth/callback?next=${encodeURIComponent(redirectTo || "/trading")}`,
+      redirectTo: `${origin}/auth/callback?next=${encodeURIComponent("/trading")}`,
     },
   });
 
