@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import CalculatorClient from "./CalculatorClient";
 
 export const metadata: Metadata = {
-  title: "Blox Fruit Calculator — Free BFV Trade Value Checker 2026",
+  title: "Blox Fruit Calculator — Is Your Trade a W or L? Free Check",
   description:
-    "Free Blox Fruit calculator — check BFV trade values instantly. Add fruits on both sides and see if your trade is a W, L, or fair. Updated June 2026.",
+    "Instant W or L verdict on any Blox Fruit trade. Add fruits on both sides and get a result in seconds — 45 fruits tracked, demand scores, Robux prices. Free, no login.",
   alternates: { canonical: "https://www.bloxfruitsai.com/calculator" },
   openGraph: {
-    title: "Blox Fruit Calculator — Free BFV Trade Value Checker 2026",
-    description: "Free Blox Fruit calculator for 2026. Add fruits on both sides and instantly see if your trade is fair, overpay or underpay. No login needed — updated June 2026.",
+    title: "Blox Fruit Calculator — Is Your Trade a W or L? Free Check",
+    description: "Instant W or L verdict on any Blox Fruit trade. Add fruits on both sides and get a result in seconds — 45 fruits tracked, demand scores, Robux prices. Free, no login.",
     url: "https://www.bloxfruitsai.com/calculator",
   },
 };

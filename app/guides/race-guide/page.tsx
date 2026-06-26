@@ -3,8 +3,8 @@ import GuideLayout from "@/components/guides/GuideLayout";
 import { GuideSection, InfoBox, TierCard } from "@/components/guides/GuideSection";
 
 export const metadata: Metadata = {
-  title: "Blox Fruits Race Guide 2026 — Best Race Tier List & Awakenings",
-  description: "Complete Blox Fruits race guide for 2026. Best race tier list, V4 awakening requirements, and which race pairs best with every devil fruit build.",
+  title: "Blox Fruits Race Tier List 2026 — Best Race for PVP & Grinding",
+  description: "Blox Fruits race tier list 2026. Best race for PVP, grinding, and Buddha builds — Human, Shark, Angel, Ghoul, Cyborg ranked. V4 awakening requirements included.",
   alternates: { canonical: "https://www.bloxfruitsai.com/guides/race-guide" },
 };
 

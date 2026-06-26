@@ -92,8 +92,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // Max 155 chars / ~1000px
   const seoDesc = isGamepass
-    ? `${fruit.name} gamepass value in Blox Fruits 2026. Current price ${fruit.permanentValue.toLocaleString()} Robux, demand ${fruit.demand}/10. Is it worth buying? Full breakdown.`
-    : `${fruit.name} fruit value in Blox Fruits 2026. Trade value ${formatValue(fruit.value)}, permanent price ${fruit.permanentValue.toLocaleString()} Robux, demand ${fruit.demand}/10. Is it worth it?`;
+    ? `${fruit.name} gamepass is worth ${fruit.permanentValue.toLocaleString()} Robux in Blox Fruits 2026. Demand score ${fruit.demand}/10. Is it worth buying? Full breakdown + trade value.`
+    : `${fruit.name} value in Blox Fruits 2026: ${formatValue(fruit.value)} trade value, ${fruit.permanentValue.toLocaleString()} Robux permanent, demand ${fruit.demand}/10. Is ${fruit.name} worth trading for? Check before you trade.`;
 
   return {
     title: `${seoTitle} | BloxFruitsAI.com`,
@@ -162,8 +162,8 @@ export default async function FruitPage({ params }: Props) {
     ? `${fruit.name} Gamepass Value — Blox Fruits 2026`
     : `${fruit.name} Fruit Value — Blox Fruits 2026`;
   const seoDesc = isGamepass
-    ? `${fruit.name} gamepass value in Blox Fruits 2026. Current price ${fruit.permanentValue.toLocaleString()} Robux, demand ${fruit.demand}/10.`
-    : `${fruit.name} fruit value in Blox Fruits 2026. Trade value ${formatValue(fruit.value)}, permanent price ${fruit.permanentValue.toLocaleString()} Robux, demand ${fruit.demand}/10.`;
+    ? `${fruit.name} gamepass is worth ${fruit.permanentValue.toLocaleString()} Robux in Blox Fruits 2026. Demand score ${fruit.demand}/10.`
+    : `${fruit.name} value in Blox Fruits 2026: ${formatValue(fruit.value)} trade value, ${fruit.permanentValue.toLocaleString()} Robux permanent, demand ${fruit.demand}/10.`;
 
   // Related fruits — same tier, excluding current
   const related = FRUITS.filter(f => f.tier === fruit.tier && f.id !== fruit.id).slice(0, 4);

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import ValuesClient from "./ValuesClient";
 
 export const metadata: Metadata = {
-  title: "Blox Fruit Value List 2026 — BFV Trade Values & Prices",
+  title: "Blox Fruit Value List 2026 — Every Fruit Value & Price",
   description:
-    "Complete Blox Fruit value list for every devil fruit in 2026. Live trade values, demand scores (1–10), updated daily after every patch. Free, no login.",
+    "Every Blox Fruit value in one place — Dragon, Kitsune, Leopard, Shadow, Venom and 40 more. Trade value, demand score (1–10), Robux price, and tier. Updated after every patch.",
   alternates: { canonical: "https://www.bloxfruitsai.com/values" },
   openGraph: {
-    title: "Blox Fruit Value List 2026 — BFV Trade Values & Prices",
-    description: "Every Blox Fruit value in one place: trade value, demand score, Robux price, and tier. Updated after every patch. Check any fruit before you trade.",
+    title: "Blox Fruit Value List 2026 — Every Fruit Value & Price",
+    description: "Every Blox Fruit value in one place — Dragon, Kitsune, Leopard, Shadow, Venom and 40 more. Trade value, demand, Robux price, and tier. Updated after every patch.",
     url: "https://www.bloxfruitsai.com/values",
     type: "website",
   },

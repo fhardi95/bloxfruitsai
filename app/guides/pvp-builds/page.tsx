@@ -3,9 +3,10 @@ import GuideLayout from "@/components/guides/GuideLayout";
 import { GuideSection, InfoBox, StepList } from "@/components/guides/GuideSection";
 
 export const metadata: Metadata = {
-  title: "Best Grinding Routes 2026 — Fastest XP & Beli Farming Guide",
-  description: "Fastest Blox Fruits grinding routes for every level range in 2026. Maximize XP per hour, Beli farming, and boss drop rates with our AI-optimized route guide.",
-  alternates: { canonical: "https://www.bloxfruitsai.com/guides/grinding-routes" },
+  title: "Best PVP Fruits Blox Fruits 2026 — Top Tier PVP Builds",
+  description:
+    "Best PVP fruits in Blox Fruits 2026. Top S-tier picks: Dragon, Kitsune, Leopard, T-Rex — ranked for damage, mobility, and combo potential. Full builds included.",
+  alternates: { canonical: "https://www.bloxfruitsai.com/guides/pvp-builds" },
 };
 
 const ROUTES = [

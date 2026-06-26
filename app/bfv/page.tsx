@@ -3,9 +3,9 @@ import Link from "next/link";
 
 // ─── SEO METADATA ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "BFV — Blox Fruits Values & Trade Calculator 2026",
+  title: "BFV Calculator & Values — Check Every Blox Fruits Trade 2026",
   description:
-    "BFV (Blox Fruits Values) — the complete 2026 guide to every fruit's trade value, free BFV calculator to check if your trade is fair instantly.",
+    "BFV calculator + full value list for every Blox Fruit in 2026. Check trade value, demand score (1–10), and Robux price for 45 fruits instantly. Is your trade fair? Find out free.",
   alternates: { canonical: "https://www.bloxfruitsai.com/bfv" },
   keywords: [
     "bfv",
@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     "bfv calculator",
     "bfv trade",
     "bfv value",
+    "bfv trade calculator",
+    "bfv calc",
     "blox fruits values",
     "blox fruits value list",
     "blox fruits trade calculator",
@@ -20,17 +22,17 @@ export const metadata: Metadata = {
     "blox fruits bfv",
   ],
   openGraph: {
-    title: "BFV — Blox Fruits Values & Trade Calculator 2026",
+    title: "BFV Calculator & Values — Check Every Blox Fruits Trade 2026",
     description:
-      "BFV is the community standard for Blox Fruits trading. Check every fruit's value, demand score, and Robux price — then verify your trade with the free BFV calculator.",
+      "BFV calculator + full value list for every Blox Fruit in 2026. Check trade value, demand score (1–10), and Robux price for 45 fruits instantly. Free.",
     url: "https://www.bloxfruitsai.com/bfv",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BFV — Blox Fruits Values & Trade Calculator 2026",
+    title: "BFV Calculator & Values — Check Every Blox Fruits Trade 2026",
     description:
-      "Check BFV values for every Blox Fruits devil fruit. Free trade calculator included.",
+      "BFV calculator + full value list for every Blox Fruit. Check trade value, demand and Robux price instantly. Free.",
   },
 };
 
