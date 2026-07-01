@@ -204,7 +204,8 @@ function formatTime(d: Date) {
   return d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 }
 
-const AGENT_SECRET = process.env.NEXT_PUBLIC_AGENT_SECRET || "";
+// No client-side secret needed — the browser is already authenticated via the
+// httpOnly "agent_authed" cookie set on login, which the API routes check.
 
 const ARTICLE_SYSTEM_PROMPT = `You are the AI content manager for bloxfruitsai.com — a Next.js website for Blox Fruits (Roblox) players targeting 1 million monthly Google visits and AdSense revenue.
 
@@ -282,7 +283,7 @@ export default function AgentClient() {
 
   // Load current article count on mount
   useEffect(() => {
-    fetch("/api/publish", { headers: { "x-agent-secret": AGENT_SECRET } })
+    fetch("/api/publish")
       .then((r) => r.json())
       .then((d) => { if (d.count) setArticleCount(d.count); })
       .catch(() => {});
@@ -342,10 +343,7 @@ const MONTH_YEAR = now.toLocaleString("en-GB", { month: "long", year: "numeric" 
         // Publish to GitHub
         const pubRes = await fetch("/api/publish", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "x-agent-secret": AGENT_SECRET,
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ post }),
         });
 
@@ -432,10 +430,7 @@ const MONTH_YEAR = now.toLocaleString("en-GB", { month: "long", year: "numeric" 
     try {
       const res = await fetch("/api/publish", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-agent-secret": AGENT_SECRET,
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ post }),
       });
 

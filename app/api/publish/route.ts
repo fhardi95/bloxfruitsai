@@ -1,6 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
 
 const GITHUB_API = "https://api.github.com";
+
+// Accepts either the logged-in dashboard cookie (browser calls) or the
+// x-agent-secret header (external callers like the GitHub Actions cron job).
+async function isAuthorised(req: NextRequest) {
+  if (!process.env.AGENT_SECRET) return false;
+
+  const headerSecret = req.headers.get("x-agent-secret");
+  if (headerSecret === process.env.AGENT_SECRET) return true;
+
+  const cookieStore = await cookies();
+  const authed = cookieStore.get("agent_authed")?.value === "1";
+  return authed;
+}
 
 function hexToRgba(hex: string, alpha: number) {
   const r = parseInt(hex.slice(1, 3), 16);
@@ -54,8 +68,7 @@ async function updateFile(
 
 export async function POST(req: NextRequest) {
   // ── Auth ──────────────────────────────────────────────────────────────────
-  const secret = req.headers.get("x-agent-secret");
-  if (!process.env.AGENT_SECRET || secret !== process.env.AGENT_SECRET) {
+  if (!(await isAuthorised(req))) {
     return NextResponse.json({ error: "Unauthorised" }, { status: 401 });
   }
 
@@ -193,8 +206,7 @@ export async function POST(req: NextRequest) {
 
 // ── GET: count published articles ─────────────────────────────────────────────
 export async function GET(req: NextRequest) {
-  const secret = req.headers.get("x-agent-secret");
-  if (!process.env.AGENT_SECRET || secret !== process.env.AGENT_SECRET) {
+  if (!(await isAuthorised(req))) {
     return NextResponse.json({ error: "Unauthorised" }, { status: 401 });
   }
 
