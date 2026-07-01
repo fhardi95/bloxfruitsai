@@ -350,7 +350,8 @@ const MONTH_YEAR = now.toLocaleString("en-GB", { month: "long", year: "numeric" 
         const pubData = await pubRes.json();
 
         if (!pubRes.ok) {
-          addLog(`⚠️ Publish failed: ${pubData.error}`);
+          const debugSuffix = pubData.preview ? ` | File starts with: ${pubData.preview}` : "";
+          addLog(`⚠️ Publish failed: ${pubData.error}${debugSuffix}`);
         } else {
           addLog(`🚀 Published! → bloxfruitsai.com/blog/${post.slug}`);
           setArticleCount((c) => c + 1);
@@ -438,7 +439,8 @@ const MONTH_YEAR = now.toLocaleString("en-GB", { month: "long", year: "numeric" 
 
       if (!res.ok || !data.success) {
         setPublishStatus((prev) => ({ ...prev, [msgIdx]: "error" }));
-        setPublishResult((prev) => ({ ...prev, [msgIdx]: data.error || "Unknown error" }));
+        const debugSuffix = data.preview ? ` | File starts with: ${data.preview}` : "";
+        setPublishResult((prev) => ({ ...prev, [msgIdx]: (data.error || "Unknown error") + debugSuffix }));
         return;
       }
 
