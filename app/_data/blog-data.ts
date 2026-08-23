@@ -28,6 +28,281 @@ export interface BlogSection {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+  "slug": "third-sea-guide-unlock-and-what-to-do",
+  "title": "Blox Fruits Third Sea Guide",
+  "excerpt": "Complete Third Sea walkthrough: how to unlock, preparation, best islands, boss farming, fruit spawns, progression and trading tips for Sea 3.",
+  "date": "23 August 2026",
+  "dateISO": "2026-08-23",
+  "category": "Guides",
+  "categoryColor": "#00c2ff",
+  "readTime": "14 min",
+  "icon": "🧭",
+  "author": "BloxFruitsAI Team",
+  "featured": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Third Sea is the high-tier area for experienced players — it unlocks new islands, tougher bosses, better fruit spawns and the endgame progression loop. This guide explains how to unlock Third Sea (what to prepare, steps you’ll take in-game) and what to do once you arrive so you level and farm efficiently."
+    },
+    {
+      "type": "heading",
+      "text": "Quick overview — is Third Sea for you?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Third Sea is aimed at mid-to-high level players who’ve finished most Second Sea quests and want to push for top-tier grinding, legendary fruit hunting and competitive trading. If you’re still levelling in Second Sea, use this guide to prepare — especially your stats, gear and fruit choices."
+    },
+    {
+      "type": "heading",
+      "text": "How unlocking works (summary)"
+    },
+    {
+      "type": "paragraph",
+      "text": "To unlock Third Sea you must complete the Second Sea storyline quests and meet the game’s unlock requirement (the game usually requires completion of core Second Sea content and a high character level). After meeting the requirements you gain access to the Third Sea gate/portal — often found at the main Second Sea dock or a designated island. Exact gate location and unlock triggers can change with updates; always check in-game prompts and the community wiki for the latest details."
+    },
+    {
+      "type": "info",
+      "text": "Game updates sometimes change the unlock step (boss, key or NPC). If something looks different in your version, check our wiki at bloxfruitsai.com/wiki for the current step-by-step map and NPC names."
+    },
+    {
+      "type": "heading",
+      "text": "Preparation checklist before attempting unlock"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Finish the Second Sea main questline and all island bosses linked to it",
+        "Aim for a high combat level (commonly 1500–3000+ depending on updates) so you don’t struggle in Sea 3",
+        "Stock up on Beli, potions, and revive items for repeated boss runs",
+        "Bring a strong Devil Fruit or Haki build; melee and ranged options both work",
+        "Set your ship or spawn point near the unlock gate to save travel time"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "If you want to plan required experience, use our calculator at bloxfruitsai.com/calculator to estimate grind time and Beli costs for your target level."
+    },
+    {
+      "type": "heading",
+      "text": "Step-by-step: how to unlock Third Sea"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Complete all core Second Sea storyline quests — the final quest usually prompts the unlock sequence.",
+        "Defeat the final Second Sea boss(s) that drop the item or trigger required to open the Third Sea gate.",
+        "Collect any required key or pass (if the update introduces one). Keys are typically dropped by a boss or rewarded from a quest.",
+        "Return to the designated dock or gate NPC — interact to open the portal to Third Sea.",
+        "Enter the portal and accept any introductory quest; first visit often gives a short tutorial and rewards."
+      ]
+    },
+    {
+      "type": "warning",
+      "text": "Don’t assume the unlock is instant after hitting a raw level number. Always finish the required questline and check the final NPC or signpost in Second Sea."
+    },
+    {
+      "type": "heading",
+      "text": "Immediate actions on arrival"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Complete the arrival quest — it usually gives XP, Beli and a small readiness reward",
+        "Check the map and mark the major Third Sea islands (boss, farming and NPC islands)",
+        "Speak to the key NPCs: vendor(s), boss quest givers and PVP arena hosts",
+        "Verify Devil Fruit spawn rules in this sea — fruit spawn timers often change in Sea 3",
+        "Join a group for early boss clears; many players rush to establish dominance on new islands"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Third Sea priorities — what to do first"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Clear the new main questline to unlock island fast-travel and NPC services",
+        "Farm the top-level bosses for early fruit drops and unique accessories",
+        "Hunt for S+ and legendary fruits; Sea 3 increases the chance of high-tier spawns",
+        "Grind islands with high XP density for quick level gains",
+        "Switch to endgame stats and awaken any Haki or passive boosts you’ve been saving for"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Best islands and routes in Third Sea (sample route)"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Island",
+        "Why visit",
+        "Recommended level"
+      ],
+      "rows": [
+        [
+          "Skull Island (example)",
+          "High XP mobs, mid boss, frequent fruit spawns",
+          "2000+"
+        ],
+        [
+          "Abyss Fortress",
+          "Top-tier boss, rare drops, PVP hotspot",
+          "2500+"
+        ],
+        [
+          "Tidewatch Ruins",
+          "Resource nodes, daily quest NPCs",
+          "2200+"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Island names and recommended levels will vary by update — treat the table above as a sample route. Always check the in-game map and our wiki at bloxfruitsai.com/wiki for exact island names and spawn mechanics."
+    },
+    {
+      "type": "heading",
+      "text": "Boss farming tips"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Use team queues for faster clears — many bosses have mechanics that are easier with a full squad",
+        "Learn boss patterns: most Third Sea bosses have multi-stage fights; avoid standing in telegraphed AoEs",
+        "Bring mobility: fruit powers with blink/teleport outperform pure slow builds for dodging",
+        "Save your strongest hits for final phases when the boss is briefly vulnerable",
+        "Rotate between islands to keep spawn timers aligned and avoid long downtime"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "If you’re farming a boss for a fruit or key drop, set a timer and alternate with other groups — spawn timers are commonly 30–60 minutes on high-tier bosses."
+    },
+    {
+      "type": "heading",
+      "text": "Devil Fruit strategy in Third Sea"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sea 3 increases the value of strong S and S+ fruits. Choose a fruit that matches your play style: high burst for boss clears, mobility for farm runs, or crowd-control for PVP. Use our value guide on bloxfruitsai.com/values before trading or buying—prices fluctuate quickly in top-tier economies."
+    },
+    {
+      "type": "tierrow",
+      "tier": "S",
+      "tierColor": "#ff4757",
+      "label": "Dominant",
+      "fruits": [
+        "🐉 Dragon",
+        "⚡ Light",
+        "🌪️ Quake"
+      ]
+    },
+    {
+      "type": "tierrow",
+      "tier": "A",
+      "tierColor": "#ffa502",
+      "label": "Strong choices",
+      "fruits": [
+        "🔥 Flame",
+        "🌊 Water",
+        "❄️ Ice"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Tier placements are contextual: a fruit that’s S for bossing might be A for PVP. Use our calculator at bloxfruitsai.com/calculator to compare time-to-grind and trading ROI when you plan to acquire or trade fruits."
+    },
+    {
+      "type": "heading",
+      "text": "Trading and economy in Third Sea"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sea 3 changes supply and demand. Legendary fruits become rarer, and players will attach value to exclusive cosmetics and high-level weapons. When trading, always consult current value lists (bloxfruitsai.com/values) and factor in your server region — UK and US markets can differ in RPM and demand."
+    },
+    {
+      "type": "heading",
+      "text": "PVP hotspots and arena tips"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Key PVP islands: main spawn docks, boss islands and the central arena",
+        "Bring mixed builds to counter meta fruits — adaptability wins fights",
+        "Use Haki and mobility to outplay opponents in narrow spaces",
+        "Avoid unnecessary 1v1s if you’re farming; stick to team fights for safety"
+      ]
+    },
+    {
+      "type": "warning",
+      "text": "PVP in Third Sea is high-risk. You can lose progress if you die repeatedly — always carry extra revives and avoid carrying rare fruits into open PVP without backup."
+    },
+    {
+      "type": "heading",
+      "text": "Daily routines and long-term progression"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Run daily boss rotations to farm parts and fruit spawns",
+        "Complete island daily quests and weekly raids for consistent Beli and XP",
+        "Rotate between levelling, boss farming and fruit-hunting days to manage burnout",
+        "Track value trends on bloxfruitsai.com/values before committing to big trades"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Long-term progression in Third Sea is about efficiency: use well-structured routes, time your fruit hunts and participate in community raids to get the rare drops faster."
+    },
+    {
+      "type": "heading",
+      "text": "Useful commands, NPCs and services"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Fast-travel NPCs unlock as you progress through the Third Sea quests",
+        "Merchant NPCs sell top-tier weapons and revival items — check stock daily",
+        "Some NPCs offer exclusive repeatable quests that are excellent XP per hour",
+        "Ship upgrades are sometimes restricted by sea — upgrade before you leave Second Sea when possible"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Common beginner mistakes to avoid"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Rushing into elite bosses without proper gear or team",
+        "Carrying rare fruits in open PVP without a safe inventory plan",
+        "Ignoring spawn timers and inefficiently rotating islands",
+        "Trading without verifying prices on trusted value lists"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Mark your key island routes in-world and keep a small notepad or screenshot of spawn times — this saves minutes every run which add up to hours of extra farm per week."
+    },
+    {
+      "type": "heading",
+      "text": "Where to get more up-to-date info"
+    },
+    {
+      "type": "paragraph",
+      "text": "Because unlock mechanics and island details can change, check our ongoing wiki at bloxfruitsai.com/wiki and the values page at bloxfruitsai.com/values. For quick grind maths or to plan a fruit purchase, our calculator page at bloxfruitsai.com/calculator is ideal."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "paragraph",
+      "text": "Third Sea is the big leap from midgame to endgame. Prepare carefully, use grouping and boss rotation strategies, and follow current value and spawn guides on bloxfruitsai.com to make the most of Sea 3. If you need a personalised route based on your current level and fruit, reply with your stats and I’ll suggest a daily plan."
+    }
+  ]
+},
+  {
   "slug": "best-blox-fruits-for-grinding",
   "title": "Best Fruits for Grinding in 2026",
   "excerpt": "Discover the top Blox Fruits for fast levelling and efficient grinding. Expert tier list with levelling strategies for beginners to max level.",
