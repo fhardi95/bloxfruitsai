@@ -4,6 +4,19 @@ import Link from "next/link";
 
 const POSTS = [
   {
+    slug: "best-fighting-style-2026",
+    title: "Blox Fruits Best Fighting Style 2026",
+    excerpt: "Definitive 2026 guide and tier list for fighting styles — S-to-D tiers, best stat builds, combos, and where to train. Updated for August 23, 2026 meta.",
+    date: "23 August 2026",
+    category: "Guides",
+    categoryColor: "#00f5ff",
+    categoryBg: "rgba(0,245,255,0.08)",
+    categoryBorder: "rgba(0,245,255,0.25)",
+    readTime: "14 min",
+    icon: "🥋",
+    featured: false,
+  },
+  {
     slug: "third-sea-guide-unlock-and-what-to-do",
     title: "Blox Fruits Third Sea Guide",
     excerpt: "Complete Third Sea walkthrough: how to unlock, preparation, best islands, boss farming, fruit spawns, progression and trading tips for Sea 3.",
