@@ -4,6 +4,19 @@ import Link from "next/link";
 
 const POSTS = [
   {
+    slug: "blox-fruits-all-bosses-guide-locations-drop-rates",
+    title: "Blox Fruits All Bosses Guide",
+    excerpt: "Complete guide to every boss: spawn locations, estimated drop rates, loot, and best strategies for farming rare fruits and weapons.",
+    date: "23 August 2026",
+    category: "Guides",
+    categoryColor: "#00f5ff",
+    categoryBg: "rgba(0,245,255,0.08)",
+    categoryBorder: "rgba(0,245,255,0.25)",
+    readTime: "12 min",
+    icon: "🗺️",
+    featured: false,
+  },
+  {
     slug: "best-fighting-style-2026",
     title: "Blox Fruits Best Fighting Style 2026",
     excerpt: "Definitive 2026 guide and tier list for fighting styles — S-to-D tiers, best stat builds, combos, and where to train. Updated for August 23, 2026 meta.",
