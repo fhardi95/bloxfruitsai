@@ -4,6 +4,19 @@ import Link from "next/link";
 
 const POSTS = [
   {
+    slug: "third-sea-guide-unlock-and-what-to-do",
+    title: "Blox Fruits Third Sea Guide",
+    excerpt: "Complete Third Sea walkthrough: how to unlock, preparation, best islands, boss farming, fruit spawns, progression and trading tips for Sea 3.",
+    date: "23 August 2026",
+    category: "Guides",
+    categoryColor: "#00c2ff",
+    categoryBg: "rgba(0,194,255,0.08)",
+    categoryBorder: "rgba(0,194,255,0.25)",
+    readTime: "14 min",
+    icon: "🧭",
+    featured: false,
+  },
+  {
     slug: "best-blox-fruits-for-grinding",
     title: "Best Fruits for Grinding in 2026",
     excerpt: "Discover the top Blox Fruits for fast levelling and efficient grinding. Expert tier list with levelling strategies for beginners to max level.",
