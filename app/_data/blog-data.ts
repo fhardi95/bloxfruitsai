@@ -28,6 +28,344 @@ export interface BlogSection {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+  "slug": "blox-fruits-all-bosses-guide-locations-drop-rates",
+  "title": "Blox Fruits All Bosses Guide",
+  "excerpt": "Complete guide to every boss: spawn locations, estimated drop rates, loot, and best strategies for farming rare fruits and weapons.",
+  "date": "23 August 2026",
+  "dateISO": "2026-08-23",
+  "category": "Guides",
+  "categoryColor": "#00f5ff",
+  "readTime": "12 min",
+  "icon": "🗺️",
+  "author": "BloxFruitsAI Team",
+  "featured": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "This guide covers every boss type you’ll encounter in Blox Fruits: where they spawn, what they drop, estimated drop rates and the best ways to farm them efficiently. If you want quick values for trades and fruit prices, check our values page at bloxfruitsai.com/values, and for quick reference on items and mechanics visit bloxfruitsai.com/wiki. Use the calculator at bloxfruitsai.com/calculator to estimate EXP and farming time."
+    },
+    {
+      "type": "heading",
+      "text": "How to use this guide"
+    },
+    {
+      "type": "paragraph",
+      "text": "Read the sections for spawn mechanics and drop-rate estimates first. Use the boss table to find location, level, drops and approximate fruit chances. Strategy notes and counters are below each boss category to save you time when farming."
+    },
+    {
+      "type": "heading",
+      "text": "Boss categories explained"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Field bosses (random spawns on islands)",
+        "World/sea bosses (appear on the sea or near islands)",
+        "Event bosses (limited-time, usually higher fruit chance)",
+        "Raid/Evil bosses (group-focused with guaranteed rare drops at times)",
+        "NPC elite bosses (higher HP, better loot)"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Spawn mechanics & timers"
+    },
+    {
+      "type": "paragraph",
+      "text": "Most bosses follow fixed respawn windows (commonly 30–60 minutes for field bosses, up to 2 hours for world bosses) and some have spawn conditions (e.g., player level, area progress, or event triggers). Boss spawn timers are server-wide; killing a boss on your server starts the cooldown for everyone. Event bosses may ignore regular timers and spawn globally."
+    },
+    {
+      "type": "subheading",
+      "text": "Server and private servers"
+    },
+    {
+      "type": "paragraph",
+      "text": "On official servers boss behaviour is consistent. Private servers often let you reset bosses instantly for farming—use that if you’re testing drops but remember this isn’t representative of global spawn mechanics."
+    },
+    {
+      "type": "heading",
+      "text": "Drops: what bosses can give"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Devil Fruits (rare, highly sought after)",
+        "Weapons (swords, guns, cannons)",
+        "Accessories and clothing",
+        "Boss-exclusive items (keys, fragments)",
+        "EXP, coins and crates that give mats or stat boosts"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "General drop rate estimates (community averages)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Exact drop rates aren’t published by the developer. Based on large community samples and long-term farming: common weapon drops: 5–20%, uncommon accessories: 2–8%, boss-exclusive items: 1–5%. Devil Fruit drops from bosses are rare—typically 0.3%–1.5% per boss kill, with event bosses or raid completions giving higher fruit chance (up to ~3–6% during special events). Treat these as estimates, not guarantees."
+    },
+    {
+      "type": "warning",
+      "text": "Drop rates vary by server, event and developer updates. Use this guide as a baseline; always check the in-game boss loot screen and community resources on bloxfruitsai.com/wiki for the latest changes."
+    },
+    {
+      "type": "heading",
+      "text": "Farming best practices"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Farm on servers with low player counts to reduce competition",
+        "Use private servers to test farming routes and timings",
+        "Bring AOE and high mobility; bosses often teleport or fly",
+        "Coordinate with friends to speed up world bosses and share loot chances",
+        "Use fruit luck boosts during events if available"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Notable boss table — locations, levels, drops & rates (est.)"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Boss",
+        "Typical spawn location",
+        "Level",
+        "Common drops",
+        "Approx. fruit drop rate",
+        "Respawn"
+      ],
+      "rows": [
+        [
+          "Bandit Boss",
+          "Starter islands (near camps)",
+          "Level 30–40",
+          "Swords, coins, low-tier accessories",
+          "~0.3%",
+          "30–40 min"
+        ],
+        [
+          "Pirate Captain",
+          "Early-game islands/ports",
+          "Level 40–60",
+          "Guns, swords, crates",
+          "~0.4%",
+          "30–45 min"
+        ],
+        [
+          "Marine Command",
+          "Marine bases/ports",
+          "Level 60–120",
+          "Weapons, marine-themed items",
+          "~0.5%",
+          "45–60 min"
+        ],
+        [
+          "Giant (Island Guardian)",
+          "High-level islands (volcano, tundra)",
+          "Level 200+",
+          "Rare weapons, fragments",
+          "~0.6%",
+          "60–120 min"
+        ],
+        [
+          "Sea Monster (World Boss)",
+          "Random sea tile; visible on map",
+          "Level 150–250",
+          "Boss-exclusive drops, crates",
+          "~0.5%–1%",
+          "60–120 min"
+        ],
+        [
+          "Raid Boss (Event)",
+          "Varies / event arena",
+          "Level varies",
+          "Higher chance to drop fruits & rares",
+          "~1%–6% (event)",
+          "Event-timed"
+        ],
+        [
+          "Undead Captain",
+          "Graveyard islands",
+          "Level 80–120",
+          "Cursed items, weapons",
+          "~0.4%",
+          "40–60 min"
+        ],
+        [
+          "Magma Lord",
+          "Volcano island boss",
+          "Level 180–230",
+          "Rare weapons, magma items",
+          "~0.6%",
+          "60–90 min"
+        ],
+        [
+          "Sky Paladin",
+          "Sky islands/temples",
+          "Level 220–300",
+          "Sky-themed drops, high-tier loot",
+          "~0.7%",
+          "90–120 min"
+        ],
+        [
+          "Dark Admiral",
+          "Endgame islands/fortress",
+          "Level 300+",
+          "Top-tier weapons, fragments",
+          "~0.8%–1%",
+          "90–120 min"
+        ]
+      ]
+    },
+    {
+      "type": "info",
+      "text": "Table notes: Boss names above are the commonly used names by the community; exact title and level may change with updates. For an up-to-date list of NPC stats and precise mechanics, consult bloxfruitsai.com/wiki."
+    },
+    {
+      "type": "heading",
+      "text": "Top fruit-farming targets and why"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Event/Raid bosses — highest fruit chance during active events",
+        "World/sea bosses — large HP pools but repeatable and often better rare item pools",
+        "High-level island bosses — better chance to drop top-tier weapons that sell well"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Tips for solo vs group farming"
+    },
+    {
+      "type": "paragraph",
+      "text": "Solo farming: pick fast respawn, low-competition servers and use mobility builds. Group farming: split roles (aggro, damage, support), focus DPS on adds to speed the fight. For world bosses, groups massively increase run rate and you’ll share similar fruit chances per kill."
+    },
+    {
+      "type": "subheading",
+      "text": "Using Devil Fruits while farming"
+    },
+    {
+      "type": "paragraph",
+      "text": "Some fruits offer superior AOE and control for boss clearing (e.g., long-range or wide-AOE fruits). Swap to a farming fruit if you have it — but never rely solely on fruits: good weapons + movement are still essential for many bosses."
+    },
+    {
+      "type": "heading",
+      "text": "Boss-specific strategy snippets"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Sea Monster: stay on ship or high ground, target tentacles first to reduce AOE",
+        "Giant: kite and use ranged weapons to avoid stomp mechanics",
+        "Magma Lord: avoid lava pools and burst during cooldown windows",
+        "Sky Paladin: anticipate dive attacks and use mobility to dodge"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How to increase your effective fruit odds"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Farm more kills — odds are per kill but scale with attempts",
+        "Join event servers when fruit rates are boosted",
+        "Use private servers for repetitive testing (not representative of global odds)",
+        "Coordinate with groups to clear higher-tier bosses faster (more kills/hour)"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How drops are shared and trade value"
+    },
+    {
+      "type": "paragraph",
+      "text": "Drops from bosses can be sold, traded or used. Rare weapons and fruits command high trade value; use bloxfruitsai.com/values to check community-driven price estimates. Remember: fruit trade value depends on rarity and demand — not just drop rate."
+    },
+    {
+      "type": "heading",
+      "text": "Event bosses and limited-time mechanics"
+    },
+    {
+      "type": "paragraph",
+      "text": "During developer events, bosses often gain boosted fruit chances or guaranteed high-tier drops for raid completions. Watch official announcements and community channels to time your farming runs for maximum return."
+    },
+    {
+      "type": "tip",
+      "text": "Always farm during double-drop events or holiday promotions — they can multiply your returns and occasionally include exclusive drops."
+    },
+    {
+      "type": "heading",
+      "text": "Recordkeeping & community data"
+    },
+    {
+      "type": "paragraph",
+      "text": "Many players record kill counts and drops to estimate community drop rates. Contributing to public logs on forums or the wiki helps refine rate estimates — help the community by sharing your data at bloxfruitsai.com/wiki."
+    },
+    {
+      "type": "heading",
+      "text": "Risk & reward: where to spend your time"
+    },
+    {
+      "type": "paragraph",
+      "text": "High-level world bosses yield the best high-tier loot but take longer to kill. If your goal is fruits, target event bosses and raids. If you want coins and trade goods, mid-tier field bosses with fast respawns can be more efficient."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "heading",
+      "text": "Quick reference: Boss farming checklist"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Check server population",
+        "Confirm boss respawn timer",
+        "Bring mobility and AOE",
+        "Use boosts/events when available",
+        "Log drops and adjust strategy"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Summary — maximise your boss farming"
+    },
+    {
+      "type": "paragraph",
+      "text": "Boss farming in Blox Fruits rewards persistence and planning. Use low-competition servers, prioritise event and raid bosses for fruits, and keep an eye on developer updates. For item values and trade guidance, use bloxfruitsai.com/values, and for quick mechanical lookups visit bloxfruitsai.com/wiki. Use the calculator at bloxfruitsai.com/calculator to plan XP and time investment."
+    },
+    {
+      "type": "tip",
+      "text": "If a boss seems to be dropping fewer fruits after a patch, check event status and server modifiers — rates are the first thing developers tweak."
+    },
+    {
+      "type": "warning",
+      "text": "Avoid any third-party tools promising increased drop rates; these often violate the game's Terms of Service and can lead to account penalties."
+    },
+    {
+      "type": "heading",
+      "text": "Further reading & community resources"
+    },
+    {
+      "type": "list",
+      "items": [
+        "bloxfruitsai.com/wiki — Boss mechanics and NPC stats",
+        "bloxfruitsai.com/values — Trade and value estimates",
+        "bloxfruitsai.com/calculator — Farming time and XP planning",
+        "Official patch notes and community Discords for real-time spawn/event alerts"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Good luck farming — track your kills, note your drops, and share findings with the community to refine these estimates. Bookmark this guide and the wiki for quick checks before every farming session."
+    }
+  ]
+},
+  {
   "slug": "best-fighting-style-2026",
   "title": "Blox Fruits Best Fighting Style 2026",
   "excerpt": "Definitive 2026 guide and tier list for fighting styles — S-to-D tiers, best stat builds, combos, and where to train. Updated for August 23, 2026 meta.",
