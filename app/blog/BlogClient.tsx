@@ -4,6 +4,19 @@ import Link from "next/link";
 
 const POSTS = [
   {
+    slug: "dough-combo-guide",
+    title: "Dough Combo Guide",
+    excerpt: "Complete guide to Dough combos, moves, stat builds and counters — best rotations for PvP, bossing and trading synergy.",
+    date: "14 September 2026",
+    category: "Guides",
+    categoryColor: "#00f5ff",
+    categoryBg: "rgba(0,245,255,0.08)",
+    categoryBorder: "rgba(0,245,255,0.25)",
+    readTime: "14 min",
+    icon: "🥐",
+    featured: false,
+  },
+  {
     slug: "buddha-guide-moves-awakening-tips",
     title: "Buddha Guide: Moves, Awakening & Tips",
     excerpt: "Complete Buddha guide — learn moves, how awakening changes playstyle, combos, counters and top tips to master Buddha in Blox Fruits.",
