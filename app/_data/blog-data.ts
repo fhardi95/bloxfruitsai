@@ -28,6 +28,318 @@ export interface BlogSection {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+  "slug": "buddha-guide-moves-awakening-tips",
+  "title": "Buddha Guide: Moves, Awakening & Tips",
+  "excerpt": "Complete Buddha guide — learn moves, how awakening changes playstyle, combos, counters and top tips to master Buddha in Blox Fruits.",
+  "date": "14 September 2026",
+  "dateISO": "2026-09-14",
+  "category": "Guides",
+  "categoryColor": "#00f5ff",
+  "readTime": "14 min",
+  "icon": "🧘‍♂️",
+  "author": "BloxFruitsAI Team",
+  "featured": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Buddha is a heavyweight Devil Fruit that transforms the user into a giant, tanky fighter with strong area-of-effect tools and excellent crowd control. This guide explains Buddha's moves, what changes after awakening, optimal combos, how to use it in PvP and PvE, and where the fruit fits in trade/value conversations."
+    },
+    {
+      "type": "heading",
+      "text": "Why pick Buddha?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Buddha excels if you want survivability and simple, high-impact abilities. It scales well with melee-oriented builds and is forgiving for new players. If you need more advanced value or trading reference see bloxfruitsai.com/values and the in-game wiki at /wiki for cross-checks."
+    },
+    {
+      "type": "subheading",
+      "text": "Playstyles that suit Buddha"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Tank / frontliner for boss fights",
+        "PvE grinder that clears groups quickly",
+        "Beginner-friendly PvP pick for brawls and 1v1s with the right combos"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How Buddha works (core mechanics)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Core Buddha mechanics revolve around transformation into a giant form that increases hitbox and damage for certain moves, plus unique AOE attacks and crowd-push effects. Some moves are long-range for a heavyweight fruit while others are close‑range slams."
+    },
+    {
+      "type": "subheading",
+      "text": "Key strengths and weaknesses"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Strengths",
+        "Weaknesses"
+      ],
+      "rows": [
+        [
+          "High survivability and self-sustain",
+          "Slow mobility compared with nimble fruits"
+        ],
+        [
+          "Strong AOE single-target burst when up close",
+          "Larger hitbox makes you easier to target"
+        ],
+        [
+          "Simple combo loops for consistent damage",
+          "Awakening can be button-heavy; positioning matters"
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Move list (unawakened)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Below are the common move categories you’ll use before awakening. Exact move names can vary by update, but the behaviours remain: heavy melee slams, ground pounds, and single-target grapples."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Move",
+        "Type",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Giant Punch",
+          "Single-target / Melee",
+          "High damage, moderate cooldown — good opener."
+        ],
+        [
+          "Ground Stomp",
+          "AOE / Crowd Control",
+          "Pushes and knocks down nearby enemies; ideal for breaking combos."
+        ],
+        [
+          "Palm Burst",
+          "Ranged / Knockback",
+          "Medium-range blast that interrupts ranged attackers."
+        ],
+        [
+          "Absorb Stance",
+          "Buff / Tank",
+          "Temporary damage reduction or self-heal mechanic on some builds."
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How awakening changes Buddha"
+    },
+    {
+      "type": "paragraph",
+      "text": "Awakening swaps or augments existing moves, increases size and hitboxes and often adds new AOE or movement tools. After awakening you will feel bulkier and more disruptive — ideal for dominating fight zones but still vulnerable to kiting."
+    },
+    {
+      "type": "subheading",
+      "text": "Awakening method"
+    },
+    {
+      "type": "paragraph",
+      "text": "Awakening in Blox Fruits usually requires reaching a specified level and using your fruit's awakening procedure in-game. Check the latest steps on our /wiki page and use the /calculator if you need XP or stat planning — awakening requirements can change by update."
+    },
+    {
+      "type": "heading",
+      "text": "Move changes after awakening"
+    },
+    {
+      "type": "paragraph",
+      "text": "Awakened moves become more AOE-focused, with some gaining additional status effects (e.g., paralysis, slow). Your melee strings often chain into a giant slam that does massive area damage and knocks opponents into follow-up attacks."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Awakened Move",
+        "Effect",
+        "Use case"
+      ],
+      "rows": [
+        [
+          "Titanic Slam",
+          "Large AOE damage + knockdown",
+          "Use to reset fights, clear mobs, or initiate team control."
+        ],
+        [
+          "Colossus Sweep",
+          "Sweeping hit with extended range",
+          "Great for punishing dodgers and ranged users."
+        ],
+        [
+          "Enveloping Aura",
+          "Damage reduction for a short period",
+          "Survivability tool during boss nukes or team fights."
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Optimal combos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Buddha combos revolve around a heavy opener, crowd control, then follow-up AOE while enemies are stunned or airborne. A sample rotation works from unawakened into awakened as soon as you hit the transformation window."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Open with Palm Burst to interrupt ranged players.",
+        "Follow with Giant Punch to chunk health.",
+        "Use Ground Stomp to lock targets in place.",
+        "Finish with Titanic Slam after awakening for maximum AOE."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "PvP tips"
+    },
+    {
+      "type": "paragraph",
+      "text": "PvP with Buddha is about timing and positioning. Use size to bully space but avoid being kited. Combos are slower than light fruits, so bait dodges and punish with your AOE. When facing fast fruits, lead with interrupting moves and try to hit a one-shot follow-up."
+    },
+    {
+      "type": "tip",
+      "text": "Use Ground Stomp defensively to break incoming large-damage combos from enemies and create space for a counter-rotate."
+    },
+    {
+      "type": "heading",
+      "text": "PvE and farming"
+    },
+    {
+      "type": "paragraph",
+      "text": "Buddha’s AOE strengths make it an excellent farmer. Use sweep and slam moves to clear spawn groups. Pair with a damage or drop-boosting crew and use the fruit to tank while teammates chip bosses — also reference our /calculator for XP planning and efficient routeing."
+    },
+    {
+      "type": "heading",
+      "text": "Stat and build recommendations"
+    },
+    {
+      "type": "paragraph",
+      "text": "Buddha benefits from a mix of melee and durability stats. Invest in melee and robustness early; consider some mobility or stamina depending on personal playstyle. For more trade-offs and exact stat math visit bloxfruitsai.com/values and our /calculator for tailored builds."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Priority: Melee > Defence > Stamina",
+        "Optional: Mobility if you struggle with kiting",
+        "Use ranged backup (guns or fruits) for hybrid builds"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Best fruits to pair with Buddha"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pair Buddha with fruits or weapons that cover its mobility gaps or boost team damage. A ranged fruit or fast melee partner helps control the battlefield while you play anchor."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ranged fruits for poke & pressure",
+        "Support fruits that buff or heal",
+        "Fast melee fruits to capitalise on your crowd control"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Counters and how to beat them"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kiting, long-range harassment and knockback are Buddha’s worst enemies. Keep awareness of the battlefield and avoid chasing into open areas where ranged damage can whittle you down."
+    },
+    {
+      "type": "warning",
+      "text": "Don’t overcommit to an awakening slam if the enemy team has multiple range characters ready to reset; your large hitbox will make you an easy target."
+    },
+    {
+      "type": "heading",
+      "text": "Trading and value notes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Buddha’s market value fluctuates by update and popularity. For up-to-date valuation and trade tips consult bloxfruitsai.com/values. Remember: utility in PvE, PvP success, and rarity drive price — keep proof of trades and be mindful of scams."
+    },
+    {
+      "type": "heading",
+      "text": "Common mistakes to avoid"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Chasing single targets into enemy teams",
+        "Using awakening without a planned follow-up",
+        "Neglecting mobility or escape tools"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Advanced tips and micro-techniques"
+    },
+    {
+      "type": "paragraph",
+      "text": "Frame-cancel short animations into a heavy swing to reduce recovery time, and use your larger hitbox in tight map corridors to land multi-target hits. Practice spacing so your AOE hits maximum enemies."
+    },
+    {
+      "type": "tip",
+      "text": "In team fights, bait enemy cooldowns using a short feint punch then immediately transform to punish predictable escapes."
+    },
+    {
+      "type": "heading",
+      "text": "Training routes and where to grind"
+    },
+    {
+      "type": "paragraph",
+      "text": "Grind at zones where mobs cluster; Buddha shines in grouped spawns. Combine with XP boosts and a crew for fastest levelling. Tailor routes with the /calculator to track XP goals and time-to-awakening."
+    },
+    {
+      "type": "heading",
+      "text": "FAQ"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Q: Is Buddha good endgame? A: Yes for tanking and zoning, though some endgame bosses prefer high single-target DPS fruits.",
+        "Q: Does awakening change your fruit’s rarity? A: Awakening is a power change, not rarity — but awakened performance can affect trading value.",
+        "Q: Can I use weapons with Buddha? A: Yes; mixing weapon skills with Buddha’s opens varied combo options."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Final checklist before you play Buddha"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Learn your primary AOE and single-target rotation",
+        "Plan an awakening timing and follow-up",
+        "Set stat points for melee and durability",
+        "Have a mobility or ranged plan to handle kiting"
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "paragraph",
+      "text": "Buddha is a rewarding fruit for players who like straightforward, impactful play. Use this guide alongside the resources on bloxfruitsai.com/values, /wiki and the /calculator to optimise your build and trading strategy. Practice combos in a safe area, keep awareness of cooldowns and you’ll dominate both PvE and many PvP situations."
+    }
+  ]
+},
+  {
   "slug": "blox-fruits-all-bosses-guide-locations-drop-rates",
   "title": "Blox Fruits All Bosses Guide",
   "excerpt": "Complete guide to every boss: spawn locations, estimated drop rates, loot, and best strategies for farming rare fruits and weapons.",
