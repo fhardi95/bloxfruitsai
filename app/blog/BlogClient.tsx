@@ -4,6 +4,19 @@ import Link from "next/link";
 
 const POSTS = [
   {
+    slug: "leveling-guide-2026-fastest-way-to-max-level",
+    title: "Blox Fruits Leveling Guide 2026",
+    excerpt: "A complete 2026 guide to the fastest way to reach max level: routes, XP sources, best fruits, stat builds, party tips and tools like bloxfruitsai.com/calculator.",
+    date: "14 September 2026",
+    category: "Guides",
+    categoryColor: "#00f5ff",
+    categoryBg: "rgba(0,245,255,0.08)",
+    categoryBorder: "rgba(0,245,255,0.25)",
+    readTime: "14 min",
+    icon: "🎯",
+    featured: true,
+  },
+  {
     slug: "dough-combo-guide",
     title: "Dough Combo Guide",
     excerpt: "Complete guide to Dough combos, moves, stat builds and counters — best rotations for PvP, bossing and trading synergy.",
