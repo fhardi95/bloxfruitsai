@@ -4,6 +4,19 @@ import Link from "next/link";
 
 const POSTS = [
   {
+    slug: "buddha-guide-moves-awakening-tips",
+    title: "Buddha Guide: Moves, Awakening & Tips",
+    excerpt: "Complete Buddha guide — learn moves, how awakening changes playstyle, combos, counters and top tips to master Buddha in Blox Fruits.",
+    date: "14 September 2026",
+    category: "Guides",
+    categoryColor: "#00f5ff",
+    categoryBg: "rgba(0,245,255,0.08)",
+    categoryBorder: "rgba(0,245,255,0.25)",
+    readTime: "14 min",
+    icon: "🧘‍♂️",
+    featured: false,
+  },
+  {
     slug: "blox-fruits-all-bosses-guide-locations-drop-rates",
     title: "Blox Fruits All Bosses Guide",
     excerpt: "Complete guide to every boss: spawn locations, estimated drop rates, loot, and best strategies for farming rare fruits and weapons.",
