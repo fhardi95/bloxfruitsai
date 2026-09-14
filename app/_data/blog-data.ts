@@ -28,6 +28,254 @@ export interface BlogSection {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+  "slug": "dough-combo-guide",
+  "title": "Dough Combo Guide",
+  "excerpt": "Complete guide to Dough combos, moves, stat builds and counters — best rotations for PvP, bossing and trading synergy.",
+  "date": "14 September 2026",
+  "dateISO": "2026-09-14",
+  "category": "Guides",
+  "categoryColor": "#00f5ff",
+  "readTime": "14 min",
+  "icon": "🥐",
+  "author": "BloxFruitsAI Team",
+  "featured": false,
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "This Dough combo guide covers everything you need to dominate with the Dough fruit: core mechanics, best stat builds, essential moves, beginner-to-advanced combos, PvP and boss rotations, matchups, and recommended weapon/item synergies. Target keyword: Blox Fruits Dough combo."
+    },
+    {
+      "type": "heading",
+      "text": "Why Dough is a strong pick"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dough balances reliable crowd control, mobility and burst. It excels at chaining soft-CC into high-damage finishers, which makes it a versatile choice for both PvP and PvE. Dough players can zone with projectiles, lock targets with short roots/stuns, then follow up with multi-hit finishers to secure kills or chunk boss HP."
+    },
+    {
+      "type": "subheading",
+      "text": "Core mechanics to master"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mastering Dough means understanding three things: (1) how to start a combo safely (projectile + movement), (2) how to cancel or confirm into your stun/root move, and (3) how to time your heavy finishers before the opponent recovers. Dough often relies on quick cancels into dash or jump-cancels to maintain pressure while avoiding damage."
+    },
+    {
+      "type": "heading",
+      "text": "Best stat build"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Primary: Melee (60–70%) — improves the damage of most Dough finishers and basic combos.",
+        "Secondary: Defence (10–20%) — useful in prolonged PvP or boss fights to survive counters.",
+        "Remainder: Sword / Gun (10–20%) — if you plan to weave in weapon autos or use a sword opener."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "If you prefer pure DF scaling (for full fruit-focused play) shift to 70% Fruit and 20% Defence, 10% Melee. Use the damage calculator at /calculator to test exact damage numbers for your build and level."
+    },
+    {
+      "type": "heading",
+      "text": "Essential Dough moves and what they do"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Dough Ball (Q) — projectile opener: safe poke, good for starting combos and zoning.",
+        "Rolling Pin Dash (E) — dash that knocks back/immobilises briefly; great cancel tool.",
+        "Oven Burst (R) — area burst finisher that hits multiple times; best saved for execute.",
+        "Sugar Coat (Passive) — damage reduction or sticky effect on autos that enables follow-ups.",
+        "Sticky Crust (Z) — short stun/root; your confirm move for high-damage chains."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Each move has a specific role: use Dough Ball to bait or interrupt, Rolling Pin Dash to reposition/cancel, Sticky Crust to lock, then Oven Burst to finish. Adjust move order based on opponent movement and Haki usage."
+    },
+    {
+      "type": "heading",
+      "text": "Beginner combos (safe and easy)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Combo A — Poke & Finish: Dough Ball -> walk forward -> Sticky Crust -> Oven Burst. Use when opponent is grounded.",
+        "Combo B — Dash Confirm: Rolling Pin Dash -> Sticky Crust -> Oven Burst. Good after a dash-in or cross-map approach.",
+        "Combo C — Pressure Loop: Dough Ball -> light auto chain -> Sticky Crust -> Oven Burst. Safer vs players with evasion moves."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Beginner combos focus on minimal timing: use a projectile opener and confirm with Sticky Crust. These combos work well when you’re still learning cancel windows and opponent recovery frames."
+    },
+    {
+      "type": "heading",
+      "text": "Intermediate combos (timing and cancels)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Combo D — Air-Cancel: Jump + Dough Ball -> Rolling Pin Dash mid-air -> Sticky Crust on landing -> Oven Burst. Use for surprise aerial approach.",
+        "Combo E — Mixup: Dough Ball -> fake walk back -> Rolling Pin Dash -> quick auto -> Sticky Crust -> Oven Burst. Keeps foes guessing.",
+        "Combo F — CC Chain: Dough Ball -> Oven Burst (soft) -> Sticky Crust -> Oven Burst (finish). Use the first Oven Burst for stun-setup when range is tight."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Intermediate combos require practice with movement cancels. The air-cancel and fake-walk mixups catch players who block or anticipate a single style of approach."
+    },
+    {
+      "type": "heading",
+      "text": "Advanced combos (high-skill, high-reward)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Combo G — Frame-Perfect Execute: Dough Ball -> micro-step -> Rolling Pin Dash -> cancel into sword auto -> Sticky Crust -> Oven Burst. Maximises damage in short window.",
+        "Combo H — Cross-map Catch: Boot or weapon ranged opener -> Dough Ball as they dodge -> teleport/dash -> Sticky Crust -> Oven Burst. Requires prediction and map awareness.",
+        "Combo I — Haki-Bait Finish: Use Dough Ball to bait Haki, bait their parry with a fake Oven Burst, then Rolling Pin Dash through and finish with a guaranteed Sticky Crust + Oven Burst."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Advanced combos make you unpredictable: mix movement, weapon autos and tiny cancels. Use these when you’re confident in your frames and opponent tendencies."
+    },
+    {
+      "type": "heading",
+      "text": "PvP rotation example"
+    },
+    {
+      "type": "paragraph",
+      "text": "A typical PvP rotation: start with Dough Ball to test defence -> follow with Rolling Pin Dash if they counter -> land Sticky Crust to lock -> Oven Burst as finisher. If they use Haki, bait with small autos and reset to range — do not commit Oven Burst if they still have defensive cooldowns."
+    },
+    {
+      "type": "heading",
+      "text": "Bossing rotation example"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Step 1: Maintain distance with Dough Ball to avoid AoE telegrabs.",
+        "Step 2: Use Rolling Pin Dash for movement and repositioning between phases.",
+        "Step 3: Use Sticky Crust only when boss is briefly stunned or immobile to avoid wasted uptime.",
+        "Step 4: Dump Oven Burst when boss is CC’d or on safe windows for maximum DPS."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "For bosses, swap into more Fruit/Defence stats and rely on short, repeatable combos. Check the move and fruit mechanics on /wiki for boss-specific counters and phase timings."
+    },
+    {
+      "type": "heading",
+      "text": "Synergy with other fruits"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dough pairs well with fruits that either extend CC or add single-target burst. Use fruits that complement the Dough kit rather than overlap it. Trading and value choices matter — check values at /values if you plan to trade."
+    },
+    {
+      "type": "tierrow",
+      "tier": "S",
+      "tierColor": "#ff4757",
+      "label": "Dominant partners",
+      "fruits": [
+        "🐉 Dragon — huge single-target scaling pairs with Dough confirms.",
+        "🔥 Phoenix — heals between Dough bursts for sustained fights."
+      ]
+    },
+    {
+      "type": "tierrow",
+      "tier": "A",
+      "tierColor": "#ffa502",
+      "label": "Strong partners",
+      "fruits": [
+        "⚡ Light — mobility and burst that match Dough's window-based play.",
+        "🌪️ Quake — strong CC that chains into Dough finishers."
+      ]
+    },
+    {
+      "type": "tierrow",
+      "tier": "B",
+      "tierColor": "#1e90ff",
+      "label": "Situational partners",
+      "fruits": [
+        "🌊 Water — safe ranged picks but less synergy with Dough's root timing.",
+        "🕸️ Venom — adds DoT but requires careful timing to stack with Oven Burst."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Best weapons & items"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Sword: Use a fast sword for quick autos between Dough moves — helps extend combos.",
+        "Gun: Light guns can open cross-map vs kitey players before committing.",
+        "Accessories: Damage-increasing trinkets and short cooldown reduction items amplify Oven Burst value."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Haki, movement and map tips"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use Busoshoku Haki to bypass blocking or reduce parry windows. Keep movement unpredictable — alternate dash heights and use map geometry to bait dashes into walls where Oven Burst or Rolling Pin Dash deals more guaranteed hits."
+    },
+    {
+      "type": "heading",
+      "text": "Matchups and counters"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Hard counters: mobility fruit users (e.g. Light) who can dodge Sticky Crust consistently.",
+        "Even matchups: mid-range combo fruits — your zoning and timing wins the fight.",
+        "Favourable matchups: slow/heavy fruits or low-mobility bosses where your root locks equals high damage."
+      ]
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Strengths",
+        "Weaknesses"
+      ],
+      "rows": [
+        [
+          "Reliable CC, strong burst windows",
+          "Struggles vs high-mobility and long invulnerability frames"
+        ],
+        [
+          "Flexible in PvP and PvE",
+          "Requires practice with cancel timings"
+        ]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Trade safe: if you plan to trade or value fruits, always cross-check the latest marketplace rates on /values before swapping — Dough’s popularity fluctuates after patches."
+    },
+    {
+      "type": "warning",
+      "text": "Avoid overcommitting Oven Burst when opponent still has Haki or escape available — you’ll be punished heavily by counters."
+    },
+    {
+      "type": "info",
+      "text": "Want exact damage numbers? Use the /calculator to input your level, stats and weapon to see how much each Dough move will deal. Also review move descriptions and history on our /wiki for patch-specific notes."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "paragraph",
+      "text": "Final checklist before queueing: 1) Set stats to your preferred melee/fruit split, 2) practice 3–5 combos in a private server, 3) know common counters for your region and adjust loadouts. Use this guide to refine your rotations and refer to /wiki, /values and /calculator when planning trades or testing damage."
+    }
+  ]
+},
+  {
   "slug": "buddha-guide-moves-awakening-tips",
   "title": "Buddha Guide: Moves, Awakening & Tips",
   "excerpt": "Complete Buddha guide — learn moves, how awakening changes playstyle, combos, counters and top tips to master Buddha in Blox Fruits.",
