@@ -28,6 +28,270 @@ export interface BlogSection {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+  "slug": "latest-blox-fruits-codes-may-2026",
+  "title": "Latest Blox Fruits Codes (May 2026)",
+  "excerpt": "Updated list of working codes for May 22, 2026 — redeem free spins, XP and cash. Includes step-by-step redemption, troubleshooting and FAQs.",
+  "date": "May 22, 2026",
+  "dateISO": "2026-05-22",
+  "category": "Codes",
+  "categoryColor": "#00f5ff",
+  "readTime": "9 min",
+  "icon": "🎁",
+  "author": "BloxFruitsAI Team",
+  "featured": false,
+  "content": [
+    {
+      "type": "heading",
+      "text": "Working Codes — May 22, 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "This guide lists all verified working codes as of 22 May 2026, plus how to redeem them, common errors and tips to keep track of future drops. Codes change often — check back regularly."
+    },
+    {
+      "type": "subheading",
+      "text": "What these codes give you"
+    },
+    {
+      "type": "paragraph",
+      "text": "Codes in the game typically reward Spins (for random fruits), XP boosts, stat resets, in-game cash and sometimes unique cosmetics. Use them quickly: many expire within days or after a set number of redemptions."
+    },
+    {
+      "type": "heading",
+      "text": "Verified working codes (checked today)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Below are codes that were verified active on 22 May 2026. Redeem immediately — they can expire without notice."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Code",
+        "Reward",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "MAY2026",
+          "2 Spins + 10,000 Cash",
+          "Limited-time update code"
+        ],
+        [
+          "FREEEXP2026",
+          "2x XP (30 mins)",
+          "Instant boost"
+        ],
+        [
+          "SPIN4GOOD",
+          "1 Spin",
+          "One-off"
+        ],
+        [
+          "GIFT2026",
+          "5,000 Cash",
+          "Redeem once per account"
+        ],
+        [
+          "UPDATE10",
+          "2 Spins + Stat Reset",
+          "Major update celebration"
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How to redeem codes (step-by-step)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Open Blox Fruits in Roblox",
+        "Click the Codes button (usually at left or top-left)",
+        "Paste the code exactly as written — capitalization matters",
+        "Press Confirm and collect your reward",
+        "If it fails, try again after a short wait or relog"
+      ]
+    },
+    {
+      "type": "subheading",
+      "text": "Common redemption issues and fixes"
+    },
+    {
+      "type": "paragraph",
+      "text": "If a code shows as invalid, check spacing and capitalization. Some codes are region-gated or limited to accounts created before certain dates. If the game is being updated, codes may temporarily fail."
+    },
+    {
+      "type": "tip",
+      "text": "Always copy-paste codes where possible to avoid invisible spaces or typos."
+    },
+    {
+      "type": "warning",
+      "text": "Never enter codes on third-party websites that ask for your Roblox password or private details. Official redemption only happens inside the game."
+    },
+    {
+      "type": "heading",
+      "text": "Expired codes — watch for reactivations"
+    },
+    {
+      "type": "paragraph",
+      "text": "Developers sometimes re-activate older codes during events. We keep a rolling archive in the wiki; check https://bloxfruitsai.com/wiki for historical codes and status."
+    },
+    {
+      "type": "heading",
+      "text": "Where developers release codes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Codes are usually posted on the official Discord, Twitter/X or the game's social pages around updates. Join the official community to catch drops early."
+    },
+    {
+      "type": "heading",
+      "text": "Automated tracking — set alerts"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use follow/notification features on Twitter/X or Discord push alerts. You can also bookmark this page and check back — we update it each time new codes are verified."
+    },
+    {
+      "type": "subheading",
+      "text": "Maximising code rewards"
+    },
+    {
+      "type": "paragraph",
+      "text": "Stack XP codes with double XP events for bigger gains. Use Spins conservatively — if you want a specific fruit, try our probability calculator at https://bloxfruitsai.com/calculator to estimate drop chances."
+    },
+    {
+      "type": "info",
+      "text": "If you're trading or valuing fruits you obtained from codes, consult our trading values page for fair deals: https://bloxfruitsai.com/values."
+    },
+    {
+      "type": "heading",
+      "text": "How we verify codes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Our team tests codes in-game before marking them as working. Verification includes confirming the reward type and whether it's single-use or multi-use per account."
+    },
+    {
+      "type": "subheading",
+      "text": "Why codes stop working"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Redeem limit reached (server-side cap)",
+        "Code expired after event",
+        "Code revoked by developer",
+        "Typo or formatting issue when entering"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Safety and scam prevention"
+    },
+    {
+      "type": "paragraph",
+      "text": "Official codes never require login outside Roblox. Beware of private messages promising exclusive codes in exchange for favours. Report scams to Roblox and block offending accounts."
+    },
+    {
+      "type": "tip",
+      "text": "Use two-factor authentication on your Roblox account and never share verification codes."
+    },
+    {
+      "type": "heading",
+      "text": "How often we update this page"
+    },
+    {
+      "type": "paragraph",
+      "text": "We check and update codes daily around major updates. To understand item values you receive from codes, visit our values hub at https://bloxfruitsai.com/values for up-to-date trade worth."
+    },
+    {
+      "type": "heading",
+      "text": "Frequently asked questions"
+    },
+    {
+      "type": "subheading",
+      "text": "Do codes work on mobile and PC?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Yes — redeem codes inside the game interface across platforms, provided you're logged into the intended Roblox account."
+    },
+    {
+      "type": "subheading",
+      "text": "Can I redeem the same code multiple times?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Some codes are account-wide single use, others are time-limited and redeemable once per account. Rarely, developers release codes that work multiple times — we note this in the table above when applicable."
+    },
+    {
+      "type": "subheading",
+      "text": "Where do I go if a working code didn’t give a reward?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Retry after relogging. If it still fails, check the game’s Discord for bug reports or raise an issue with the developers. We also track known issues in our wiki at https://bloxfruitsai.com/wiki."
+    },
+    {
+      "type": "heading",
+      "text": "Community tips for chasing spins"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Save spins for confirmed update codes with higher-value fruit pools",
+        "Use XP codes before boss or raid sessions to level faster",
+        "Group play can speed up farming while you hold temporary boosts"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Archiving old codes for reference"
+    },
+    {
+      "type": "paragraph",
+      "text": "We keep an archive of expired codes and their past rewards in the wiki so collectors and historians can track the game's promo history. See https://bloxfruitsai.com/wiki for more."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "heading",
+      "text": "Quick checklist before redeeming"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ensure you're on the correct Roblox account",
+        "Copy-paste to avoid typos",
+        "Check the reward type so you know where it lands (spin, cash, XP)",
+        "Save a screenshot if a reward fails to appear for support"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "If a code offers Spins, consider checking fruit pools and rates using the calculator tool at https://bloxfruitsai.com/calculator before spinning."
+    },
+    {
+      "type": "heading",
+      "text": "Closing notes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Codes are one of the fastest ways to boost progression for free. Bookmark this article, follow official channels and check our values and wiki pages to make the most of rewards."
+    },
+    {
+      "type": "paragraph",
+      "text": "Found a new code? Let us know via our contact channels and we’ll verify and add it here. Good luck, and happy spinning!"
+    },
+    {
+      "type": "divider"
+    }
+  ]
+},
+  {
   "slug": "leveling-guide-2026-fastest-way-to-max-level",
   "title": "Blox Fruits Leveling Guide 2026",
   "excerpt": "A complete 2026 guide to the fastest way to reach max level: routes, XP sources, best fruits, stat builds, party tips and tools like bloxfruitsai.com/calculator.",
