@@ -4,6 +4,19 @@ import Link from "next/link";
 
 const POSTS = [
   {
+    slug: "latest-blox-fruits-codes-may-2026",
+    title: "Latest Blox Fruits Codes (May 2026)",
+    excerpt: "Updated list of working codes for May 22, 2026 — redeem free spins, XP and cash. Includes step-by-step redemption, troubleshooting and FAQs.",
+    date: "May 22, 2026",
+    category: "Codes",
+    categoryColor: "#00f5ff",
+    categoryBg: "rgba(0,245,255,0.08)",
+    categoryBorder: "rgba(0,245,255,0.25)",
+    readTime: "9 min",
+    icon: "🎁",
+    featured: false,
+  },
+  {
     slug: "leveling-guide-2026-fastest-way-to-max-level",
     title: "Blox Fruits Leveling Guide 2026",
     excerpt: "A complete 2026 guide to the fastest way to reach max level: routes, XP sources, best fruits, stat builds, party tips and tools like bloxfruitsai.com/calculator.",
