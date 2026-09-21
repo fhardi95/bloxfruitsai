@@ -4,6 +4,19 @@ import Link from "next/link";
 
 const POSTS = [
   {
+    slug: "blox-fruits-tier-list-september-2026",
+    title: "Blox Fruits Tier List Sept 2026",
+    excerpt: "Updated Blox Fruits tier list for September 21, 2026 — S-to-C rankings, best uses for PvP, bossing and early game, plus trading and reroll tips.",
+    date: "September 21, 2026",
+    category: "Tier List",
+    categoryColor: "#ff4757",
+    categoryBg: "rgba(255,71,87,0.08)",
+    categoryBorder: "rgba(255,71,87,0.25)",
+    readTime: "12 min",
+    icon: "🏆",
+    featured: false,
+  },
+  {
     slug: "latest-blox-fruits-codes-may-2026",
     title: "Latest Blox Fruits Codes (May 2026)",
     excerpt: "Updated list of working codes for May 22, 2026 — redeem free spins, XP and cash. Includes step-by-step redemption, troubleshooting and FAQs.",
